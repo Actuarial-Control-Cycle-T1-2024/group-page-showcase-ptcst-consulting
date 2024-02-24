@@ -14,8 +14,8 @@ Group Members: Chloe Kostopoulos, Sarah Lou, Tetian Madfouni, Tanvi Vakkalagadda
 ## Executive Summary
 ## Objectives
 The main objectives of the proposed program are to: 
-- Reduce the frequency and severity of life insurance claim payouts for the company  
-- Incentivise healthier behaviours of policyholders
+1. Reduce the frequency and severity of life insurance claim payouts for the company
+2. Incentivise healthier behaviours of policyholders
 
 These two objectives work together to increase the profitability of the Life Insurance company and can be measured by key metrics including:
 - mortality rates of policyholders
@@ -23,9 +23,11 @@ These two objectives work together to increase the profitability of the Life Ins
 - new business signups
 - expected death payouts
 
-These metrics will be continuously monitored over time, with the program being reviewed once every calendar year to ensure it is still achieving its main objectives.
+These metrics will be continuously monitored over time, with the program being reviewed every 5 years to assess whether it is still achieving these main objectives, and modify the program's features and/or pricing if necessary.
 
 ## Program Design
+PTCST Consulting developed a comprehensive health incentive program for SuperLife that incentivises participation by offering external benefits through a rewards scheme, and policy-related benefits through premium reductions.
+
 Ideas for program incentives that contribute to a decrease in expected mortality:
 Smoking Cessation Programs: 
   - Tobacco Cessation Treatment
@@ -35,7 +37,7 @@ Cancer Prevention Initiatives:
   - Cancer Screening Questionnaire
 
 Annual Health Check-ups: 
-  - Discounted health assessments with partnered medical professionals, which includes blood and urine testing, and a physical examination.
+  - Discounted health assessments with partnered medical professionals, which includes annual cholesterol and blood pressure screenings, and a physical examination.
   - For all policyholders to complete annually upon purchasing a policy.
 
 Weight Management Programs: 
