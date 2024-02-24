@@ -30,20 +30,25 @@ Ideas for program incentives that contribute to a decrease in expected mortality
 Smoking Cessation Programs: 
   - Tobacco Cessation Treatment
   - Vaping Cessation Programs
+
 Cancer Prevention Initiatives: 
   - Cancer Screening Questionnaire
+
 Annual Health Check-ups: 
   - Discounted health assessments with partnered medical professionals, which includes blood and urine testing, and a physical examination.
   - For all policyholders to complete annually upon purchasing a policy.
+
 Weight Management Programs: 
   - Wellbeing Diet
   - Exercise classes and gym memberships
   - Weight-loss medications
   - Dietitian/Nutritionist appointments
-Heart Health Screenings
+
+Heart Health Screenings:
   - Annual screenings for cholesterol levels and blood pressure.
   - For all policyholders to complete annually upon purchasing a policy.
-Chronic Disease Management
+
+Chronic Disease Management:
   - GP Chronic Disease Management Plan: incentivise policyholders with Chronic Diseases to obtain
 
 ## Pricing/Costs
