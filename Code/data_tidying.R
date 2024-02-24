@@ -63,3 +63,4 @@ data[to_numeric] = lapply(data[to_numeric], as.numeric)
 data$sex = factor(data$sex)
 data$death_cause = factor(data$death_cause)
 data$underwriting_class = factor(data$underwriting_class, levels = c("VL", "L", "M", "H"))
+

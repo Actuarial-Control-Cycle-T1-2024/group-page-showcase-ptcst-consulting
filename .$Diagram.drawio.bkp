@@ -1,0 +1,185 @@
+<mxfile host="app.diagrams.net" modified="2024-02-19T09:20:34.752Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="B6PL_Jw9fMtA483qIdHq" version="23.1.5" type="device">
+  <diagram name="Page-1" id="G69Q2HjziIWSIaZHjA8r">
+    <mxGraphModel dx="2901" dy="2301" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-26" target="2OgW7ox5jOHKhb1XSsqK-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.417;exitY=1.06;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-35" target="2OgW7ox5jOHKhb1XSsqK-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-2" value="Chosen Intervention Programs" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#fff2cc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="344" y="-40" width="210" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-54" value="We will estimate the collective&lt;br&gt;sign-up rate based on all incentive&lt;br&gt;programs for each intervention&lt;br&gt;Can also give confidence intervals&lt;br&gt;for sign-up rate" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2OgW7ox5jOHKhb1XSsqK-2">
+          <mxGeometry y="26" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=-0.052;exitY=0.587;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-23" target="2OgW7ox5jOHKhb1XSsqK-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-19" target="2OgW7ox5jOHKhb1XSsqK-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-6" value="Incentive Programs" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#fff2cc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="580" y="150" width="145" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-61" value="Estimate cost per capita" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2OgW7ox5jOHKhb1XSsqK-6">
+          <mxGeometry y="26" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.947;exitY=1.127;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-38" target="2OgW7ox5jOHKhb1XSsqK-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-7" value="Mortality Post-Intervention" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#fff2cc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="14" y="86" width="330" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-52" value="For a specific intervention program&lt;br&gt;we need to consider&lt;br&gt;- how long mortality changes take&lt;br&gt;- how much they affect different demographics&lt;br&gt;- make up confidence intervals around provided estimates&lt;br&gt;&amp;nbsp; of mortality reduction" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2OgW7ox5jOHKhb1XSsqK-7">
+          <mxGeometry y="26" width="330" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.006;exitY=0.467;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-41" target="2OgW7ox5jOHKhb1XSsqK-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-8" value="Expected Payout of Policies" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=#fff2cc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="220" y="280" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-55" value="Calculating PV of payout.&lt;br&gt;Reduction in said PV can&amp;nbsp;&lt;br&gt;be considered profit&lt;br&gt;&lt;br&gt;Because mortality changes&lt;br&gt;are gradual, can repeat&lt;br&gt;calcs for future years" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2OgW7ox5jOHKhb1XSsqK-8">
+          <mxGeometry y="40" width="170" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-10" value="Profit" style="html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="595" y="440" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-11" value="Loss" style="html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="480" y="330" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.43;entryY=0.933;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-6" target="2OgW7ox5jOHKhb1XSsqK-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="150" as="sourcePoint" />
+            <mxPoint x="484" y="56" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-23" value="Sign-Up Rates" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="620" y="10" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.485;entryY=-0.113;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-6" target="2OgW7ox5jOHKhb1XSsqK-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="202" as="sourcePoint" />
+            <mxPoint x="590" y="355" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-19" value="Cost of Incentive Program&lt;br&gt;and sign-up rate" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="580" y="277" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-2" target="2OgW7ox5jOHKhb1XSsqK-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="82" as="sourcePoint" />
+            <mxPoint x="535" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-26" value="Cost of Intervention Program" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="380" y="170" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.023;entryY=0.613;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-2" target="2OgW7ox5jOHKhb1XSsqK-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="344" y="56" as="sourcePoint" />
+            <mxPoint x="230" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-35" value="Lowers Mortality Rate" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="125" y="10" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.533;exitY=1.024;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-52" target="2OgW7ox5jOHKhb1XSsqK-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="210" as="sourcePoint" />
+            <mxPoint x="300" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-38" value="Lowers probability of payout" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="110" y="230" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-41" value="Lower expected payout costs" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="324" y="450" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.037;exitY=0.227;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-57" target="2OgW7ox5jOHKhb1XSsqK-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-56" value="Discount Rate" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#fff2cc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="317" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-57" value="What is the discount rate? And does it matter?" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2OgW7ox5jOHKhb1XSsqK-56">
+          <mxGeometry y="26" width="140" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-62" value="Insurance Data" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#f8cecc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="191" width="200" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-63" value="Use 2023 cohort as representative&amp;nbsp;&lt;br&gt;sample of payout reduction for&lt;br&gt;prospective policies" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2OgW7ox5jOHKhb1XSsqK-62">
+          <mxGeometry y="26" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.013;entryY=0.189;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-62" target="2OgW7ox5jOHKhb1XSsqK-55">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-10" y="234" />
+              <mxPoint x="-10" y="290" />
+              <mxPoint x="120" y="290" />
+              <mxPoint x="120" y="320" />
+              <mxPoint x="160" y="320" />
+              <mxPoint x="160" y="347" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-65" value="P&amp;amp;L" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="740" y="360" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-66" value="Build up a future projection of profits and losses arising with confidence intervals&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2OgW7ox5jOHKhb1XSsqK-65">
+          <mxGeometry y="26" width="210" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.005;entryY=0.338;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-11" target="2OgW7ox5jOHKhb1XSsqK-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.429;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-10" target="2OgW7ox5jOHKhb1XSsqK-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-71" value="Mortality Data" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#f8cecc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="-40" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-72" value="Build up a future projection of profits and losses arising with confidence intervals&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2OgW7ox5jOHKhb1XSsqK-71">
+          <mxGeometry y="26" width="210" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.006;entryY=0.47;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.443;exitY=1.041;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-72" target="2OgW7ox5jOHKhb1XSsqK-52">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-127" y="110" />
+              <mxPoint x="-120" y="110" />
+              <mxPoint x="-120" y="159" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-74" target="2OgW7ox5jOHKhb1XSsqK-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-74" value="Intervention Program Data" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#f8cecc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="74" y="-160" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-75" value="Qualitatively analyse and choose&amp;nbsp;&lt;br&gt;ones we think look good and affect&lt;br&gt;a large proportion of the population" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2OgW7ox5jOHKhb1XSsqK-74">
+          <mxGeometry y="26" width="210" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-77" target="2OgW7ox5jOHKhb1XSsqK-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-77" value="Economic Data" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#f8cecc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="335" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-78" value="Determine discount rates heuristically&lt;br&gt;or make assumptions around it" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2OgW7ox5jOHKhb1XSsqK-77">
+          <mxGeometry y="26" width="210" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="2OgW7ox5jOHKhb1XSsqK-80" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.006;entryY=0.533;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2OgW7ox5jOHKhb1XSsqK-55" target="2OgW7ox5jOHKhb1XSsqK-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="305" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
