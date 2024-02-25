@@ -58,12 +58,12 @@ For all policyholder ages to complete annually upon purchasing a policy
 
 Ways it will achieve the project objectives:
 1. Lower frequency and severity of life insurance claim payouts:
-  a. Decrease Expected Mortality: By regular preventative health screenings, and through the overall development of healthy behaviours, the program aims to reduce the likelihood of premature death and decrease expected mortality rates of policyholders.
-  b. Increase Life Insurance Sales: The rewards and discounts offered through the program will incentivize participants to purchase SuperLife’s life insurance products, thereby increasing sales and revenue through new business.
-  c. Improve Product Marketability and Competitiveness: A comprehensive health incentive program will differentiate SuperLife’s offerings in the market, making them more attractive to consumers, hence creating a competitive advantage.
-  d. Add Economic Value to SuperLife: By promoting healthier lifestyles and reducing mortality rates, the program will ultimately add economic value to SuperLife through increased sales, customer loyalty, and improved overall profitability.
+  - Decrease Expected Mortality: By regular preventative health screenings, and through the overall development of healthy behaviours, the program aims to reduce the likelihood of premature death and decrease expected mortality rates of policyholders.
+  - Increase Life Insurance Sales: The rewards and discounts offered through the program will incentivize participants to purchase SuperLife’s life insurance products, thereby increasing sales and revenue through new business.
+  - Improve Product Marketability and Competitiveness: A comprehensive health incentive program will differentiate SuperLife’s offerings in the market, making them more attractive to consumers, hence creating a competitive advantage.
+  - Add Economic Value to SuperLife: By promoting healthier lifestyles and reducing mortality rates, the program will ultimately add economic value to SuperLife through increased sales, customer loyalty, and improved overall profitability.
 
-2. Incentivises Healthy Behaviour: The rewards system aims to motivate policyholders to participate in the program schemes in exchange for points that can be used to redeem cash or gift cards of well-known brands
+3. Incentivises Healthy Behaviour: The rewards system aims to motivate policyholders to participate in the program schemes in exchange for points that can be used to redeem cash or gift cards of well-known brands
   - indirectly encourages engagement in healthy activities, resulting in improved overall health outcomes.
 
 ## Pricing/Costs
