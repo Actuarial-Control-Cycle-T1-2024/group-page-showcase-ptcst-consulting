@@ -65,13 +65,19 @@ Taking a more personalised approach to the wellness plan, each new policyholder 
     safety techniques, e.g., proper lifting techniques for policyholders with manual labour jobs
 
 **Incentives for Intervention Program**
-SuperLife’s incentive scheme will be underpinned by a multi-level points-based reward system, where policyholders earn points for participating in features of their personalised health plan, such as participating in safety workshops and healthy eating workshops. 
+SuperLife’s incentive scheme will be underpinned by a multi-level reward system, where policyholders progress for participating in features of their personalised health plan, such as participating in safety workshops and healthy eating workshops.
 
-This system involves five levels, with each level offering different rewards (see IMAGE), which increase in value as policyholders progress. The points are linked to the features in the personalised health plans, which are associated with different values based on its effectiveness (refer to PLOT). Starting with 0 points upon policy purchase, these points can be earned to redeem rewards and, once reaching the Level 5, these points can be redeemed for discounts on Life Insurance premiums. Note, in order to remain at each level, the policyholder must annually earn the required points of that level, else, they regress to the previous level.
+This system is split into two reward categories, each with five levels, with policyholders starting on Level 1 upon signup:
+1. Subsidies on Interventions: increasing proportion of intervention program costs (in policyholder wellness plans), covered by SuperLife      as policyholders progress to higher levels
+   - Policyholders will only receive subsidies for the first 5 years of policy
+2. Premium Discounts: increasing discounts applied to policyholder premiums of SuperLife policies as policyholders progress to higher levels
+   - Only applies after policyholder is enrolled and participating  in wellness program for at least 5 years
 
-Additionally, there will be a referral aspect to this scheme, where policyholders who refer friends or family members to the health incentive program receive additional points for each successful referral.
+Each year, in the annual check-up, the policyholder will receive certain health goals to meet from medical practitioner, such as BMI requirements, heart-rate, cholesterol levels, etc.
+At the next annual check-up (based on policy inception date):
+- If the policyholder has met the previous year’s goals, they move up a level for the next year.
+- If the policyholder has not met the previous year’s , they move down a level. At this point, new goals will be determined by the medical    practitioner for the next year, and this cycle will repeat.
 
-<img width="852" alt="Screen Shot 2024-03-02 at 1 59 05 pm" src="https://github.com/tmadfouni/SOA2024/assets/85098929/af50bb56-e486-4e4f-835c-443b2d5251f1">
 IMAGE
 
 PLOT
