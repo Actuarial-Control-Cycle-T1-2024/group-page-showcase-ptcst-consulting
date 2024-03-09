@@ -119,6 +119,25 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 
 ## Pricing/Costs
 ## Assumptions
+| Variable                   | Assumption                                                                                          |
+|----------------------------|-----------------------------------------------------------------------------------------------------|
+| Inflation                  | Economic inflation rate from 2023 onwards is a constant 2% p.a. (see Appendix for justification)    |
+| Population                 | Closed population (based on 2023)                                                                   |
+| Interpolation              | Assume linear trend of mortality improvement across years                                           |
+| Interest-Rates             | Use concept of yield curve; assume it is upward-sloping and smooth                                  |
+| Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:                       |
+|                            | Safety Campaigns: 6 months                                                                          |
+|                            | Annual Health-Checkups: 5 years                                                                     |
+|                            | Discounted Gym-Memberships: 10 months                                                               |
+|                            | Weight Management Programs: 3 months                                                                |
+|                            | Cancer Prevention Initiatives: 9 years                                                              |
+|                            | Heart-Health Screenings: 5 years                                                                    |
+| Correlation                |                                                                                                     |
+|                            | Discounted gym memberships may have a positive correlation with weight management programs          |
+|                            | Cancer prevention initiatives may have a positive correlation with heart-health screenings          |
+|                            | Annual health checkups may have a positive correlation with weight management programs              |
+|                            | Heart-health screenings may have a positive correlation with cancer prevention initiatives          |
+
 ## Risk and Risk Mitigation Strategies
 
 **Risk Assessment Matrix**
