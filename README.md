@@ -169,12 +169,19 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 
 
 ## Data and Data Limitations
+**Data**
+
+No external data was used for the analysis. 
+
+
 **Data Limitations**
 | Limitation                   | Explanation                                                                                         |
 |------------------------------|-----------------------------------------------------------------------------------------------------|
-| Assumed homogeneity of data between insured population vs general population | The Superlife Inforce data set (2023 cohort) has been used as a representative sample of payout reduction for prospective policies [Appendix X]. The selection effects of the insured population versus the general population may compromise the accuracy of our analysis. |
+| Assumed homogeneity between insured population vs general population | The Superlife Inforce data set (2023 cohort) has been used as a representative sample of payout reduction for prospective policies [Appendix B]. The selection effects of the insured population versus the general population may compromise the accuracy of our analysis. |
 | Lack of gender differentiation in mortality table data | The discrepancies between female and male life expectancies in reality should be reflected in differences in their mortality rates. However, the mortality table does not distinguish between the two genders and thus, generalises our analysis by combining both genders. |
-| No data on policy premiums |
+| No data on policy premiums | Exact policy premiums were not provided. Hence, premiums were calculated based on the expected payout values, which compromises the accuracy of the estimated cash inflows. |
+| Blank entries (non N/A) for ‘Cause of Death’ data |
+| Historical economic data | Historical inflation rates, interest rates and spot rates were used to project future rates, thus compromising the accuracy of projected future revenue and costs. |
 
 
 ## Conclusion & Recommendations
@@ -184,3 +191,15 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 1. Sorted ​​program descriptions (in given data) to maximise impact on mortality rates whilst simultaneously minimising per capita cost of the scheme
 2. Plotted and identified leading causes of death (using given data) and mapped these to the associated intervention schemes
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigate the leading causes of death
+
+### Appendix B: Comparison of In Force data vs Population data
+To justify the assumed homogeneity between the SuperLife Inforce sample and the general Lumaria population, a comparison of the age distribution was performed, as per the table below. The discrepancy in the age distributions can be attributed to the SuperLife data only covering persons aged 25+. 
+
+| Age | Insured Data | Population Data | 
+|-----|--------------|-----------------|
+|0-14 |0%            |20%              |
+|15-24|0%            |18%              |
+|25-54|84.5%         |46%              |
+|55-64|14.3%         |12%              |
+|65+  |1.2%          |4%               |
+
