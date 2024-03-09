@@ -65,13 +65,21 @@ Taking a more personalised approach to the wellness plan, each new policyholder 
     safety techniques, e.g., proper lifting techniques for policyholders with manual labour jobs
 
 **Incentives for Intervention Program**
-SuperLife’s incentive scheme will be underpinned by a multi-level points-based reward system, where policyholders earn points for participating in features of their personalised health plan, such as participating in safety workshops and healthy eating workshops. 
 
-This system involves five levels, with each level offering different rewards (see IMAGE), which increase in value as policyholders progress. The points are linked to the features in the personalised health plans, which are associated with different values based on its effectiveness (refer to PLOT). Starting with 0 points upon policy purchase, these points can be earned to redeem rewards and, once reaching the Level 5, these points can be redeemed for discounts on Life Insurance premiums. Note, in order to remain at each level, the policyholder must annually earn the required points of that level, else, they regress to the previous level.
+SuperLife’s incentive scheme will be underpinned by a multi-level reward system, where policyholders progress for participating in features of their personalised health plan, such as participating in safety workshops and healthy eating workshops.
 
-Additionally, there will be a referral aspect to this scheme, where policyholders who refer friends or family members to the health incentive program receive additional points for each successful referral.
+This system is split into two reward categories, each with five levels, with policyholders starting on Level 1 upon signup:
+1. Subsidies on Interventions: increasing proportion of intervention program costs (in policyholder wellness plans), covered by SuperLife      as policyholders progress to higher levels
+   - Policyholders will only receive subsidies for the first 5 years of policy
+2. Premium Discounts: increasing discounts applied to policyholder premiums of SuperLife policies as policyholders progress to higher levels
+   - Only applies after the policyholder is enrolled and participating in wellness program for at least 5 years
 
-<img width="852" alt="Screen Shot 2024-03-02 at 1 59 05 pm" src="https://github.com/tmadfouni/SOA2024/assets/85098929/af50bb56-e486-4e4f-835c-443b2d5251f1">
+Each year, in the annual check-up, the policyholder will receive certain health goals from the medical practitioner, such as BMI requirements, heart rate, cholesterol levels, etc.
+At the next annual check-up (based on policy inception date):
+- If the policyholder has met the previous policy year’s goals, they move up a level for the next year.
+- If the policyholder has not met the previous policy year’s goals, they move down a level.
+At this point, revised goals for the upcoming policy year will be determined by the medical practitioner, and this cycle will repeat.
+
 IMAGE
 
 PLOT
@@ -111,8 +119,64 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 
 ## Pricing/Costs
 ## Assumptions
+| Variable                   | Assumption                                                                                          |
+|----------------------------|-----------------------------------------------------------------------------------------------------|
+| Inflation                  | Economic inflation rate from 2023 onwards is a constant 2% p.a. (see Appendix for justification)    |
+| Population                 | Closed population (based on 2023)                                                                   |
+| Interpolation              | Assume linear trend of mortality improvement across years                                           |
+| Interest-Rates             | Use concept of yield curve; assume it is upward-sloping and smooth                                  |
+| Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:                       |
+|                            | Safety Campaigns: 6 months                                                                          |
+|                            | Annual Health-Checkups: 5 years                                                                     |
+|                            | Discounted Gym-Memberships: 10 months                                                               |
+|                            | Weight Management Programs: 3 months                                                                |
+|                            | Cancer Prevention Initiatives: 9 years                                                              |
+|                            | Heart-Health Screenings: 5 years                                                                    |
+| Correlation                |                                                                                                     |
+|                            | Discounted gym memberships may have a positive correlation with weight management programs          |
+|                            | Cancer prevention initiatives may have a positive correlation with heart-health screenings          |
+|                            | Annual health checkups may have a positive correlation with weight management programs              |
+|                            | Heart-health screenings may have a positive correlation with cancer prevention initiatives          |
+
 ## Risk and Risk Mitigation Strategies
+
+**Risk Assessment Matrix**
+<br>
+<img width="1000" alt="image" src="https://github.com/tmadfouni/SOA2024/assets/85324306/604ae043-c287-4d71-8b8a-24bd3f7825ae">
+
+
+**Qualitative Risks (L)**
+| Risk | Explanation | Risk Matrix Score | Mitigation |
+|------|-------------|-------------------|------------|
+| L1. Program may be perceived as intrusive | Policyholders may feel that SuperLife’s access to their health data and the level of monitoring is intrusive leading to potential customers hesitating to purchase a life insurance policy with them. | 12 (High) | <ul><li>Ensuring there is transparency surrounding what health data will be used and how individuals will be monitored.</li><li>Ensuring that only the minimum required data is collected to complete the required work.</li><li>Providing options for policyholders to refrain from sharing certain data if they would like to keep it private.</li><li>Emphasising the benefits of participating so that they know their data is being used in their best interests</li></ul>|
+| L2. Dependence on Technology | It is likely that there will be a lot of technology used for monitoring purposes throughout the program. Some policyholders (e.g., the elderly population) may not have sufficient digital literacy leading to accessibility issues amongst different age groups. | 20 (Very High) | <ul><li>Provide good customer service and technology support.</li><li>Ensure a user friendly interface and clear instructions.</li></ul>|
+| L3. Exploitation of loopholes | Policyholders may exploit loopholes in the health program if monitoring is not stringent enough or if the completion of the program activities are easy to forge. E.g., if there is a daily requirement of 1000 steps, the policyholder could just attach their step counter device to their dog. | 6 (Moderate) | <ul><li>Define clear rules and criteria regarding what constitutes the completion/progression of the health program.</li><li>Carefully consider possible loopholes when developing the healthcare plan.</li><li>Monitor policyholder engagement patterns and investigate any suspicious activity.</li></ul>|
+| L4. Regulatory Compliance Risk | Using policyholder health data and constant health monitoring to determine e.g., premium reductions may be violating Lumarian regulations. | 20 (High) | <ul><li>Utilise regulatory and legal advisors whilst developing the program to ensure there is compliance to all relevant laws.</li><li>Conduct frequent audits to ensure ongoing compliance especially when there are changes to regulations.</li></ul>|
+| L5. Employee Resistance | Implementing a health program like this would require more work from employees since there would be more inquiries from policyholders and more information would need to be provided to customers. This concept is new so it would take quite a bit of work on the employees’ part to help customers understand and feel secure. | 12 (High) | <ul><li>Since more employees will need to be hired, make sure to hire individuals who are supportive of the program and its objectives.</li><li>Provide comprehensive training, guidance and resources so that they understand the program and its benefits.</li><li>Incentivise frontline workers to promote the new products.</li></ul>|
+| L6. Policyholders not adopting healthy behaviours | The policyholders may not adopt healthy behaviours in which case the program wouldn’t be that effective and the high initial costs to implement the program may not be compensated by decreased mortality in the future. | 12 (High) | <ul><li>Ensure participation incentives are sufficient to motivate participation. This could be done by conducting surveys and exploring existing data from other health care plans.</li><li>Providing tailored programs taking into account barriers to change and mitigating those accordingly.</li><li>Ensure that the policyholder understands the short and long term benefits of adherence.</li></ul>|
+| L7. Competitive Rivalry | Other insurance companies may implement similar health programs creating competition for SuperLife. | 12 (High) | <ul><li>Ensure that the program being provided by SuperLife has some differentiating aspect that isn’t easy to replicate, e.g., SuperLife could have an exclusive supply partnership with some other companies to provide unique incentives to policyholders.</li><li>Monitor the competition landscape continuously and ensure the program continues to have a differentiating factor and is reasonably priced.</li></ul>|
+| L8. Privacy Concerns | There is risk of privacy being breached. | 16 (Very High) | <ul><li>Ensure compliance with the relevant regulators. </li><li>Conduct frequent audits.</li><li>Create appropriate access controls and encryption.</li><li>Only collect the minimum data necessary to complete the required work.</li></ul>|
+
+**Quantitative Risks (T)**
+| Risk | Explanation | Risk Matrix Score | Mitigation |
+|------|-------------|-------------------|------------|
+| T1. Underestimation of Program Costs | The total initial and ongoing costs of the program may be underestimated leading to unforeseen expenses and challenges to maintain the program. | 12 (High) | <ul><li>Conduct thorough analysis of all potential costs including admin, incentive payouts, marketing, new employee salaries, training, etc.</li><li>Regularly update cost projections depending on inflation.</li><li>Ensure there are reserves to buffer unexpected costs.</li><li>Conduct sensitivity analysis to determine what would be an appropriate amount of reserves.</li></ul>| 
+| T2. Inaccurate Health Assessments (Counterparty Risk) | There is a possibility that third-party vendors and healthcare providers conduct inaccurate health assessments leading to mispricing of premiums or not providing the most effective incentives. | 8 (High) | <ul><li>Conduct due diligence on selected counterparty’s experience and expertise.</li><li>Define clear performance metrics.</li><li>Monitor and audit the performance of the counterparty.</li></ul>| 
+| T3. Adverse Selection | Individuals with higher health risks may be more likely to sign up to the program leading to higher claims and increased losses to SuperLife. | 16 (Very High) | <ul><li>Ensure high risk individuals are filtered out during the health assessment process using well defined underwriting guidelines.</li><li>Monitor the risk profile of individuals and make sure to adjust their premiums and incentives accordingly.</li></ul>| 
+| T4. Model Selection Risk | Potentially selecting an inadequate modelling for projecting the program outcomes leading to inaccurate predictions or biases. | 9 (High) | <ul><li>Understand the data and use suitable assumptions.</li><li>Compare models.</li><li>Evaluate model performance using metrics such as AIC/BIC and R-squared.</li><li>Update assumptions and model as the program evolves.</li></ul>| 
+| T5. Economic Assumptions Risk | Economic factors such as inflation and interest rates can be highly volatile. Because of this, any assumptions about these rates are likely to be incorrect leading to false projections and revenue forecasts. | 25 (Very High) | <ul><li>Assume constant inflation and interest rate since the high volatility of these factors means there is no added benefit or projecting these.</li><li>Conduct sensitivity analysis to assess economic scenario impact.</li><li>Regularly update economic assumptions.</li></ul>|
+| T6. Liquidity Risk | There may be inadequate liquidity to fund payouts and meet other financial obligations especially during the first few years of implementing the program. | 15 (Very High) | <ul><li>Conduct stress testing and cash-flow analysis.</li><li>Organise contingency funding arrangements e.g., reinsurance.</li><li>Monitor liquidity metrics regularly.</li></ul>|
+
+
 ## Data and Data Limitations
+**Data Limitations**
+| Limitation                   | Explanation                                                                                         |
+|------------------------------|-----------------------------------------------------------------------------------------------------|
+| Assumed homogeneity of data between insured population vs general population | The Superlife Inforce data set (2023 cohort) has been used as a representative sample of payout reduction for prospective policies [Appendix X]. The selection effects of the insured population versus the general population may compromise the accuracy of our analysis. |
+| Lack of gender differentiation in mortality table data | The discrepancies between female and male life expectancies in reality should be reflected in differences in their mortality rates. However, the mortality table does not distinguish between the two genders and thus, generalises our analysis by combining both genders. |
+| No data on policy premiums |
+
+
 ## Conclusion & Recommendations
 ## References
 ## Appendix 
