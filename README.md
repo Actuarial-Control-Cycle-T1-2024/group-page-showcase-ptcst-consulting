@@ -81,9 +81,10 @@ At the next annual check-up (based on policy inception date):
 - If the policyholder has not met the previous policy year’s goals, they move down a level.
 At this point, revised goals for the upcoming policy year will be determined by the medical practitioner, and this cycle will repeat.
 
-IMAGE
-
-PLOT
+![Screen Shot 2024-03-10 at 10 14 42 am](https://github.com/tmadfouni/SOA2024/assets/85098929/f38ab3f8-440e-4369-b73f-0e68d3f75d63)
+Incentive Scheme Structure
+![Screen Shot 2024-03-10 at 10 15 19 am](https://github.com/tmadfouni/SOA2024/assets/85098929/8e7a250a-9730-4139-b327-7f4cad8ff1d6)
+Incentive Scheme Rewards
 
 **Justification of Program Features**:
 
@@ -126,17 +127,16 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 | Population                 | Closed population (based on 2023)                                                                   |
 | Interpolation              | Assume linear trend of mortality improvement across years                                           |
 | Interest-Rates             | Use concept of yield curve; assume it is upward-sloping and smooth                                  |
-| Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:                       |
-|                            | Safety Campaigns: 6 months                                                                          |
-|                              Annual Health-Checkups: 5 years                                                                     |
-|                              Discounted Gym-Memberships: 10 months                                                               |
-|                              Weight Management Programs: 3 months                                                                |
-|                              Cancer Prevention Initiatives: 9 years                                                              |
-|                              Heart-Health Screenings: 5 years                                                                    |
-| Correlation                |                                                                                                     |
-|                              Discounted gym memberships may have a positive correlation with weight management programs          |
-|                              Cancer prevention initiatives may have a positive correlation with heart-health screenings          |
-|                              Annual health checkups may have a positive correlation with weight management programs              |
+| Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:                       
+|                              - Safety Campaigns: 6 months                                                                        
+|                              - Annual Health-Checkups: 5 years                                                                   
+|                              - Discounted Gym-Memberships: 10 months                                                             
+|                              - Weight Management Programs: 3 months                                                              
+|                              - Cancer Prevention Initiatives: 9 years                                                            
+|                              - Heart-Health Screenings: 5 years                                                                  |
+| Correlation                | Discounted gym memberships may have a positive correlation with weight management programs          
+|                              Cancer prevention initiatives may have a positive correlation with heart-health screenings          
+|                              Annual health checkups may have a positive correlation with weight management programs              
 |                              Heart-health screenings may have a positive correlation with cancer prevention initiatives          |
 
 ## Sensitivity Analysis
