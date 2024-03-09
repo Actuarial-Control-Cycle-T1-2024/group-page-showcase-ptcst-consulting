@@ -169,6 +169,14 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 
 
 ## Data and Data Limitations
+**Data Limitations**
+| Limitation                   | Explanation                                                                                         |
+|------------------------------|-----------------------------------------------------------------------------------------------------|
+| Assumed homogeneity of data between insured population vs general population | The Superlife Inforce data set (2023 cohort) has been used as a representative sample of payout reduction for prospective policies [Appendix X]. The selection effects of the insured population versus the general population may compromise the accuracy of our analysis. |
+| Lack of gender differentiation in mortality table data | The discrepancies between female and male life expectancies in reality should be reflected in differences in their mortality rates. However, the mortality table does not distinguish between the two genders and thus, generalises our analysis by combining both genders. |
+| No data on policy premiums |
+|
+
 ## Conclusion & Recommendations
 ## References
 ## Appendix 
