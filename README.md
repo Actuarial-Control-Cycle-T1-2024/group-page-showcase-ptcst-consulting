@@ -75,16 +75,23 @@ This system is split into two reward categories, each with five levels, with pol
 2. Premium Discounts: increasing discounts applied to policyholder premiums of SuperLife policies as policyholders progress to higher levels
    - Only applies after the policyholder is enrolled and participating in wellness program for at least 5 years
 
+|        | **Level 1** | **Level 2** | **Level 3** | **Level 4** | **Level 5** |
+|--------|---------|---------|---------|---------|---------|
+| **Subsidies on Interventions** | 0% | 2.5% | 5% | 7.5% | 10%|
+| **Premium Discounts** | 0% | 2% | 4% | 6% | 8% | 
+|:--:| 
+| *Incentive Scheme Structure* |
+
 Each year, in the annual check-up, the policyholder will receive certain health goals from the medical practitioner, such as BMI requirements, heart rate, cholesterol levels, etc.
 At the next annual check-up (based on policy inception date):
 - If the policyholder has met the previous policy year’s goals, they move up a level for the next year.
 - If the policyholder has not met the previous policy year’s goals, they move down a level.
 At this point, revised goals for the upcoming policy year will be determined by the medical practitioner, and this cycle will repeat.
 
-![Screen Shot 2024-03-10 at 10 14 42 am](https://github.com/tmadfouni/SOA2024/assets/85098929/f38ab3f8-440e-4369-b73f-0e68d3f75d63)
-Incentive Scheme Structure
-![Screen Shot 2024-03-10 at 10 15 19 am](https://github.com/tmadfouni/SOA2024/assets/85098929/8e7a250a-9730-4139-b327-7f4cad8ff1d6)
-Incentive Scheme Rewards
+| Subsidies on Interventions | Premium Discounts |
+| Base Rates:<ul><li>Safety Campaigns: 90%</li><li>Annual Checkup: 100% (fully subsidized)</li><li>- treated as fixed premium increase</li><li>Gym Membership: 40%</li><li>Weight Management: 60%</li><li>Cancer Prevention: 90%</li><li>Heart Screenings: 55%</li></ul> | Base Rates:<ul><li>Premium determined by Equivalence Principle based on cost of (personalized) intervention programs</li><li></li></ul> |
+|:--:| 
+| _Incentive Scheme Rewards_ |
 
 **Justification of Program Features**:
 
@@ -127,17 +134,8 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 | Population                 | Closed population (based on 2023)                                                                   |
 | Interpolation              | Assume linear trend of mortality improvement across years                                           |
 | Interest-Rates             | Use concept of yield curve; assume it is upward-sloping and smooth                                  |
-| Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:                       
-|                              - Safety Campaigns: 6 months                                                                        
-|                              - Annual Health-Checkups: 5 years                                                                   
-|                              - Discounted Gym-Memberships: 10 months                                                             
-|                              - Weight Management Programs: 3 months                                                              
-|                              - Cancer Prevention Initiatives: 9 years                                                            
-|                              - Heart-Health Screenings: 5 years                                                                  |
-| Correlation                | Discounted gym memberships may have a positive correlation with weight management programs          
-|                              Cancer prevention initiatives may have a positive correlation with heart-health screenings          
-|                              Annual health checkups may have a positive correlation with weight management programs              
-|                              Heart-health screenings may have a positive correlation with cancer prevention initiatives          |
+| Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:<ul><li>Safety Campaigns: 6 months</li><li>Annual Health-Checkups: 5 years</li><li>Discounted Gym-Memberships: 10 months</li><li>Weight Management Programs: 3 months</li><li>Cancer Prevention Initiatives: 9 years</li><li>Heart-Health Screenings: 5 years</li></ul> |
+| Correlation                |<ul><li>Discounted gym memberships may have a positive correlation with weight management programs</li><li>Cancer prevention initiatives may have a positive correlation with heart-health screenings</li><li>Annual health checkups may have a positive correlation with weight management programs</li><li>Heart-health screenings may have a positive correlation with cancer prevention initiatives</li></ul>|
 
 ## Sensitivity Analysis
 
