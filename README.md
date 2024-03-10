@@ -19,13 +19,16 @@ The main objectives of the proposed program are to:
 1. Reduce the frequency and severity of life insurance claim payouts for the company
 2. Incentivise healthier behaviours of policyholders
 
-These two objectives work together to increase the profitability of the Life Insurance company and can be measured by key metrics including:
-- mortality rates of policyholders
-- expected policy profits
-- new business signups
-- expected death payouts
+These two objectives work together to increase the profitability of SuperLife and will be measured by the following key metrics:
+| Key Metric | Frequency |
+|------------|-----------|
+| Mortality Rates of Policyholders | Annually for the first 5 years, then once every 5 years |
+| Expected Death Payouts | Annually |
+| Number of New Business Signups | Annually |
+| Expected Policy Profits & Costs | Annually |
+| Satisfaction Rate (NPS Score) | Annually for the first 5 years, then once every 5 years |
 
-These metrics will be continuously monitored over time, with the program being reviewed every 5 years to assess whether it is still achieving these main objectives, and modify the program's features and/or pricing if necessary.
+Given these metrics, the wellness program will be reviewed as a whole every 5 years to assess whether it is still achieving its main objectives, and modify the program's features and/or pricing if necessary.
 
 ## Program Design
 PTCST Consulting developed a comprehensive health incentive program for SuperLife that incentivises participation by offering external benefits through a rewards scheme, and policy-related benefits through premium reductions.
@@ -34,36 +37,33 @@ PTCST Consulting developed a comprehensive health incentive program for SuperLif
 Taking a more personalised approach to the wellness plan, each new policyholder over the age of 25 will undergo an initial, compulsory health and heart check-up, that will form the basis of their personalised health plan. This personalised health plan will include some or all of the following program features, and will be revised each year, based on the results of the policyholder’s annual health check-up:
 
 1.	Annual Health Check-ups:
-  - Comprehensive annual health check-up (and immediately for all new policyholders) that provides free or discounted health screenings for various conditions, including blood pressure checks, cholesterol tests, and diabetes screenings
-  - Used to develop personalised health plan
+     - Comprehensive annual health check-up (and immediately for all new policyholders) that provides free or discounted health screenings for various conditions, including blood pressure checks, cholesterol tests, and diabetes screenings
+     - Used to develop personalised health plan
 
 2.	Heart Health Screenings:
-  - Offer to policyholders to gauge risk of a heart attack or stroke in the next 5 years
-    - Use to develop features of personalised health plan, e.g., following a heart-healthy eating pattern, increasing exercise, maintaining a
-      healthy weight and reducing tobacco use
-  - For all policyholder ages to complete annually upon purchasing a policy
+     - Offer to policyholders to gauge risk of a heart attack or stroke in the next 5 years
+     - Use to develop features of personalised health plan, e.g., following a heart-healthy eating pattern, increasing exercise, maintaining a healthy weight and reducing tobacco use
+     - For all policyholder ages to complete annually upon purchasing a policy
 
 3.	Cancer Prevention Initiatives:
-  - Personalised based on policyholder’s lifestyle factors, including diet, tobacco use, physical activity.
-    - offer personalised educational resources on lifestyle improvements and its effect on reducing cancer risk
-  - Provide access to genetic testing for policyholders with a family history of cancer
+     - Personalised based on policyholder’s lifestyle factors, including diet, tobacco use, physical activity.
+     - Offer personalised educational resources on lifestyle improvements and its effect on reducing cancer risk
+     - Provide access to genetic testing for policyholders with a family history of cancer
 
 4.	Discounted Gym Memberships:
-  - Partner with large franchise gym centres to offer discounted gym memberships to policyholders’ closest local gym
-  - Provide access to virtual fitness classes and online workout programs for policyholders who elect to exercise at home
+     - Partner with large franchise gym centres to offer discounted gym memberships to policyholders’ closest local gym
+     - Provide access to virtual fitness classes and online workout programs for policyholders who elect to exercise at home
 
 5.	Weight Management Programs:
-  - Develop personalised weight management program, with potential aspects of:
-    - Dietitian appointments
-    - Healthy cooking classes
-    - Healthy eating workshops
+     - Develop personalised weight management program, with potential aspects of:
+         - Dietitian appointments
+         - Healthy cooking classes
+         - Healthy eating workshops
 
 6.	Safety Campaigns:
-  - Provide both general and personalised safety workshops, based on policyholder’s profile, that aim to promote healthy living and injury
-    prevention
-  - General workshops and webinars on fire safety, home safety and safe driving
-  - Create personalised (i.e., by industry) workplace safety campaigns that offers tips on work stress management, ergonomic practices and key
-    safety techniques, e.g., proper lifting techniques for policyholders with manual labour jobs
+     - Provide both general and personalised safety workshops, based on policyholders' profiles, that aim to promote healthy living and injury prevention
+     - General workshops and webinars on fire safety, home safety and safe driving
+     - Create personalised (i.e., by industry) workplace safety campaigns that offers tips on work stress management, ergonomic practices and key safety techniques, e.g., proper lifting techniques for policyholders with manual labour jobs
 
 **Incentives for Intervention Program**
 
@@ -79,19 +79,19 @@ This system is split into two reward categories, each with five levels, with pol
 |--------|---------|---------|---------|---------|---------|
 | **Subsidies on Interventions** | 0% | 2.5% | 5% | 7.5% | 10%|
 | **Premium Discounts** | 0% | 2% | 4% | 6% | 8% | 
-
-_Table 1A: Incentive Scheme Structure_
+[Table 1A: Incentive Scheme Structure]
 
 Each year, in the annual check-up, the policyholder will receive certain health goals from the medical practitioner, such as BMI requirements, heart rate, cholesterol levels, etc.
 At the next annual check-up (based on policy inception date):
 - If the policyholder has met the previous policy year’s goals, they move up a level for the next year.
 - If the policyholder has not met the previous policy year’s goals, they move down a level.
+  
 At this point, revised goals for the upcoming policy year will be determined by the medical practitioner, and this cycle will repeat.
 
 | Subsidies on Interventions | Premium Discounts |
+|----------------------------|-------------------|
 | Base Rates:<ul><li>Safety Campaigns: 90%</li><li>Annual Checkup: 100% (fully subsidized)</li><li>- treated as fixed premium increase</li><li>Gym Membership: 40%</li><li>Weight Management: 60%</li><li>Cancer Prevention: 90%</li><li>Heart Screenings: 55%</li></ul> | Base Rates:<ul><li>Premium determined by Equivalence Principle based on cost of (personalized) intervention programs</li><li></li></ul> |
-
-_Table 1B: Incentive Scheme Rewards_ 
+[Table 1B: Incentive Scheme Rewards]
 
 **Justification of Program Features**:
 
@@ -127,6 +127,11 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 
 
 ## Pricing/Costs
+**Method**
+**Short-Term Projections**
+**Long-Term Projections**
+**Solvency Capital Requirements**
+
 ## Assumptions
 | Variable                   | Assumption                                                                                          |
 |----------------------------|-----------------------------------------------------------------------------------------------------|
