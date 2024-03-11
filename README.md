@@ -102,7 +102,7 @@ _Qualitative_:
 2. Incentivises Healthy Behaviour through…
   - Participation in the Program: material rewards system uses gamification elements, such as progressing to higher reward tiers, to motivates
     policyholders to make lasting health changes
-  - social support aspect of program features, such as group healthy cooking or exercise classes, encourages engagement and make it easily
+  - Social support aspect of program features, such as group healthy cooking or exercise classes, encourages engagement and make it easily
     accessible
 3.	Increases SuperLife’s overall profitability by…
   - Increasing Life Insurance Sales: rewards and discounts offered through the program will incentivise participants to purchase SuperLife’s life
@@ -121,7 +121,7 @@ Intervention Program Selection Methodology:
 
 **Justification of Short-and-Long-term Timeframes**
 - Short-term timeframe is the 5-year period from 2023 (2023–2028)
-Evaluating the wellness program within the next 5 years is a sufficient amount of time for Superlife to start seeing the impact on mortality rates, but not too extensive so as to allow them to adjust the program if needed, based on feedback and results, to ensure it achieves the project goals.
+Evaluating the wellness program within the next 5 years is a sufficient amount of time for SuperLife to start seeing the impact on mortality rates, but not too extensive so as to allow them to adjust the program if needed, based on feedback and results, to ensure it achieves the project goals.
 - Long-term timeframe of the 30-year period from 2023 (2023-2053)
 SuperLife offers products such as whole life, 20- and 30-year term insurance, and universal life products and hence have long-term implications for policyholders. Hence, this timeframe allows Superlife to recognise the long-term benefits in terms of lower mortality rates and higher customer retention.
 
@@ -140,7 +140,7 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 | Interpolation              | Assume linear trend of mortality improvement across years                                           |
 | Interest-Rates             | Use concept of yield curve; assume it is upward-sloping and smooth                                  |
 | Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:<ul><li>Safety Campaigns: 6 months</li><li>Annual Health-Checkups: 5 years</li><li>Discounted Gym-Memberships: 10 months</li><li>Weight Management Programs: 3 months</li><li>Cancer Prevention Initiatives: 9 years</li><li>Heart-Health Screenings: 5 years</li></ul> |
-| Correlation                |<ul><li>Discounted gym memberships may have a positive correlation with weight management programs</li><li>Cancer prevention initiatives may have a positive correlation with heart-health screenings</li><li>Annual health checkups may have a positive correlation with weight management programs</li><li>Heart-health screenings may have a positive correlation with cancer prevention initiatives</li></ul>|
+| Correlation                |<ul><li>Discounted gym memberships may have a positive correlation with weight management programs</li><li>Cancer prevention initiatives may have a positive correlation with heart-health screenings</li><li>Annual health checkups may have a positive correlation with weight management programs</li></ul>|
 
 ## Sensitivity Analysis
 
