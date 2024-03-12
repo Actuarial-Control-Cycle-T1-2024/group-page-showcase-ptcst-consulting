@@ -6,18 +6,20 @@ require(mvtnorm)
 
 # LOADING DATA
 
-mort_table = as.vector(read_excel("Data/Altered Mortality Tables.xlsx", sheet = "standard"))[[1]]
-mort_table[120] = Inf
+mort_table = readRDS("Data/ult_lt.RDS")
+mort_table = rbind(data.table(age = 0:25, male_qx = NA, female_qx = NA, standard = NA) , mort_table)
+
+
+lapse_data = readRDS("Data/lapse_rates.RDS")
 ins_data = readRDS("Data/SuperLife Inforce Dataset.rds")
 proj_data = ins_data[issue_year == 2023]
-example = ins_data[issue_year == 2023][1]
 
 # PARAMETERS
 # Intervention Programs
 
 intervention_progs = list(
   safety_campaigns = list(effect_l = 0.03, effect_u = 0.05, cost_l = 10, cost_u = 35, horizon = 1, signup = 0.7, sub_rate = 0.9, effect_reduction = TRUE),
-  annual_checkup = list(effect_l = 0.05, effect_u = 0.1, cost_l = 175, cost_u = 870, horizon = 5, signup = 1, sub_rate = 0.4, effect_reduction = FALSE),
+  annual_checkup = list(effect_l = 0.05, effect_u = 0.1, cost_l = 175, cost_u = 870, horizon = 5, signup = 1, sub_rate = 1, effect_reduction = FALSE),
   discount_gym = list(effect_l = 0.03, effect_u = 0.06, cost_l = 175, cost_u = 870, horizon = 1, signup = 0.3, sub_rate = 0.4, effect_reduction = TRUE),
   weight_mgmt = list(effect_l = 0.05, effect_u = 0.1, cost_l = 175, cost_u = 870, horizon = 1, signup = 0.6, sub_rate = 0.6, effect_reduction = TRUE),
   cancer_prevention = list(effect_l = 0.05, effect_u = 0.1, cost_l = 20, cost_u = 85, horizon = 9, signup = 0.6, sub_rate = 0.9, effect_reduction = TRUE),
@@ -85,7 +87,7 @@ gen_costs = function(prog) {
   participation = runif(nrow(full_data)) < prog$signup
   participation = ifelse(!goal_meeter & prog$effect_reduction, 0, participation)
   participation = as.numeric(participation)
-  costs = (prog$sub_rate + goal_meeter * 0.1) * runif(nrow(full_data), prog$cost_l, prog$cost_u)
+  costs = min(1, (prog$sub_rate + goal_meeter * 0.1)) * runif(nrow(full_data), prog$cost_l, prog$cost_u)
   return(list(costs * participation, participation))
 }
 
@@ -107,7 +109,7 @@ full_data[, c("cost", "cancer_prevention") := list(cost + gen[[1]], gen[[2]])]
 gen = gen_costs(intervention_progs[['heart_screenings']])
 full_data[, c("cost", "heart_screenings") := list(cost + gen[[1]], gen[[2]])]
 
-full_data[, `:=`(face_amount = proj_data$face_amount, issue_age = proj_data$issue_age, policy_end_age = proj_data$policy_end_age)]
+full_data[, `:=`(face_amount = proj_data$face_amount, issue_age = proj_data$issue_age, policy_end_age = proj_data$policy_end_age, sex = proj_data$sex)]
 
 for (i in 1:nrow(full_data)) {
   if (i %% 1000 == 0) {
@@ -125,18 +127,20 @@ for (i in 1:nrow(full_data)) {
   }
 }
 
-premium_under_base = function(entry, mort_table, interest) {
+# saveRDS(full_data, "Data/program_gens.RDS")
+
+premium_under_base = function(issue_age, policy_end_age, mort_table, discount_factor) {
   cum_surv = 1
   exp_payment = 1
   exp_payout = 0
-  discount_factor = 1/(1+interest)
   
-  for (i in (entry$issue_age + 1):entry$policy_end_age) {
-    if (i > entry$issue_age + 1) {
-      cum_surv = cum_surv * exp(-mort_table[i-1])
-      exp_payment = exp_payment + cum_surv * discount_factor^(i - (entry$issue_age + 1))
+  for (i in issue_age:(policy_end_age - 1)) {
+    if (i > issue_age) {
+      cum_surv = cum_surv * (1 - mort_table[i] - get_lapse(i, issue_age))
+      exp_payment = exp_payment + cum_surv * discount_factor^(i - issue_age)
     }
-    exp_payout = exp_payout + cum_surv * (1 - exp(-mort_table[i])) * discount_factor^(i - entry$issue_age)
+    exp_payout = exp_payout + cum_surv * mort_table[i + 1] * discount_factor^(i - issue_age + 1)
+    # print(paste("Surv", i-1,"age and die in", i, "year of age. With discount", i - issue_age + 1))
       
   }
   
@@ -146,49 +150,81 @@ premium_under_base = function(entry, mort_table, interest) {
 
 
 
-mort_reductions = function(entry, curr_age) {
+mort_reductions = function(mort_reds, issue_age, intervention_progs, curr_age) {
   mort_reduction = 0
-  for (p in colnames(entry)[1:6]) {
+  for (p in 1:6) {
     prog = intervention_progs[[p]]
-    if (entry[, p] > 0 && curr_age - entry$issue_age <= prog$horizon) {
-      mort_reduction = mort_reduction + entry[, p] / prog$horizon
+    if (mort_reds[p] > 0 && curr_age - issue_age + 1 <= prog$horizon) {
+      mort_reduction = mort_reduction + mort_reds[p] / prog$horizon
     }
   }
-  return(mort_reduction)
+  return(unname(mort_reduction))
 }
 
-
+get_lapse = function(curr_age, issue_age) {
+  duration = curr_age - issue_age
+  if (duration == 0) {
+    return(lapse_data$rate[1])
+  } else if (duration %in% 1:4) {
+    return(lapse_data$rate[2])
+  } else if (duration %in% 5:9) {
+    return(lapse_data$rate[3])
+  } else {
+    return(lapse_data$rate[4])
+  }
+}
 
 
 
 model_func = function(intervention_progs, mort_table, entry, interest) {
   discount_factor = 1/(1+interest)
-  base_values = premium_under_base(entry, mort_table, interest)
+  
+  mort_rates = NA 
+  if (entry$sex == "M") {
+    mort_rates = mort_table$male_qx
+  } else {
+    mort_rates = mort_table$female_qx
+  }
+  
+  # Because of stupid data table
+  cost = unlist(entry$cost)
+  mort_reds = unlist(entry[, 1:6])
+  face_amount = unlist(entry$face_amount)
+  issue_age = unlist(entry$issue_age)
+  policy_end_age = unlist(entry$policy_end_age)
+  checkup_cost = unlist(entry$checkup_cost)
   
   death_costs = c()
+  premiums = c()
+  expenses = c()
   
   cum_surv = 1
   epv_annuity_new_rates = 0
   mort_reduction = 0
   
-  for (i in (entry$issue_age + 1):entry$policy_end_age) {
+  base_values = premium_under_base(issue_age, policy_end_age, mort_rates, discount_factor)
+  
+  for (i in issue_age:(policy_end_age - 1)) {
     # If applicable mortality reductions still have time in horizon, apply effects
-    mort_reduction = mort_reduction + mort_reductions(entry, i)
-    
+    mort_reduction = mort_reduction + mort_reductions(mort_reds, issue_age, intervention_progs, i)
+
     # Accounting for no requirement for cumulative survival in first year of policy
-    if (i > entry$issue_age + 1) {
-      cum_surv = cum_surv * exp(-mort_table[i-1] * (1 - mort_reduction))
+    if (i > issue_age) {
+      cum_surv = cum_surv * (1 - mort_rates[i] * (1 - mort_reduction) - get_lapse(i, issue_age))
     }
     death_costs = c(death_costs,
-                    cum_surv * (1 - exp(-mort_table[i] * (1 - mort_reduction))) * discount_factor^(i - entry$issue_age))
-    epv_annuity_new_rates = epv_annuity_new_rates + cum_surv * discount_factor^(i - (entry$issue_age + 1))
+                    unlist(cum_surv * mort_rates[i + 1] * (1 - mort_reduction) ) * discount_factor)
+    expenses = c(expenses, unlist(cum_surv)  * discount_factor)
+    premiums = c(premiums, unlist(cum_surv)  * discount_factor)
+    epv_annuity_new_rates = epv_annuity_new_rates + cum_surv * discount_factor
   }
+
   
-  premium = (entry$face_amount * base_values$exp_payout + 
-               0.5 * entry$checkup_cost * epv_annuity_new_rates) / base_values$exp_payment
-  
-  vals = data.table(year = 2023:(2023 + entry$policy_end_age - entry$issue_age - 1), premium = premium,
-                    expenses = entry$cost, exp_death_costs = entry$face_amount * death_costs)
+  # 0.5 * checkup_cost * epv_annuity_new_rates gives the amount extra per premium that customers pay, but we don't receive because it goes
+  premium = (face_amount * base_values$exp_payout +
+               0.5 * checkup_cost * epv_annuity_new_rates) / base_values$exp_payment
+  vals = data.table(year = 2023:(2023 + policy_end_age - issue_age - 1), premium = premium * premiums,
+                    expenses = cost * expenses, exp_death_costs = face_amount * death_costs)
 
   vals
 }
@@ -199,12 +235,11 @@ final_frame = data.table(year = 2023:(2023 + max(ins_data$policy_end_age - ins_d
                          expenses = 0,
                          exp_death_costs = 0)
 
-for (i in 1:10000) {
+for (i in 1:3000) {
   if (i %% 1000 == 0) {
     print(paste("Passing", i))
   }
-  res = model_func(intervention_progs, mort_table, data_2023[i], 0.02)
-
+  res = model_func(intervention_progs, mort_table, full_data[i], 0.035)
   final_frame[1:nrow(res),
               `:=`(
                 premium = premium + res$premium,
@@ -212,5 +247,24 @@ for (i in 1:10000) {
                 exp_death_costs = exp_death_costs + res$exp_death_costs
               )]
 }
+
+
+
+
+
+# saveRDS(final_frame, "Data/single_cohort_profits.RDS")
+
+
+# final_frame = readRDS("Data/temp2_TETIAN.RDS")
+# og_frame = final_frame
+# for (i in 1:80) {
+#   # plot(final_frame[, year], final_frame[, premium - expenses - exp_death_costs])
+#   # Sys.sleep(1)
+#   new = shift(og_frame[, 2:4] * (1/1.02)^i, n = i, fill = 0)
+#   final_frame[, 2:4] = final_frame[, 2:4] + new
+#   
+# }
+# 
+# plot(final_frame[, year], final_frame[, premium - expenses - exp_death_costs])
 
 
