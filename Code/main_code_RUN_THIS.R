@@ -1,6 +1,7 @@
 # STILL REMAINING TO DO (but negligible)
 # ADD HARD LIMITS ON MULTIVARIATE NORMAL SIM
 # ADD MALE vs. FEMALE LIFE TABLE 
+# ADD FEMALE MORTALITY RATES PROPERLY
 
 # PARAMS
 # effect_u/effect_l/cost_u/cost_l lower and upper limits of cost and effects
@@ -56,7 +57,9 @@ premium_disc = 0.1
 
 interest = 0.03
 
-source("Code/actually_pricing_interventions.R")
+source("Code/supplementary_to_main.R")
 
 res = sim_func(intervention_progs, mort_table, full_data, interest)
-
+rm(categs, full_data, covs, gen, ins_data, lapse_data, mort_table,
+   proj_data, reduct, sims, goal_meeter, group, partic, gen_costs,
+   i, means, get_lapse)
