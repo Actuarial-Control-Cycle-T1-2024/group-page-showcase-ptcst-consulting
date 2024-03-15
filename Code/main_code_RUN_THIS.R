@@ -11,6 +11,8 @@
 # effect_reduction - TRUE if the effect is only felt if someone puts effort in
 #                    i.e. heart checks help anyway, but gym memberships dont.
 
+set.seed(1234)
+
 intervention_progs = list(
   safety_campaigns = list(effect_l = 0.03, effect_u = 0.05, cost_l = 10, cost_u = 35, horizon = 1, signup = 0.7, sub_rate = 0.9, effect_reduction = TRUE),
   annual_checkup = list(effect_l = 0.05, effect_u = 0.1, cost_l = 175, cost_u = 870, horizon = 5, signup = 1, sub_rate = 1, effect_reduction = FALSE),

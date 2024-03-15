@@ -94,15 +94,30 @@ for (i in 1:nrow(categs)) {
 
 full_data[, 1:6] = shift(reduct[,1:6], 0)
 
+# get_lapse = function(duration) {
+#   rates = lapse_data$rate
+#   case_when(
+#     duration == 0 ~ rates[1],
+#     duration <= 4 ~ rates[2],
+#     duration <= 9 ~ rates[3],
+#     .default = rates[4]
+#   )
+# }
+
 get_lapse = function(duration) {
   rates = lapse_data$rate
-  case_when(
-    duration == 0 ~ rates[1],
-    duration <= 4 ~ rates[2],
-    duration <= 9 ~ rates[3],
-    .default = rates[4]
-  )
+  if (duration == 0) {
+    rates[1]
+  } else if (duration <= 4) {
+    rates[2]
+  } else if (duration <= 9) {
+    rates[3]
+  } else {
+    rates[4]
+  }
 }
+
+get_lapse = Vectorize(get_lapse)
 
 sim_func = function(intervention_progs, mort_table, data, interest) {
   
