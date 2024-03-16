@@ -10,7 +10,8 @@ Group Members: Chloe Kostopoulos, Sarah Lou, Tetian Madfouni, Tanvi Vakkalagadda
 - [Sensitivity Analysis](#SensitivityAnalysis)
 - [Risk and Risk Mitigation Strategies](#RiskandRiskMitigationStrategies)
 - [Data and Data Limitations](#DataandDataLimitations)
-- [Conclusion & Recommendations](#Conclusion&Recommendations)
+- [Further Recommendations](#FurtherRecommendations)
+- [Conclusion](#Conclusion)
 - [References](#References)
 - [Appendix](#Appendix)
 ## Executive Summary
@@ -22,7 +23,7 @@ The main objectives of the proposed program are to:
 These two objectives work together to increase the profitability of SuperLife and will be measured by the following key metrics:
 | Key Metric | Frequency |
 |------------|-----------|
-| Mortality Rates of Policyholders | Annually for the first 5 years, then once every 5 years |
+| Mortality Rates of Policyholders | Annually for first 5 years, then once every 5 years |
 | Expected Death Payouts | Annually |
 | Number of New Business Signups | Annually |
 | Expected Policy Profits & Costs | Annually |
@@ -34,7 +35,7 @@ Given these metrics, the wellness program will be reviewed as a whole every 5 ye
 PTCST Consulting developed a comprehensive health incentive program for SuperLife that incentivises participation by offering external benefits through a rewards scheme, and policy-related benefits through premium reductions.
 
 **Features**
-Taking a more personalised approach to the wellness plan, each new policyholder over the age of 25 will undergo an initial, compulsory health and heart check-up, that will form the basis of their personalised health plan. This personalised health plan will include some or all of the following program features, and will be revised each year, based on the results of the policyholder’s annual health check-up:
+Taking a more personalised approach to the wellness plan, each new policyholder over the age of 25 will undergo an initial, compulsory health and heart check-up, that will form the basis of their personalised health plan. This personalised health plan will include some or all of the following program features, and will be revised each year, based on the results of the policyholder’s annual health and heart check-ups:
 
 1.	Annual Health Check-ups:
      - Comprehensive annual health check-up (and immediately for all new policyholders) that provides free or discounted health screenings for various conditions, including blood pressure checks, cholesterol tests, and diabetes screenings
@@ -67,7 +68,7 @@ Taking a more personalised approach to the wellness plan, each new policyholder 
 
 **Incentives for Intervention Program**
 
-SuperLife’s incentive scheme will be underpinned by a multi-level reward system, where policyholders progress for participating in features of their personalised health plan, such as participating in safety workshops and healthy eating workshops.
+SuperLife’s incentive scheme is underpinned by a multi-level reward system, where policyholders progress by participating in features of their personalised health plan, such as participating in safety workshops and healthy eating workshops.
 
 This system is split into two reward categories, each with five levels, with policyholders starting on Level 1 upon signup:
 1. Subsidies on Interventions: increasing proportion of intervention program costs (in policyholder wellness plans), covered by SuperLife      as policyholders progress to higher levels
@@ -79,7 +80,7 @@ This system is split into two reward categories, each with five levels, with pol
 |--------|---------|---------|---------|---------|---------|
 | **Subsidies on Interventions** | 0% | 2.5% | 5% | 7.5% | 10%|
 | **Premium Discounts** | 0% | 2% | 4% | 6% | 8% | 
-[Table 1A: Incentive Scheme Structure]
+_Table 1A: Incentive Scheme Structure_
 
 Each year, in the annual check-up, the policyholder will receive certain health goals from the medical practitioner, such as BMI requirements, heart rate, cholesterol levels, etc.
 At the next annual check-up (based on policy inception date):
@@ -91,7 +92,13 @@ At this point, revised goals for the upcoming policy year will be determined by 
 | Subsidies on Interventions | Premium Discounts |
 |----------------------------|-------------------|
 | Base Rates:<ul><li>Safety Campaigns: 90%</li><li>Annual Checkup: 100% (fully subsidized)</li><li>- treated as fixed premium increase</li><li>Gym Membership: 40%</li><li>Weight Management: 60%</li><li>Cancer Prevention: 90%</li><li>Heart Screenings: 55%</li></ul> | Base Rates:<ul><li>Premium determined by Equivalence Principle based on cost of (personalized) intervention programs</li><li></li></ul> |
-[Table 1B: Incentive Scheme Rewards]
+_Table 1B: Incentive Scheme Rewards_
+
+**Other Key Program Requirements**
+- Policyholders must agree to participate in initial and annual health and heart check-ups to track personal progress and improvements.
+- Policyholders must be committed to making lifestyle changes and implementing healthy habits to improve overall wellness.
+- Policyholders must be willing to honestly share their progress with SuperLife to qualify for incentives.
+- Policyholders must agree to participate in NPS feedback surveys to provide input and improve the program for future participants.
 
 **Justification of Program Features**:
 
@@ -113,11 +120,10 @@ _Qualitative_:
     customer loyalty and long-term customer relations
     
 _Quantitative_:
-Intervention Program Selection Methodology:
+Intervention Program Selection Methodology conducted to determine the most optimal intervention programs to include (refer to _Appendix A_ for further details):
 1. Sorted program descriptions (in given data) to maximise impact on mortality rates whilst simultaneously minimising per capita cost of the scheme
 2. Plotted and identified leading causes of death (using given data) and mapped these to the associated intervention schemes
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigate the leading causes of death
-(refer to Appendix – add plot, Excel table, risk quadrant)
 
 **Justification of Short-and-Long-term Timeframes**
 - Short-term timeframe is the 5-year period from 2023 (2023–2028)
@@ -128,18 +134,39 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 
 ## Pricing/Costs
 **Method**
-**Short-Term Projections**
-**Long-Term Projections**
+**Short-Term Projections** (over 5 years)
+- With program
+- Without program
+
+
+Include % change in costs, revenue, etc. for with vs. without program
+Include plots
+
+**Long-Term Projections** _(over 30 years)_
+- With program
+- Without program
+  
+Include % change in costs, revenue, etc. for with vs. without program
+Include plots
+
 **Solvency Capital Requirements**
+Line plot of capital required over time
+Table of initial capital required (with vs. without scheme) and yearly capital required (with vs. without scheme)
+
+For expenses, include mean estimates and upper-bound
 
 ## Assumptions
 | Variable                   | Assumption                                                                                          |
 |----------------------------|-----------------------------------------------------------------------------------------------------|
-| Inflation                  | Economic inflation rate from 2023 onwards is a constant 2% p.a. (see Appendix for justification)    |
+| Inflation                  | Economic inflation rate from 2023 onwards is a constant 2% p.a. (see _Appendix B_ for justification)    |
 | Population                 | Closed population (based on 2023)                                                                   |
 | Interpolation              | Assume linear trend of mortality improvement across years                                           |
 | Interest-Rates             | Use concept of yield curve; assume it is upward-sloping and smooth                                  |
-| Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:<ul><li>Safety Campaigns: 6 months</li><li>Annual Health-Checkups: 5 years</li><li>Discounted Gym-Memberships: 10 months</li><li>Weight Management Programs: 3 months</li><li>Cancer Prevention Initiatives: 9 years</li><li>Heart-Health Screenings: 5 years</li></ul> |
+| Interval Dates             | Annual date of health check-up and heart screening is based on yearly anniversary of policy inception date
+                             |
+| Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:<ul><li>Safety Campaigns: 6 months (Newnam & Muir 2015)</li><li>Annual Health-Checkups: 5 years (Maindal, Støvring & Sandbaek 2014)</li><li>Discounted Gym-Memberships: 10 months (Homonoff, Willage & Willén 2020)</li><li>Weight Management Programs: 3 months (Ahern et al. 2017)</li><li>Cancer Prevention Initiatives: 9 years (Valle, Tramalloni & Bragazzi 2015)</li><li>Heart-Health Screenings: 5 years (Alageel & Gulliford 2019)</li></ul> |
+| Subsidies                  |Costs of initial and annual health check-ups and heart screenings are fully incorporated into all SuperLife policyholder premiums
+                             |
 | Correlation                |<ul><li>Discounted gym memberships may have a positive correlation with weight management programs</li><li>Cancer prevention initiatives may have a positive correlation with heart-health screenings</li><li>Annual health checkups may have a positive correlation with weight management programs</li></ul>|
 
 ## Sensitivity Analysis
@@ -183,22 +210,36 @@ No external data was used for the analysis.
 **Data Limitations**
 | Limitation                   | Explanation                                                                                         |
 |------------------------------|-----------------------------------------------------------------------------------------------------|
-| Assumed homogeneity between insured population vs general population | The Superlife Inforce data set (2023 cohort) has been used as a representative sample of payout reduction for prospective policies [Appendix B]. The selection effects of the insured population versus the general population may compromise the accuracy of our analysis. |
-| Lack of gender differentiation in mortality table data | The discrepancies between female and male life expectancies in reality should be reflected in differences in their mortality rates. However, the mortality table does not distinguish between the two genders and thus, generalises our analysis by combining both genders. |
-| No data on policy premiums | Exact policy premiums were not provided. Hence, premiums were calculated based on the expected payout values, which compromises the accuracy of the estimated cash inflows. |
-| Blank entries (non N/A) for ‘Cause of Death’ data |
+| Lack of homogeneity between insured population vs. general population | The SuperLife Inforce data set (2023 cohort) has been used as a representative sample of payout reduction for prospective policies. However, the selection effects of the differences between the insured population versus the general population (_Appendix C_) may compromise the accuracy of our analysis. |
+| Lack of gender differentiation in mortality table data | The discrepancies between female and male life expectancies in reality should be reflected in differences in their mortality rates. However, the mortality table does not distinguish between the two genders and thus, generalises our analysis by combining both genders.|
+| Limited past policy data | The truncation of the SuperLife Inforce dataset to 2001 blocks insight into possible longitudinal and cross-sectional trends, thus reducing the precision of future projections by introducing unaccounted variance. |
+| Limited data on Lumaria’s population trend | The lack of data on Lumaria’s population trend has made it difficult to extrapolate calculations. This had led to the assumptions of a closed population and a linear trend in mortality improvement. |
+| No data on policy premiums | Exact policy premiums were not provided. Hence, premiums were estimated based on the Principle of Equivalence, which compromises the accuracy of the estimated cash inflows. |
 | Historical economic data | Historical inflation rates, interest rates and spot rates were used to project future rates, thus compromising the accuracy of projected future revenue and costs. |
 
+## Further Recommendations
+When implementing the program, it is essential to ensure the wellness program is easily accessible and convenient for policyholders to participate in to ensure full health benefits and optimal experience and satisfaction can be achieved. SuperLife must ensure that the wellness program does not unfairly discriminate against policyholders based on factors such as age, gender, or location. For instance, SuperLife may consider offering virtual or online resources as a reasonable location adjustment, such as mobile apps, telehealth services, or virtual wellness events. 
 
-## Conclusion & Recommendations
+The use of policyholder data to evaluate the impact of the wellness program is essential for measuring its effectiveness and making informed decisions for future improvements. However, for ethical purposes, SuperLife should consider implementing a transparent data collecting and analysing process, with the data only being used for the purpose of measuring the effectiveness of the program and making improvements for the future benefit of policyholders. 
+
+Furthermore, to ensure compliance with consumer protection laws, SuperLife may consider providing clear information about the program, including costs, benefits, and potential risks to policyholders, and not engage in any unfair or deceptive practices. Ongoing reporting, monitoring of reserves and regular funding and cost updates to regulatory authorities should be undertaken to ensure compliance.
+
+Overall, this aims to find a balance across the needs of all stakeholders to drive long-term success and sustainability of both the wellness program and SuperLife as a whole. 
+
+## Conclusion
+To conclude, the proposed wellness intervention program can help SuperLife improve its policyholders’ expected mortality whilst also achieving increased profitability (RESULTS…..). After thorough qualitative and quantitative analyses on the impact of the wellness program over short and long-term timeframes and under assumptions scenarios, the improved financial and social benefits associated with the scheme provide substantial evidence that the project should be undertaken given our assumptions. Although the analyses conducted in this report justify the implementation of the wellness program, it is crucial to consider the ongoing monitoring of risks, costs and progress on initial objectives, within the program design. 
+
 ## References
 ## Appendix 
 ### Appendix A: Intervention Program Selection Methdology 
-1. Sorted ​​program descriptions (in given data) to maximise impact on mortality rates whilst simultaneously minimising per capita cost of the scheme
-2. Plotted and identified leading causes of death (using given data) and mapped these to the associated intervention schemes
-3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigate the leading causes of death
+_Table A: Intervention Programs ranked in order of highest mortality effect and lowest per capita cost_
+_Column Graph A: Count of deaths associated with listed causes_
+_Plot A: Proportion of ages at death of each cause_
 
-### Appendix B: Comparison of In Force data vs Population data
+### Appendix B: Inflation Assumption
+Plot below shows that the economic inflation rate from 2023 onwards approaches 2% in the short-term, hence set to this constant 2% for all analyses. 
+
+### Appendix C: Comparison of In Force data vs Population data
 To justify the assumed homogeneity between the SuperLife Inforce sample and the general Lumaria population, a comparison of the age distribution was performed, as per the table below. The discrepancy in the age distributions can be attributed to the SuperLife data only covering persons aged 25+. 
 
 | Age | Insured Data | Population Data | 
