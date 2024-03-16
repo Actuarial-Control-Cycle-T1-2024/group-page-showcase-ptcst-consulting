@@ -27,7 +27,7 @@ These two objectives work together to increase the profitability of SuperLife an
 | Expected Death Payouts | Annually |
 | Number of New Business Signups | Annually |
 | Expected Policy Profits & Costs | Annually |
-| Satisfaction Rate (NPS Score) | Annually for the first 5 years, then once every 5 years |
+| Satisfaction Rate (Net Promoter Score) | Annually for the first 5 years, then once every 5 years |
 
 Given these metrics, the wellness program will be reviewed as a whole every 5 years to assess whether it is still achieving its main objectives, and modify the program's features and/or pricing if necessary.
 
@@ -80,6 +80,7 @@ This system is split into two reward categories, each with five levels, with pol
 |--------|---------|---------|---------|---------|---------|
 | **Subsidies on Interventions** | 0% | 2.5% | 5% | 7.5% | 10%|
 | **Premium Discounts** | 0% | 2% | 4% | 6% | 8% | 
+
 _Table 1A: Incentive Scheme Structure_
 
 Each year, in the annual check-up, the policyholder will receive certain health goals from the medical practitioner, such as BMI requirements, heart rate, cholesterol levels, etc.
@@ -92,6 +93,7 @@ At this point, revised goals for the upcoming policy year will be determined by 
 | Subsidies on Interventions | Premium Discounts |
 |----------------------------|-------------------|
 | Base Rates:<ul><li>Safety Campaigns: 90%</li><li>Annual Checkup: 100% (fully subsidized)</li><li>- treated as fixed premium increase</li><li>Gym Membership: 40%</li><li>Weight Management: 60%</li><li>Cancer Prevention: 90%</li><li>Heart Screenings: 55%</li></ul> | Base Rates:<ul><li>Premium determined by Equivalence Principle based on cost of (personalized) intervention programs</li><li></li></ul> |
+
 _Table 1B: Incentive Scheme Rewards_
 
 **Other Key Program Requirements**
@@ -159,14 +161,12 @@ For expenses, include mean estimates and upper-bound
 | Variable                   | Assumption                                                                                          |
 |----------------------------|-----------------------------------------------------------------------------------------------------|
 | Inflation                  | Economic inflation rate from 2023 onwards is a constant 2% p.a. (see _Appendix B_ for justification)    |
-| Population                 | Closed population (based on 2023)                                                                   |
-| Interpolation              | Assume linear trend of mortality improvement across years                                           |
-| Interest-Rates             | Use concept of yield curve; assume it is upward-sloping and smooth                                  |
-| Interval Dates             | Annual date of health check-up and heart screening is based on yearly anniversary of policy inception date
-                             |
+| Population                 | Closed population (based on 2023) |
+| Interpolation              | Assume linear trend of mortality improvement across years |
+| Interest-Rates             | Use concept of yield curve; assume it is upward-sloping and smooth |
+| Interval Dates             | Annual date of health check-up and heart screening is based on yearly anniversary of policy inception date |
 | Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:<ul><li>Safety Campaigns: 6 months (Newnam & Muir 2015)</li><li>Annual Health-Checkups: 5 years (Maindal, Støvring & Sandbaek 2014)</li><li>Discounted Gym-Memberships: 10 months (Homonoff, Willage & Willén 2020)</li><li>Weight Management Programs: 3 months (Ahern et al. 2017)</li><li>Cancer Prevention Initiatives: 9 years (Valle, Tramalloni & Bragazzi 2015)</li><li>Heart-Health Screenings: 5 years (Alageel & Gulliford 2019)</li></ul> |
-| Subsidies                  |Costs of initial and annual health check-ups and heart screenings are fully incorporated into all SuperLife policyholder premiums
-                             |
+| Subsidies                  |Costs of initial and annual health check-ups and heart screenings are fully incorporated into all SuperLife policyholder premiums |
 | Correlation                |<ul><li>Discounted gym memberships may have a positive correlation with weight management programs</li><li>Cancer prevention initiatives may have a positive correlation with heart-health screenings</li><li>Annual health checkups may have a positive correlation with weight management programs</li></ul>|
 
 ## Sensitivity Analysis
