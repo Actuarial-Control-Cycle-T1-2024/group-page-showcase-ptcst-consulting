@@ -45,7 +45,8 @@ full_data = data.table(safety_campaigns = 0,
                        policy_end_age = proj_data$policy_end_age,
                        sex = proj_data$sex,
                        checkup_cost = 0,
-                       goal_meeter = 0)
+                       goal_meeter = 0,
+                       policy_type = proj_data$policy_type)
 
 goal_meeter = runif(nrow(proj_data)) < goal_meeting_rate
 
@@ -85,7 +86,7 @@ for (i in 1:nrow(categs)) {
     if (length(partic) == 1) {
       reduct[group_no == group, (partic):=rnorm(categs[i, count], means, covs)]
     } else {
-      sims = mvtnorm::rmvnorm(categs[i, count], means, covs)
+      sims = mvtnorm::rmvnorm(categs[i, count], means, covs, method = "chol")
       res = lapply(seq_len(ncol(sims)), function(i) sims[,i])
       reduct[group_no == group, (partic):=res]
     }
@@ -94,30 +95,30 @@ for (i in 1:nrow(categs)) {
 
 full_data[, 1:6] = shift(reduct[,1:6], 0)
 
-# get_lapse = function(duration) {
-#   rates = lapse_data$rate
-#   case_when(
-#     duration == 0 ~ rates[1],
-#     duration <= 4 ~ rates[2],
-#     duration <= 9 ~ rates[3],
-#     .default = rates[4]
-#   )
-# }
-
 get_lapse = function(duration) {
   rates = lapse_data$rate
-  if (duration == 0) {
-    rates[1]
-  } else if (duration <= 4) {
-    rates[2]
-  } else if (duration <= 9) {
-    rates[3]
-  } else {
-    rates[4]
-  }
+  case_when(
+    duration == 0 ~ rates[1],
+    duration <= 4 ~ rates[2],
+    duration <= 9 ~ rates[3],
+    .default = rates[4]
+  )
 }
 
-get_lapse = Vectorize(get_lapse)
+# get_lapse = function(duration) {
+#   rates = lapse_data$rate
+#   if (duration == 0) {
+#     rates[1]
+#   } else if (duration <= 4) {
+#     rates[2]
+#   } else if (duration <= 9) {
+#     rates[3]
+#   } else {
+#     rates[4]
+#   }
+# }
+# 
+# get_lapse = Vectorize(get_lapse)
 
 sim_func = function(intervention_progs, mort_table, data, interest) {
   
@@ -172,8 +173,9 @@ sim_func = function(intervention_progs, mort_table, data, interest) {
   }
   
   premiums = (data$face_amount * base_values$exp_payout +
-    0.5 * data$checkup_cost * epv_annuity_new_rates) / base_values$exp_payment
-  premiums = premiums * (1 - premium_disc * data$goal_meeter)
+                0.5 * data$checkup_cost * epv_annuity_new_rates) / 
+            ifelse(data$policy_type == "T", base_values$exp_payment, 1)
+  premiums = premiums * (1 - premium_disc * data$goal_meeter * (data$policy_type == "T"))
   cum_surv = rep(1, nrow(data))
   mort_reduction = rep(0, nrow(data))
   curr_age = data$issue_age
@@ -194,8 +196,15 @@ sim_func = function(intervention_progs, mort_table, data, interest) {
                       cum_surv)
     
     expenses = c(expenses, sum(prior_end * cum_surv * data$cost))
+    
+    
     premiums_total = c(premiums_total, sum(prior_end * cum_surv * premiums))
-    death_costs = c(death_costs, sum(prior_end * data$face_amount * cum_surv * mort_data[curr_age] * (1 - mort_reduction)) * discount_factor)
+    if (curr_age[1] == data$issue_age[1]) {
+      premiums[data$policy_type == "S"] = 0
+    }
+    
+    
+    death_costs = c(death_costs, sum(prior_end * data$face_amount * cum_surv * mort_data[curr_age + 1] * (1 - mort_reduction)) * discount_factor)
     
     curr_age = pmin(120, curr_age + 1)
     years_passed = years_passed + 1
