@@ -11,13 +11,11 @@ require(foreach)
 
 
 mort_table = readRDS("Data/ult_lt.RDS")
-mort_table = rbind(data.table(age = 0:25, male_qx = NA, female_qx = NA, standard = NA) , mort_table)
+mort_table = rbind(data.table(age = 0:25, male_qx = NA, female_qx = NA, standard = NA) , mort_table, fill = TRUE)
 
 
 lapse_data = readRDS("Data/lapse_rates.RDS")
-ins_data = readRDS("Data/SuperLife Inforce Dataset.rds")
-proj_data = ins_data[issue_year == 2023]
-
+proj_data = readRDS("Data/dataset_with_risk_units.RDS")
 
 
 
@@ -46,6 +44,7 @@ full_data = data.table(safety_campaigns = 0,
                        sex = proj_data$sex,
                        checkup_cost = 0,
                        goal_meeter = 0,
+                       scaled_units = proj_data$scaled_units,
                        policy_type = proj_data$policy_type)
 
 goal_meeter = runif(nrow(proj_data)) < goal_meeting_rate
@@ -120,71 +119,74 @@ get_lapse = function(duration) {
 # 
 # get_lapse = Vectorize(get_lapse)
 
-sim_func = function(intervention_progs, mort_table, data, interest) {
+sim_func = function(intervention_progs, mort_data, data, interest) {
   
   # data = full_data[1:1000]
   # interest = 0.05
   discount_factor = 1/(1+interest)
 
   
-  mort_data = mort_table$standard
-  cum_surv = rep(1, nrow(data))
-  exp_payment = rep(0, nrow(data))
-  exp_payout = rep(0, nrow(data))
-  curr_age = data$issue_age
+  # cum_surv = rep(1, nrow(data))
+  # exp_payment = rep(0, nrow(data))
+  # exp_payout = rep(0, nrow(data))
+  # curr_age = data$issue_age
   
   horizons = sapply(intervention_progs, function(x) x$horizon)
   
-  while (sum(curr_age < data$policy_end_age) > 0) {
-    prior_end = curr_age < data$policy_end_age
-    past_first = curr_age > data$issue_age & prior_end
-    
-    cum_surv = ifelse(past_first, 
-                      cum_surv * (1 - mort_data[curr_age] - get_lapse(curr_age - data$issue_age)), 
-                      cum_surv)
-    exp_payment = exp_payment + past_first * (cum_surv * discount_factor^(curr_age - data$issue_age))
-    
-    exp_payout = exp_payout + prior_end * (cum_surv * mort_data[curr_age + 1] * discount_factor^(curr_age - data$issue_age + 1))
-    curr_age = pmin(120, curr_age + 1)
-    
-  }
-  
-  base_values = list(exp_payment = exp_payment, exp_payout = exp_payout)
+  # while (sum(curr_age < data$policy_end_age) > 0) {
+  #   prior_end = curr_age < data$policy_end_age
+  #   past_first = curr_age > data$issue_age & prior_end
+  #   
+  #   cum_surv = ifelse(past_first, 
+  #                     cum_surv * (1 - mort_data[curr_age] - get_lapse(curr_age - data$issue_age)), 
+  #                     cum_surv)
+  #   exp_payment = exp_payment + past_first * (cum_surv * discount_factor^(curr_age - data$issue_age))
+  #   
+  #   exp_payout = exp_payout + prior_end * (cum_surv * mort_data[curr_age + 1] * discount_factor^(curr_age - data$issue_age + 1))
+  #   curr_age = pmin(120, curr_age + 1)
+  #   
+  # }
+  # 
+  # base_values = list(exp_payment = exp_payment, exp_payout = exp_payout)
 
-  cum_surv = rep(1, nrow(data))
-  epv_annuity_new_rates = rep(0, nrow(data))
-  mort_reduction = rep(0, nrow(data))
-  curr_age = data$issue_age
+  # cum_surv = rep(1, nrow(data))
+  # epv_annuity_new_rates = rep(0, nrow(data))
+  # mort_reduction = rep(0, nrow(data))
+  # curr_age = data$issue_age
+  # 
+  # years_passed = 0
+  # while (sum(curr_age < data$policy_end_age) > 0) {
+  #   prior_end = curr_age < data$policy_end_age
+  #   past_first = curr_age > data$issue_age & prior_end
+  #   
+  #   mort_reduction = mort_reduction + rowSums(sweep(data[, 1:6], 2, as.numeric(years_passed < horizons) / horizons, "*"))
+  #   
+  #   cum_surv = ifelse(past_first, 
+  #                     cum_surv * (1 - mort_data[curr_age] * (1 - mort_reduction) - get_lapse(curr_age - data$issue_age)), 
+  #                     cum_surv)
+  #   epv_annuity_new_rates = epv_annuity_new_rates + prior_end * cum_surv * discount_factor^(curr_age - data$issue_age)
+  #   
+  #   curr_age = pmin(120, curr_age + 1)
+  #   years_passed = years_passed + 1
+  # }
   
-  years_passed = 0
-  while (sum(curr_age < data$policy_end_age) > 0) {
-    prior_end = curr_age < data$policy_end_age
-    past_first = curr_age > data$issue_age & prior_end
-    
-    mort_reduction = mort_reduction + rowSums(sweep(data[, 1:6], 2, as.numeric(years_passed < horizons) / horizons, "*"))
-    
-    cum_surv = ifelse(past_first, 
-                      cum_surv * (1 - mort_data[curr_age] * (1 - mort_reduction) - get_lapse(curr_age - data$issue_age)), 
-                      cum_surv)
-    epv_annuity_new_rates = epv_annuity_new_rates + prior_end * cum_surv * discount_factor^(curr_age - data$issue_age)
-    
-    curr_age = pmin(120, curr_age + 1)
-    years_passed = years_passed + 1
-  }
-  
-  premiums = (data$face_amount * base_values$exp_payout +
-                0.5 * data$checkup_cost * epv_annuity_new_rates) / 
-            ifelse(data$policy_type == "T", base_values$exp_payment, 1)
-  premiums = premiums * (1 - premium_disc * data$goal_meeter * (data$policy_type == "T"))
+  # premiums = (data$face_amount * base_values$exp_payout +
+  #               0.5 * data$checkup_cost * epv_annuity_new_rates) / 
+  #           ifelse(data$policy_type == "T", base_values$exp_payment, 1)
+  premiums = data$scaled_units
+  # premiums = premiums * (1 - premium_disc * data$goal_meeter * (data$policy_type == "T"))
   cum_surv = rep(1, nrow(data))
+  cum_surv_no_red = rep(1, nrow(data))
   mort_reduction = rep(0, nrow(data))
   curr_age = data$issue_age
   
   death_costs = c()
+  death_costs_no_red = c()
   premiums_total = c()
   expenses = c()
   years_passed = 0
   
+
   while (sum(curr_age < data$policy_end_age) > 0) {
     prior_end = curr_age < data$policy_end_age
     past_first = curr_age > data$issue_age & prior_end
@@ -192,19 +194,34 @@ sim_func = function(intervention_progs, mort_table, data, interest) {
     mort_reduction = mort_reduction + rowSums(sweep(data[, 1:6], 2, as.numeric(years_passed < horizons) / horizons, "*"))
     
     cum_surv = ifelse(past_first, 
-                      cum_surv * (1 - mort_data[curr_age] * (1 - mort_reduction) - get_lapse(curr_age - data$issue_age)), 
+                      cum_surv * (1 - ifelse(data$sex == "M", mort_data$male_qx[curr_age], mort_data$female_qx[curr_age]) * (1 - mort_reduction) - get_lapse(curr_age - data$issue_age)), 
                       cum_surv)
+    cum_surv_no_red = ifelse(past_first,
+                             cum_surv_no_red * (1 - ifelse(data$sex == "M", mort_data$male_qx[curr_age], mort_data$female_qx[curr_age]) - get_lapse(curr_age - data$issue_age)),
+                             cum_surv_no_red)
     
     expenses = c(expenses, sum(prior_end * cum_surv * data$cost))
     
-    
+
     premiums_total = c(premiums_total, sum(prior_end * cum_surv * premiums))
     if (curr_age[1] == data$issue_age[1]) {
       premiums[data$policy_type == "S"] = 0
+    } else if (years_passed == 2) {
+      premiums = premiums * (1 - premium_disc * data$goal_meeter * (data$policy_type == "T"))
     }
     
     
-    death_costs = c(death_costs, sum(prior_end * data$face_amount * cum_surv * mort_data[curr_age + 1] * (1 - mort_reduction)) * discount_factor)
+    death_costs = c(death_costs, 
+                    sum(prior_end * data$face_amount * cum_surv * 
+                          ifelse(data$sex == "M", 
+                                 mort_data$male_qx[curr_age + 1], 
+                                 mort_data$female_qx[curr_age + 1]) * 
+                          (1 - mort_reduction)) * discount_factor)
+    death_costs_no_red = c(death_costs_no_red, 
+                    sum(prior_end * data$face_amount * cum_surv_no_red * 
+                          ifelse(data$sex == "M", 
+                                 mort_data$male_qx[curr_age + 1], 
+                                 mort_data$female_qx[curr_age + 1])) * discount_factor)
     
     curr_age = pmin(120, curr_age + 1)
     years_passed = years_passed + 1
@@ -214,5 +231,7 @@ sim_func = function(intervention_progs, mort_table, data, interest) {
   data.table(year = 2023:(2023 + max(data$policy_end_age - data$issue_age) - 1),
              premiums = premiums_total,
              expenses = expenses,
-             exp_death_costs = death_costs)
+             exp_death_costs = death_costs,
+             exp_death_costs_no_reduction = death_costs_no_red)
 }
+

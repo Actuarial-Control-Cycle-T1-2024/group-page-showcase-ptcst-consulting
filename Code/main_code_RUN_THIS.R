@@ -1,7 +1,5 @@
 # STILL REMAINING TO DO (but negligible)
 # ADD HARD LIMITS ON MULTIVARIATE NORMAL SIM
-# ADD MALE vs. FEMALE LIFE TABLE 
-# ADD FEMALE MORTALITY RATES PROPERLY
 
 # PARAMS
 # effect_u/effect_l/cost_u/cost_l lower and upper limits of cost and effects
@@ -14,12 +12,12 @@
 set.seed(1234)
 
 intervention_progs = list(
-  safety_campaigns = list(effect_l = 0.03, effect_u = 0.05, cost_l = 10, cost_u = 35, horizon = 1, signup = 0.7, sub_rate = 0.9, effect_reduction = TRUE),
+  safety_campaigns = list(effect_l = 0.03, effect_u = 0.05, cost_l = 10, cost_u = 35, horizon = 1, signup = 0.7, sub_rate = 1, effect_reduction = TRUE),
   annual_checkup = list(effect_l = 0.05, effect_u = 0.1, cost_l = 175, cost_u = 870, horizon = 5, signup = 1, sub_rate = 1, effect_reduction = FALSE),
-  discount_gym = list(effect_l = 0.03, effect_u = 0.06, cost_l = 175, cost_u = 870, horizon = 1, signup = 0.3, sub_rate = 0.7, effect_reduction = TRUE),
-  weight_mgmt = list(effect_l = 0.05, effect_u = 0.1, cost_l = 175, cost_u = 870, horizon = 1, signup = 0.6, sub_rate = 0.8, effect_reduction = TRUE),
-  cancer_prevention = list(effect_l = 0.05, effect_u = 0.1, cost_l = 20, cost_u = 85, horizon = 9, signup = 0.6, sub_rate = 0.9, effect_reduction = TRUE),
-  heart_screenings = list(effect_l = 0.05, effect_u = 0.1, cost_l = 90, cost_u = 345, horizon = 5, signup = 0.6, sub_rate = 0.7, effect_reduction = FALSE) 
+  discount_gym = list(effect_l = 0.03, effect_u = 0.06, cost_l = 175, cost_u = 870, horizon = 1, signup = 0.3, sub_rate = 1, effect_reduction = TRUE),
+  weight_mgmt = list(effect_l = 0.05, effect_u = 0.1, cost_l = 175, cost_u = 870, horizon = 1, signup = 0.6, sub_rate = 1, effect_reduction = TRUE),
+  cancer_prevention = list(effect_l = 0.05, effect_u = 0.1, cost_l = 20, cost_u = 85, horizon = 9, signup = 0.6, sub_rate = 1, effect_reduction = TRUE),
+  heart_screenings = list(effect_l = 0.05, effect_u = 0.1, cost_l = 90, cost_u = 345, horizon = 5, signup = 0.6, sub_rate = 1, effect_reduction = FALSE) 
 )
 
 mu_vec = c(
@@ -47,28 +45,16 @@ var_vec = c(
 raw_covs = sqrt(outer(var_vec, var_vec, "*"))
 
 corr_mat = matrix(
-  data = c(1, -0.0, -0.0, -0.0, -0.0, -0.0,
-           -0.0, 1, -0.0, -0.0, -0.0, -0.0,
-           -0.0, -0.0, 1, -0.0, -0.0, -0.0,
-           -0.0, -0.0, -0.0, 1, -0.0, -0.0,
-           -0.0, -0.0, -0.0, -0.0, 1, -0.0,
-           -0.0, -0.0, -0.0, -0.0, -0.0, 1),
+  data = c( 1,    -0.35,  0,     0,     -0.35,  0,
+           -0.35,  1,    -0.35,  0,     -0.25,  0,
+            0,    -0.35,  1,    -0.375, -0.25, -0.25,
+            0,     0,    -0.375,   1,   -0.3,  -0.1,
+           -0.35, -0.25, -0.25, -0.3,    1,    -0.1,
+            0,     0,    -0.25, -0.1,   -0.1,   1),
   dimnames = list(names(intervention_progs), names(intervention_progs)),
   nrow = 6,
   ncol = 6
 )
-
-# corr_mat = matrix(
-#   data = c(1, -0.8, -0.6, -0.5, -0.6, -0.5,
-#            -0.8, 1, -0.7, -0.5, -0.3, -0.7,
-#            -0.6, -0.7, 1, -0.4, -0.4, -0.8,
-#            -0.5, -0.5, -0.4, 1, -0.6, -0.3,
-#            -0.6, -0.3, -0.4, -0.6, 1, -0.5,
-#            -0.5, -0.7, -0.8, -0.3, -0.5, 1),
-#   dimnames = list(names(intervention_progs), names(intervention_progs)),
-#   nrow = 6,
-#   ncol = 6
-# )
 
 
 
@@ -89,10 +75,6 @@ interest = 0.03
 source("Code/supplementary_to_main.R")
 
 res = sim_func(intervention_progs, mort_table, full_data, interest)
-# rm(categs, full_data, covs, gen, ins_data, lapse_data, mort_table,
-   # proj_data, reduct, sims, goal_meeter, group, partic, gen_costs,
-   # i, means, get_lapse)
-
-ggplot() + geom_histogram(aes(x = rowSums(full_data[,1:6]), fill = "independent"), alpha = 0.3, bins = 400) +
-  geom_histogram(aes(x = rowSums(store[,1:6]), fill = "dependent"), alpha = 0.3, bins = 400) +
-  scale_fill_manual(values = c("dependent" = "blue", "independent" = "red"))
+rm(categs, full_data, covs, gen, lapse_data, mort_table,
+proj_data, reduct, sims, goal_meeter, group, partic, gen_costs,
+i, means, get_lapse)

@@ -57,7 +57,8 @@ male_life_table[lx < 4500, qx := 0]
 female_life_table[lx < 4500, qx := 0]
 
 
-total_life_table = data.table(age = 26:120, male_qx = male_life_table[, qx], female_qx = female_life_table[, qx])
+total_life_table = data.table(age = 26:120, male_qx = male_life_table[, qx], male_lx = male_life_table[, lx],
+                              female_qx = female_life_table[, qx], female_lx = female_life_table[, lx])
 total_life_table[, standard := standard_mort_table$qx]
 lapse_table[, qx := dx / lx]
 
@@ -65,15 +66,16 @@ male_func = lm(male_qx ~ standard, data = total_life_table[1:49])$coefficients
 total_life_table[, male_qx := male_func[1] + male_func[2] * standard]
 
 female_func = lm(female_qx ~ standard, data = total_life_table[1:47])$coefficients
-total_life_table[, female_qx := standard]
+# total_life_table[, female_qx := standard]
 
 ggplot() + geom_point(data = standard_mort_table, aes(x = age, y = qx, color = 'standard')) + 
   geom_point(data = total_life_table, aes(x = age, y = male_qx, color = 'generated_male')) + 
   scale_color_manual(values = c('standard' = 'red', 'generated_male' = 'blue'))
 
 ggplot() + geom_point(data = standard_mort_table, aes(x = age, y = qx, color = 'standard')) + 
-  geom_point(data = total_life_table, aes(x = age, y = female_qx, color = 'generated_female')) + 
-  scale_color_manual(values = c('standard' = 'red', 'generated_female' = 'blue'))
+  geom_point(data = total_life_table, aes(x = age, y = female_func[1] + (female_func[2]+0.08) * standard, color = 'generated_female')) + 
+  geom_point(data = total_life_table, aes(x = age, y = male_qx, color = 'generated_male'))+
+  scale_color_manual(values = c('standard' = 'red', 'generated_female' = 'blue', generated_male = 'green'))
 
 total_life_table[nrow(total_life_table), `:=`(male_qx = 1, female_qx = 1)]
 # SAVERDS
