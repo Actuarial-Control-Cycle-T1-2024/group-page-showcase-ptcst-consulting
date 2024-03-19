@@ -185,7 +185,7 @@ For expenses, include mean estimates and upper-bound
 | Inflation                  | Economic inflation rate from 2023 onwards is a constant 2% p.a. (see _Appendix B_ for justification)    |
 | Population                 | Closed population (based on 2023) |
 | Interpolation              | Assume linear trend of mortality improvement across years |
-| Interest-Rates             | Use concept of yield curve; assume it is upward-sloping and smooth |
+| Interest/Discount Rates    | Assumed a constant 5% for analyses, as the average of Lumaria’s 1-yr and 10-yr Risk-Free Annual Spot Rates were 5.68% and 6.74%, respectively, with significant declines of each rate in recent 10 years; trending at ~ 0-2%. |
 | Interval Dates             | Annual date of health check-up and heart screening is based on yearly anniversary of policy inception date |
 | Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:<ul><li>Safety Campaigns: 6 months (Newnam & Muir 2015)</li><li>Annual Health-Checkups: 5 years (Maindal, Støvring & Sandbaek 2014)</li><li>Discounted Gym-Memberships: 10 months (Homonoff, Willage & Willén 2020)</li><li>Weight Management Programs: 3 months (Ahern et al. 2017)</li><li>Cancer Prevention Initiatives: 9 years (Valle, Tramalloni & Bragazzi 2015)</li><li>Heart-Health Screenings: 5 years (Alageel & Gulliford 2019)</li></ul> |
 | Subsidies                  |Costs of initial and annual health check-ups and heart screenings are fully incorporated into all SuperLife policyholder premiums |
@@ -194,7 +194,7 @@ For expenses, include mean estimates and upper-bound
 | Expense and Expected Death Cost Calculations |<ul><li>Expenses assumed to be paid in advance</li></ul>Expected death costs assumed to be paid in arrears</li></ul>|
 
 ## Sensitivity Analysis
-A sensitivity analysis was performed on the key variables (see _Appendix D_ for tested values) to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure B_ below. See Appendix 7.5.2 for the NPV comparison and an in-depth analysis of the sensitivity results.
+A sensitivity analysis was performed on the key variables (see _Appendix D_ for tested values) to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure B_ below. See _Appendix D_ for the NPV comparison and an in-depth analysis of the sensitivity results.
 
 _Figure B: Sensitivity Analysis - Profit Margin_
 
