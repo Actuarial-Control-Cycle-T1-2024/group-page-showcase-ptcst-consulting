@@ -123,6 +123,41 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 
 ## Pricing/Costs
 **Method**
+_Generating Parameters_
+
+To generate the model parameters, the uniform distribution was used to generate a vector of TRUE/FALSE entries that represent whether each policyholder meets their annual health goals or not, with policyholders generating TRUE, being referred to as “Goal Meet-ers”. The uniform distribution was then used to generate the cost of each policyholder’s personalised program, with the full value of the individual programs added to SuperLife’s expenses. Then, using the multivariate normal distribution, mortality benefits were generated for each policyholder, based on their individual set of intervention programs. For policyholders not classified as “Goal Meet-ers”, effects derived from their intervention programs were excluded.
+
+_Calculations for Decrements_
+
+A lapse table and mortality table were created by considering policyholders’ lapse rate and mortality rate, respectively, as the duration of the policy increased. For mortality tables, graduation was then applied using standard life tables by fitting a linear regression. This approximation was sufficient for the male population (pop.), although further approximation was required for more realistic female mortality (mort.) values, using the formula:
+
+Standard Mort.Total Pop.= Male Mort.Male Pop.+Female Mort.Female Pop.
+
+_Expenses and Expected Death Cost Calculations_ 
+
+Expenses and expected death costs were calculated for each policyholder, for each policy year:
+1. Calculate mortality reductions for policy year, according to:
+   New Mortality Rate = Old Mortality Rate  (1 - Mortality Reduction)
+2. Calculate cumulative survival probability to that point from age at date of issue
+   Survival Probability = 1 - Lapse Probability - Death Probability
+3. Multiply the expenses associated with policyholders’ individualised health programs by the cumulative survival up to that point
+4. Multiply policyholders’ cumulative survival by death probability and face amount to find expected death costs
+
+
+_Basis for Premium Pricing_
+
+Pricing methodology is centred on first determining total expenses and expected death costs, then determining the required premiums to cover those costs and generate a specified profit margin. To determine the amount of the total required premium each policyholder should undertake, the concept of “risk units” is applied, whereby the annual premium for a single risk unit is determined, then depending on each policyholder’s individual characteristics, the quantity of risk units they must purchase for each $1000 of sum insured is determined. This is used to find equitable proportions of total premiums paid by each policyholder, and price estimations. See Appendix 7.4.1 for the risk unit determination methodology. 
+
+After obtaining these risk units, standard valuation calculations were made, replacing premium values with Total Risk Units P, where P represents the price of a single risk unit. Finally, P was solved based on specified profit margins (see Results section).
+
+_Valuation and Zeroisation_
+
+The amount of required reserves each year to make the wellness program self-financing was determined by the equation:
+Reserves(t) = Premiums(t) - Expenses(t) - Expected Death Costs(t)
+
+Final cash flows were then discounted by 5% (see Assumptions) to determine the NPV.
+
+
 **Short-Term Projections** (over 5 years)
 - With program
 - Without program
@@ -252,6 +287,16 @@ To justify the assumed homogeneity between the SuperLife Inforce sample and the 
 |65+  |1.2%          |4%               |
 
 ### Appendix D: Sensitivity Analysis
+Range of values used for each variable that was tested in the sensitivity analysis. 
+| Variable | Range | 
+|----------|-------|
+| Interest rate | 3% - 6.5% |
+| Intervention program mortality rate improvements | Used outer bounds:<ul><li>Safety campaign: 3-5%</li><li>Annual checkup: 5-10%</li><li>Discount gym: 3-6%</li><li>Weight Management: 5-10%</li><li>Cancer prevention: 5-10%</li><li>Heart screening: 5-10%</li></ul>|
+|Intervention program costs | Used outer bounds:<ul><li>Safety campaign: 10-35</li><li>Annual checkup: 175-870</li><li>Discount gym: 175-870</li><li>Weight Management: 175-870</li><li>Cancer prevention: 20-85</li><li>Heart screening: 90-345</li></ul>|
+|Goal meeting rate | 30% - 80%|
+| Sign up rate | Plus/minus 20%:<ul><li>Safety campaign: 50-90%</li><li>Annual checkup: Mandatory</li><li>Discount gym: 10-50%</li><li>Weight Management: 40-80%</li><li>Cancer prevention: 40-80%</li><li>Heart screening: 40-80%</li></ul>|
+| Time horizon for mortality reductions in each intervention program | 30% increase/decrease:<ul><li>Safety campaign: 0.7-1.3 years</li><li>Annual checkup: 3.5-6.5 years</li><li>Discount gym: 0.7-1.3 years</li><li>Weight Management: 0.7-1.3 years</li><li>Cancer prevention: 6.3-11.7 years</li><li>Heart screening: 3.5-6.5 years</li></ul>|
+
 The results illustrate a comparison of the varied effects of changes in assumptions on SuperLife’s net present value and profit margin. By comparing the magnitudes of impact, we can rank the variables based on their relative impact on SuperLife’s financials. From greatest to least impact:
 1. Intervention program mortality improvements
 2. Intervention program costs
