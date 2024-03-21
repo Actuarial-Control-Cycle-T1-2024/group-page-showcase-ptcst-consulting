@@ -32,10 +32,11 @@ These two objectives work together to increase the profitability of SuperLife an
 Given these metrics, the wellness program will be reviewed as a whole every 5 years to assess whether it is still achieving its main objectives, and modify the program's features and/or pricing if necessary.
 
 ## Program Design
-PTCST Consulting developed a comprehensive health incentive program for SuperLife that incentivises participation by offering external benefits through a rewards scheme, and policy-related benefits through premium reductions.
+PTCST Consulting developed a comprehensive health incentive program for SuperLife that incentivises participation by offering profit-sharing opportunities.
 
 **Features**
-Taking a more personalised approach to the wellness plan, each new policyholder over the age of 25 will undergo an initial, compulsory health and heart check-up, that will form the basis of their personalised health plan. This personalised health plan will include some or all of the following program features, and will be revised each year, based on the results of the policyholder’s annual health and heart check-ups:
+
+PTCST Consulting’s wellness plan uses a tailored approach whereby each new SuperLife policyholder over the age of 25 will undergo an initial, compulsory health check-up which forms the basis of their personalised health plan. This personalised health plan will include some or all of the listed program features and will be revised each year, based on the results of the policyholder’s annual compulsory health check-up and heart screening:
 
 1.	Annual Health Check-ups:
      - Comprehensive annual health check-up (and immediately for all new policyholders) that provides free or discounted health screenings for various conditions, including blood pressure checks, cholesterol tests, and diabetes screenings
@@ -68,33 +69,16 @@ Taking a more personalised approach to the wellness plan, each new policyholder 
 
 **Incentives for Intervention Program**
 
-SuperLife’s incentive scheme is underpinned by a multi-level reward system, where policyholders progress by participating in features of their personalised health plan, such as participating in safety workshops and healthy eating workshops.
+SuperLife’s incentive scheme is underpinned by a multi-level reward system, where policyholders progress by completing goals in their personalised health plan, e.g. participating in safety workshops. This system is split into five levels, each with different proportions of profit share allocated to policyholders, who start on Level 1 upon sign-up (see _Table A_). 
 
-This system is split into two reward categories, each with five levels, with policyholders starting on Level 1 upon signup:
-1. Subsidies on Interventions: increasing proportion of intervention program costs (in policyholder wellness plans), covered by SuperLife      as policyholders progress to higher levels
-   - Policyholders will only receive subsidies for the first 5 years of policy
-2. Premium Discounts: increasing discounts applied to policyholder premiums of SuperLife policies as policyholders progress to higher levels
-   - Only applies after the policyholder is enrolled and participating in wellness program for at least 5 years
+Each year, in the annual check-up and heart screening, the policyholder will receive certain health goals from the medical practitioner, such as BMI requirements, target heart-rate or ideal cholesterol levels. At the policyholder’s next annual check-up and heart screening:
+- If the policyholder has met (not met) the previous policy year’s goals, they move up (down) a level in the incentive scheme structure for the next year. Moving to higher (lower) levels leads to increased (decreased) proportions of profit share.
 
 |        | **Level 1** | **Level 2** | **Level 3** | **Level 4** | **Level 5** |
 |--------|---------|---------|---------|---------|---------|
-| **Subsidies on Interventions** | 0% | 2.5% | 5% | 7.5% | 10%|
-| **Premium Discounts** | 0% | 2% | 4% | 6% | 8% | 
+| **Profit Share Allocation** | 10% | 15% | 20% | 30% | 10%|
 
-_Table 1A: Incentive Scheme Structure_
-
-Each year, in the annual check-up, the policyholder will receive certain health goals from the medical practitioner, such as BMI requirements, heart rate, cholesterol levels, etc.
-At the next annual check-up (based on policy inception date):
-- If the policyholder has met the previous policy year’s goals, they move up a level for the next year.
-- If the policyholder has not met the previous policy year’s goals, they move down a level.
-  
-At this point, revised goals for the upcoming policy year will be determined by the medical practitioner, and this cycle will repeat.
-
-| Subsidies on Interventions | Premium Discounts |
-|----------------------------|-------------------|
-| Base Rates:<ul><li>Safety Campaigns: 90%</li><li>Annual Checkup: 100% (fully subsidized)</li><li>- treated as fixed premium increase</li><li>Gym Membership: 40%</li><li>Weight Management: 60%</li><li>Cancer Prevention: 90%</li><li>Heart Screenings: 55%</li></ul> | Base Rates:<ul><li>Premium determined by Equivalence Principle based on cost of (personalized) intervention programs</li><li></li></ul> |
-
-_Table 1B: Incentive Scheme Rewards_
+_Table A: Profit Share Allocation Structure_
 
 **Other Key Program Requirements**
 - Policyholders must agree to participate in initial and annual health and heart check-ups to track personal progress and improvements.
@@ -129,13 +113,51 @@ Intervention Program Selection Methodology conducted to determine the most optim
 
 **Justification of Short-and-Long-term Timeframes**
 - Short-term timeframe is the 5-year period from 2023 (2023–2028)
+  
 Evaluating the wellness program within the next 5 years is a sufficient amount of time for SuperLife to start seeing the impact on mortality rates, but not too extensive so as to allow them to adjust the program if needed, based on feedback and results, to ensure it achieves the project goals.
+
 - Long-term timeframe of the 30-year period from 2023 (2023-2053)
+  
 SuperLife offers products such as whole life, 20- and 30-year term insurance, and universal life products and hence have long-term implications for policyholders. Hence, this timeframe allows Superlife to recognise the long-term benefits in terms of lower mortality rates and higher customer retention.
 
 
 ## Pricing/Costs
 **Method**
+_Generating Parameters_
+
+To generate the model parameters, the uniform distribution was used to generate a vector of TRUE/FALSE entries that represent whether each policyholder meets their annual health goals or not, with policyholders generating TRUE, being referred to as “Goal Meet-ers”. The uniform distribution was then used to generate the cost of each policyholder’s personalised program, with the full value of the individual programs added to SuperLife’s expenses. Then, using the multivariate normal distribution, mortality benefits were generated for each policyholder, based on their individual set of intervention programs. For policyholders not classified as “Goal Meet-ers”, effects derived from their intervention programs were excluded.
+
+_Calculations for Decrements_
+
+A lapse table and mortality table were created by considering policyholders’ lapse rate and mortality rate, respectively, as the duration of the policy increased. For mortality tables, graduation was then applied using standard life tables by fitting a linear regression. This approximation was sufficient for the male population (pop.), although further approximation was required for more realistic female mortality (mort.) values, using the formula:
+
+Standard Mort.Total Pop.= Male Mort.Male Pop.+Female Mort.Female Pop.
+
+_Expenses and Expected Death Cost Calculations_ 
+
+Expenses and expected death costs were calculated for each policyholder, for each policy year:
+1. Calculate mortality reductions for policy year, according to:
+   New Mortality Rate = Old Mortality Rate  (1 - Mortality Reduction)
+2. Calculate cumulative survival probability to that point from age at date of issue
+   Survival Probability = 1 - Lapse Probability - Death Probability
+3. Multiply the expenses associated with policyholders’ individualised health programs by the cumulative survival up to that point
+4. Multiply policyholders’ cumulative survival by death probability and face amount to find expected death costs
+
+
+_Basis for Premium Pricing_
+
+Pricing methodology is centred on first determining total expenses and expected death costs, then determining the required premiums to cover those costs and generate a specified profit margin. To determine the amount of the total required premium each policyholder should undertake, the concept of “risk units” is applied, whereby the annual premium for a single risk unit is determined, then depending on each policyholder’s individual characteristics, the quantity of risk units they must purchase for each $1000 of sum insured is determined. This is used to find equitable proportions of total premiums paid by each policyholder, and price estimations. See Appendix 7.4.1 for the risk unit determination methodology. 
+
+After obtaining these risk units, standard valuation calculations were made, replacing premium values with Total Risk Units P, where P represents the price of a single risk unit. Finally, P was solved based on specified profit margins (see Results section).
+
+_Valuation and Zeroisation_
+
+The amount of required reserves each year to make the wellness program self-financing was determined by the equation:
+Reserves(t) = Premiums(t) - Expenses(t) - Expected Death Costs(t)
+
+Final cash flows were then discounted by 5% (see Assumptions) to determine the NPV.
+
+
 **Short-Term Projections** (over 5 years)
 - With program
 - Without program
@@ -163,13 +185,29 @@ For expenses, include mean estimates and upper-bound
 | Inflation                  | Economic inflation rate from 2023 onwards is a constant 2% p.a. (see _Appendix B_ for justification)    |
 | Population                 | Closed population (based on 2023) |
 | Interpolation              | Assume linear trend of mortality improvement across years |
-| Interest-Rates             | Use concept of yield curve; assume it is upward-sloping and smooth |
+| Interest/Discount Rates    | Assumed a constant 5% for analyses, as the average of Lumaria’s 1-yr and 10-yr Risk-Free Annual Spot Rates were 5.68% and 6.74%, respectively, with significant declines of each rate in recent 10 years; trending at ~ 0-2%. |
 | Interval Dates             | Annual date of health check-up and heart screening is based on yearly anniversary of policy inception date |
 | Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:<ul><li>Safety Campaigns: 6 months (Newnam & Muir 2015)</li><li>Annual Health-Checkups: 5 years (Maindal, Støvring & Sandbaek 2014)</li><li>Discounted Gym-Memberships: 10 months (Homonoff, Willage & Willén 2020)</li><li>Weight Management Programs: 3 months (Ahern et al. 2017)</li><li>Cancer Prevention Initiatives: 9 years (Valle, Tramalloni & Bragazzi 2015)</li><li>Heart-Health Screenings: 5 years (Alageel & Gulliford 2019)</li></ul> |
 | Subsidies                  |Costs of initial and annual health check-ups and heart screenings are fully incorporated into all SuperLife policyholder premiums |
-| Correlation                |<ul><li>Discounted gym memberships may have a positive correlation with weight management programs</li><li>Cancer prevention initiatives may have a positive correlation with heart-health screenings</li><li>Annual health checkups may have a positive correlation with weight management programs</li></ul>|
+| Correlation                |<ul><li>Annual Health Check-Ups & Safety Campaigns: 0.45  Burioni, et al (2015)</li><li>Annual Health Check-Ups & Discounted Gym Memberships: 0.35  M Rand (2020)</li><li>Annual Health Check-Ups & Weight Management Programs: 0.40 Madigan et al. (2022)</li><li>Annual Health Check-Ups & Cancer Prevention Initiatives: 0.50  Kuwabara et al. (2022)</li><li>Heart Health Screenings & Discounted Gym Membership: 0.25 Norton and Norton (2011)</li><li>Heart Health Screenings & Weight Management Programs: 0.30 Zhao (2018)</li><li>Heart Health Screenings & Cancer Prevention Initiatives: 0.30 Rikke et al. (2023)</li><li>Safety Campaigns & Cancer Prevention Initiatives: 0.30 Shankar et al. (2017)</li><li>Discounted Gym Memberships & Weight Management Programs: 0.40  Riseth et al. (2019)</li><li>Discounted Gym Memberships & Cancer Prevention Initiatives: 0.25  McTiernan et al. (2018)</li><li>Weight Management Programs & Cancer Prevention Initiatives: 0.30  Anderson et al. (2020)</li></ul>|
+| Mortality & Lapse Rates    | Mortality rates and lapse rates are calculated as dependent as they were drawn from a dataset where people could both lapse and die |
+| Expense and Expected Death Cost Calculations |<ul><li>Expenses assumed to be paid in advance</li></ul>Expected death costs assumed to be paid in arrears</li></ul>|
 
 ## Sensitivity Analysis
+A sensitivity analysis was performed on the key variables (see _Appendix D_ for tested values) to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure B_ below. See _Appendix D_ for the NPV comparison and an in-depth analysis of the sensitivity results.
+
+_Figure B: Sensitivity Analysis - Profit Margin_
+
+Evidently, the effect of the intervention programs on mortality rates will have the largest impact on SuperLife’s profit margin. The outer bounds of each intervention program’s approximate impact on mortality rates was used, where the upper bound generates the best case scenario and the lower bound generates the worst case scenario. Given the results, it is important for SuperLife to closely monitor and update the mortality rate improvement assumptions regularly, as the worst case scenario results in a 14% decrease in the profit margin.
+
+Additionally, to showcase the interplay of these changing assumptions, the evaluation of a specific scenario was conducted (see Appendix 7.5.3 for tested values):
+- **Natural Disaster** (scenario): A decrease in supply of agricultural products due to major droughts which reduces crop yields and production, causing a significant decline in exports and income for individuals in Lumaria working in the agriculture sector.
+     - _Lower Mortality Improvements_: export volume decreases could lead to a decrease in revenue, hence limiting resources to invest in healthcare. This could result in lower quality of healthcare services, leading to higher mortality rates.
+     - _Lower Goal-Meeting Rate_: Lower mortality improvements and correlation may correspond to less policyholders meeting goals.
+     - _Increased Program Costs:_ economic decline causes higher prices for programs, especially non-essential ones. 
+     - _Lower Interest-Rate_: due to lower economic activity.
+     - _Lower Sign-Up Rate_: lower income and possible layoffs in the agricultural sector may result in lower spending, hence less likely to take out insurance.
+
 
 ## Risk and Risk Mitigation Strategies
 
@@ -218,16 +256,14 @@ No external data was used for the analysis.
 | Historical economic data | Historical inflation rates, interest rates and spot rates were used to project future rates, thus compromising the accuracy of projected future revenue and costs. |
 
 ## Further Recommendations
-When implementing the program, it is essential to ensure the wellness program is easily accessible and convenient for policyholders to participate in to ensure full health benefits and optimal experience and satisfaction can be achieved. SuperLife must ensure that the wellness program does not unfairly discriminate against policyholders based on factors such as age, gender, or location. For instance, SuperLife may consider offering virtual or online resources as a reasonable location adjustment, such as mobile apps, telehealth services, or virtual wellness events. 
+It is essential to ensure the wellness program is easily accessible to policyholders to ensure full health benefits and optimal satisfaction. SuperLife must ensure that the wellness program does not unfairly discriminate against policyholders based on factors such as age, gender, or location. SuperLife may consider offering virtual or online resources as a reasonable location adjustment, such as mobile apps, telehealth services, or virtual wellness events. 
 
-The use of policyholder data to evaluate the impact of the wellness program is essential for measuring its effectiveness and making informed decisions for future improvements. However, for ethical purposes, SuperLife should consider implementing a transparent data collecting and analysing process, with the data only being used for the purpose of measuring the effectiveness of the program and making improvements for the future benefit of policyholders. 
+The use of policyholder data to evaluate the impact of the wellness program is essential for measuring effectiveness and making informed decisions for future improvements. However, for ethical purposes, SuperLife should consider implementing transparent data collecting and analysis processes, with data only being used to measure the effectiveness of the program and make improvements for the future benefit of policyholders. 
 
-Furthermore, to ensure compliance with consumer protection laws, SuperLife may consider providing clear information about the program, including costs, benefits, and potential risks to policyholders, and not engage in any unfair or deceptive practices. Ongoing reporting, monitoring of reserves and regular funding and cost updates to regulatory authorities should be undertaken to ensure compliance.
-
-Overall, this aims to find a balance across the needs of all stakeholders to drive long-term success and sustainability of both the wellness program and SuperLife as a whole. 
+Furthermore, to ensure compliance with consumer protection laws, SuperLife should consider providing clear information about the program, including costs, benefits and potential risks to policyholders, and not engage in unfair or deceptive practices. Ongoing reporting, monitoring of reserves and regular cost updates to regulators should be provided to ensure compliance.
 
 ## Conclusion
-To conclude, the proposed wellness intervention program can help SuperLife improve its policyholders’ expected mortality whilst also achieving increased profitability (RESULTS…..). After thorough qualitative and quantitative analyses on the impact of the wellness program over short and long-term timeframes and under assumptions scenarios, the improved financial and social benefits associated with the scheme provide substantial evidence that the project should be undertaken given our assumptions. Although the analyses conducted in this report justify the implementation of the wellness program, it is crucial to consider the ongoing monitoring of risks, costs and progress on initial objectives, within the program design. 
+To conclude, the proposed wellness intervention program can help SuperLife improve its policyholders’ expected mortality whilst also achieving increased profitability (RESULTS…..). After thorough qualitative and quantitative analyses on the impact of the wellness program over short and long-term timeframes and under assumptions scenarios, the improved financial and social benefits associated with the scheme provide substantial evidence that the project should be undertaken given our assumptions. Although the analyses conducted in this report justify the implementation of the wellness program, it is crucial to consider the ongoing monitoring of risks, costs and progress on initial objectives, within the program design.
 
 ## References
 ## Appendix 
@@ -249,4 +285,36 @@ To justify the assumed homogeneity between the SuperLife Inforce sample and the 
 |25-54|84.5%         |46%              |
 |55-64|14.3%         |12%              |
 |65+  |1.2%          |4%               |
+
+### Appendix D: Sensitivity Analysis
+Range of values used for each variable that was tested in the sensitivity analysis. 
+| Variable | Range | 
+|----------|-------|
+| Interest rate | 3% - 6.5% |
+| Intervention program mortality rate improvements | Used outer bounds:<ul><li>Safety campaign: 3-5%</li><li>Annual checkup: 5-10%</li><li>Discount gym: 3-6%</li><li>Weight Management: 5-10%</li><li>Cancer prevention: 5-10%</li><li>Heart screening: 5-10%</li></ul>|
+|Intervention program costs | Used outer bounds:<ul><li>Safety campaign: 10-35</li><li>Annual checkup: 175-870</li><li>Discount gym: 175-870</li><li>Weight Management: 175-870</li><li>Cancer prevention: 20-85</li><li>Heart screening: 90-345</li></ul>|
+|Goal meeting rate | 30% - 80%|
+| Sign up rate | Plus/minus 20%:<ul><li>Safety campaign: 50-90%</li><li>Annual checkup: Mandatory</li><li>Discount gym: 10-50%</li><li>Weight Management: 40-80%</li><li>Cancer prevention: 40-80%</li><li>Heart screening: 40-80%</li></ul>|
+| Time horizon for mortality reductions in each intervention program | 30% increase/decrease:<ul><li>Safety campaign: 0.7-1.3 years</li><li>Annual checkup: 3.5-6.5 years</li><li>Discount gym: 0.7-1.3 years</li><li>Weight Management: 0.7-1.3 years</li><li>Cancer prevention: 6.3-11.7 years</li><li>Heart screening: 3.5-6.5 years</li></ul>|
+
+The results illustrate a comparison of the varied effects of changes in assumptions on SuperLife’s net present value and profit margin. By comparing the magnitudes of impact, we can rank the variables based on their relative impact on SuperLife’s financials. From greatest to least impact:
+1. Intervention program mortality improvements
+2. Intervention program costs
+3. Sign-up rate
+4. Goal meeting rate
+5. Interest rate
+6. Time horizon for intervention program 
+
+It is important to note that a 1.5% increase in the interest rate assumption forms the ‘best case scenario’ and leads to a 1.18% increase in SuperLife’s profit margin whilst leading to a ~14m decrease in the NPV. The discrepancy in movement is explained by the greater level of discounting and hence, the smaller NPV. However, the EPV of premiums also decreased which led to an overall increase in the profit margin. 
+
+Another discrepancy in the results is the movement in the NPV and profit margin when the ‘goal meeting’ rate was adjusted. The ‘best case scenario’ was defined to be an 80% ‘goal meeting’ rate whilst the ‘worst case scenario’ was defined to be 30%. The results indicate that the ‘best case scenario’ actually led to downward movements in SuperLife’s financials and vice versa. This can be explained through the understanding that if a greater proportion of policyholders meet their goal, SuperLife will have to payout a greater amount as a result of the profit allocation structure of the program. 
+
+### Appendix E: Scenario Testing
+| Variable | Range | 
+|----------|-------|
+| Interest rate | 4% (lower)|
+|Intervention mortality rate improvements | Reduce bounds to:<ul><li>Safety campaign: 3-4%</li><li>Annual checkup: 5-7%</li><li>Discount gym: 3-5%</li><li>Weight Management: 5-6.5%</li><li>Cancer prevention: 5-8%</li><li>Heart screening: 5-8%</li></ul>|
+| Goal meeting rate | 60% (lower) |
+| Sign-Up Rate | Reduce values to:<ul><li>Safety campaign: 60%</li><li>Annual checkup: Mandatory</li><li>Discount gym: 20%</li><li>Weight Management: 40%</li><li>Cancer prevention: 50%</li><li>Heart screening: 50%</li></ul>|
+| Intervention Program Costs | Increase bounds to:<ul><li>Safety campaign: 30-35</li><li>Annual checkup: 300-870</li><li>Discount gym: 600-870</li><li>Weight Management: 500-870</li><li>Cancer prevention: 50-85</li><li>Heart screening: 150-345</li></ul>|
 
