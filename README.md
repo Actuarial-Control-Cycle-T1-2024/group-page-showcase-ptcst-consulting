@@ -76,7 +76,7 @@ Each year, in the annual check-up and heart screening, the policyholder will rec
 
 |        | **Level 1** | **Level 2** | **Level 3** | **Level 4** | **Level 5** |
 |--------|---------|---------|---------|---------|---------|
-| **Profit Share Allocation** | 10% | 15% | 20% | 30% | 10%|
+| **Profit Share Allocation** | 10% | 25% | 35% | 45% | 60%|
 
 _Table A: Profit Share Allocation Structure_
 
@@ -123,61 +123,65 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 
 ## Pricing/Costs
 **Method**
-_Generating Parameters_
+Summarised below is an overview of PTCST Consulting’s pricing methodology, with further detail provided in _Appendix B_.
 
-To generate the model parameters, the uniform distribution was used to generate a vector of TRUE/FALSE entries that represent whether each policyholder meets their annual health goals or not, with policyholders generating TRUE, being referred to as “Goal Meet-ers”. The uniform distribution was then used to generate the cost of each policyholder’s personalised program, with the full value of the individual programs added to SuperLife’s expenses. Then, using the multivariate normal distribution, mortality benefits were generated for each policyholder, based on their individual set of intervention programs. For policyholders not classified as “Goal Meet-ers”, effects derived from their intervention programs were excluded.
+_Costs_
 
-_Calculations for Decrements_
+Costs were priced according to four main categories: 
+1. Expected Payout Costs
+2. Intervention Program Costs,
+3. Incentive Costs
+4. Operating Expenses
+Program costs were determined by sampling participation booleans for each policyholder and intervention program according to the signup rates for each intervention program (see Appendix 7.2.1). The actual costs per year of providing each program to each policyholder were then determined by sampling from a uniform distribution bounded by the lower and upper limits of costs given in the provided data.
 
-A lapse table and mortality table were created by considering policyholders’ lapse rate and mortality rate, respectively, as the duration of the policy increased. For mortality tables, graduation was then applied using standard life tables by fitting a linear regression. This approximation was sufficient for the male population (pop.), although further approximation was required for more realistic female mortality (mort.) values, using the formula:
+Annual expected payout costs were determined by multiplying survival probability to that year by death probability in that year and the policy face amount. The key difference was in the death probability reductions from the intervention programs which were determined by sampling from a multivariate normal distribution with parameters provided in Appendix 7.3.3. These values were incrementally applied according to the program time horizons listed in the assumptions.
 
-Standard Mort.Total Pop.= Male Mort.Male Pop.+Female Mort.Female Pop.
+To determine the incentive scheme costs, we first had to simulate which levels policyholders were likely to be at throughout their policies. This was modelled by sampling booleans for whether someone was likely to regularly meet their health goals that were set in their annual checkup or not. If they were, they received the level 5 benefits, and if they weren’t, they received the Level 1 benefits. In addition to this, as people who are unlikely to meet their health goals are unlikely to be actively taking part in their intervention programs, some of their mortality reductions were removed, such as mortality reductions received from discounted gym memberships (see Appendix 7.2.2).
 
-_Expenses and Expected Death Cost Calculations_ 
+The operating expenses were derived by considering data provided by APRA on life insurers and their breakdown of costs in Australian insurers. While this data is not completely reliable in estimating costs for Lumaria, using the proportion of operating expenses to policy revenue still provides a workable estimate for understanding our operational costs. 
 
-Expenses and expected death costs were calculated for each policyholder, for each policy year:
-1. Calculate mortality reductions for policy year, according to:
-   New Mortality Rate = Old Mortality Rate  (1 - Mortality Reduction)
-2. Calculate cumulative survival probability to that point from age at date of issue
-   Survival Probability = 1 - Lapse Probability - Death Probability
-3. Multiply the expenses associated with policyholders’ individualised health programs by the cumulative survival up to that point
-4. Multiply policyholders’ cumulative survival by death probability and face amount to find expected death costs
+_Premiums_
 
+Rather than determining premiums and then evaluating policy revenue based on a given premium, each policy was priced by “risk units”. The base number of risk units for a given policyholder was determined using their gender, age, policy type, underwriting class and smoking status. The total number of risk units was found by multiplying their base risk units by the sum insured divided by 1000. This allowed for the price per Č1000 of sum insured for each policyholder to be determined.
+By using this method, the total number of risk units in the cohort of policyholders can be determined, with the premium per risk unit later decided to generate a specific profit margin. The tables to determine the total number of risk units per policyholder are in Appendix 7.2.3 with some examples of possible policyholders and their pricing for a given premium per risk unit. 
 
-_Basis for Premium Pricing_
+**Results**
 
-Pricing methodology is centred on first determining total expenses and expected death costs, then determining the required premiums to cover those costs and generate a specified profit margin. To determine the amount of the total required premium each policyholder should undertake, the concept of “risk units” is applied, whereby the annual premium for a single risk unit is determined, then depending on each policyholder’s individual characteristics, the quantity of risk units they must purchase for each $1000 of sum insured is determined. This is used to find equitable proportions of total premiums paid by each policyholder, and price estimations. See Appendix 7.4.1 for the risk unit determination methodology. 
+_Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
+ADD GRAPHS
 
-After obtaining these risk units, standard valuation calculations were made, replacing premium values with Total Risk Units P, where P represents the price of a single risk unit. Finally, P was solved based on specified profit margins (see Results section).
+From the above figures, it can be seen that the total economic costs incurred per year with the wellness program are higher in the first 10 years than the total economic costs incurred without the program. This is expected since there will be initial costs associated with the implementation of the program and the benefits to mortality rates will not be fully realised in the short term. After 10 years, the total economic costs incurred with the program are lower than without the program, which is reflective of the realised decrease in mortality rates.
 
-_Valuation and Zeroisation_
+| With Program Cost Formula  | Without Program Cost Formula |
+|----------------------------|------------------------------|
+|Total Economic Costs (With Program)
+=  Policy and Other Expenses 
+     + Program Expenses 
+     + Expected Death Costs | Total Economic Costs (Without Program)
+                             =  Policy and Other Expenses
+                                   + Expected Death Costs |
 
-The amount of required reserves each year to make the wellness program self-financing was determined by the equation:
-Reserves(t) = Premiums(t) - Expenses(t) - Expected Death Costs(t)
+_Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
+ADD GRAPHS
 
-Final cash flows were then discounted by 5% (see Assumptions) to determine the NPV.
+The above figures illustrate that the expected annual death costs with the program are consistently lower than that without the program. This difference becomes larger for the first 20 years before we see that the with program costs slowly approach the without program costs. This can be explained by the reduction in mortality, hence postponement of the death of policyholders. This allows premiums to be invested for longer resulting in higher returns.
 
+With regards to possible savings if the program had been implemented 20 years ago, by accumulating all savings to the start of 2024, approximately Č6.46 billion in savings could have been accumulated (see Appendix 7.4.1 for visualisation). It should also be noted that a large proportion of these savings would have been offset by program expenses, but regardless, it demonstrates a high level of possible savings in benefit payouts.
 
-**Short-Term Projections** (over 5 years)
-- With program
-- Without program
+_Revenue for Short Term (5 Years) & Long Term (30 Years)_
+ADD GRAPHS
 
+The above figures illustrate that the revenue is very high in the first year due to a proportion of policyholders being modelled to hold Single Premium Whole Life insurance (SPWL). The revenue generated per year for the next 19 years is much lower since they are from T20 policies and due to mortality these values have a decreasing trend before they drop to 0 after the 20 year period. Comparing revenues, it can be seen that more revenue is generated with the program than without. This is due to charging a higher premium reflective of the benefits the program provides to the policyholder.
 
-Include % change in costs, revenue, etc. for with vs. without program
-Include plots
+Finally, a comparison of the profit margins obtained with and without the program is detailed in the table below,demonstrating that a higher profit margin is obtained with the program. 
 
-**Long-Term Projections** _(over 30 years)_
-- With program
-- Without program
-  
-Include % change in costs, revenue, etc. for with vs. without program
-Include plots
+| Profit Margin With Program | Profit Margin Without Program | Relative Diff in Profit Margin |
+|----------------------------|-------------------------------|--------------------------------|
+| 17.47% | 15.40% | 13.41% |
 
-**Solvency Capital Requirements**
-Line plot of capital required over time
-Table of initial capital required (with vs. without scheme) and yearly capital required (with vs. without scheme)
+_Sales Optimization_
+Premiums were set very generously (for policyholders) without the program and hiked by only 10% with the program. When monitoring the program over the next few years, if sales are below expectations, SuperLife can consider reducing premiums to optimise sales. However, it is vital to note that premiums should only be reduced to a minimum of 1.07037 × (Premiums without the program) to ensure the profit margin remains at par or greater than that without the program. 
 
-For expenses, include mean estimates and upper-bound
 
 ## Assumptions
 | Variable                   | Assumption                                                                                          |
@@ -214,29 +218,32 @@ Additionally, to showcase the interplay of these changing assumptions, the evalu
 **Risk Assessment Matrix**
 <br>
 <img width="1000" alt="image" src="https://github.com/tmadfouni/SOA2024/assets/85324306/604ae043-c287-4d71-8b8a-24bd3f7825ae">
-
+UPDATE IMG
 
 **Qualitative Risks (L)**
 | Risk | Explanation | Risk Matrix Score | Mitigation |
 |------|-------------|-------------------|------------|
-| L1. Program may be perceived as intrusive | Policyholders may feel that SuperLife’s access to their health data and the level of monitoring is intrusive leading to potential customers hesitating to purchase a life insurance policy with them. | 12 (High) | <ul><li>Ensuring there is transparency surrounding what health data will be used and how individuals will be monitored.</li><li>Ensuring that only the minimum required data is collected to complete the required work.</li><li>Providing options for policyholders to refrain from sharing certain data if they would like to keep it private.</li><li>Emphasising the benefits of participating so that they know their data is being used in their best interests</li></ul>|
-| L2. Dependence on Technology | It is likely that there will be a lot of technology used for monitoring purposes throughout the program. Some policyholders (e.g., the elderly population) may not have sufficient digital literacy leading to accessibility issues amongst different age groups. | 20 (Very High) | <ul><li>Provide good customer service and technology support.</li><li>Ensure a user friendly interface and clear instructions.</li></ul>|
-| L3. Exploitation of loopholes | Policyholders may exploit loopholes in the health program if monitoring is not stringent enough or if the completion of the program activities are easy to forge. E.g., if there is a daily requirement of 1000 steps, the policyholder could just attach their step counter device to their dog. | 6 (Moderate) | <ul><li>Define clear rules and criteria regarding what constitutes the completion/progression of the health program.</li><li>Carefully consider possible loopholes when developing the healthcare plan.</li><li>Monitor policyholder engagement patterns and investigate any suspicious activity.</li></ul>|
+| L1. Exploitation of Loopholes | Policyholders may exploit loopholes in the health program if monitoring is not stringent enough or if the completion of the program activities are easy to forge.| 6 (Moderate) | <ul><li>Define clear rules and criteria regarding what constitutes the completion/progression of the health program.</li><li>Carefully consider possible loopholes when developing the healthcare plan.</li><li>Monitor policyholder engagement patterns and investigate any suspicious activity.</li></ul>|
+| L2. Policyholders not adopting healthy behaviours | The policyholders may not adopt healthy behaviours in which case the program wouldn’t be that effective and the high initial costs to implement the program may not be compensated by decreased mortality in the future. | 12 (High) | <ul><li>Ensure participation incentives are sufficient to motivate participation. This could be done by conducting surveys and exploring existing data from other health care plans.</li><li>Providing tailored programs taking into account barriers to change and mitigating those accordingly.</li><li>Ensure that the policyholder understands the short and long term benefits of adherence.</li></ul>|
+| L3. Program perceived as Intrusive | Policyholders may feel that SuperLife’s access to their health data and the level of monitoring is intrusive leading to potential customers hesitating to purchase a life insurance policy with them. | 12 (High) | <ul><li>Ensuring there is transparency surrounding which health data will be used and how individuals will be monitored.</li><li>Ensuring that only the minimum required data is collected to complete the required work.</li><li>Providing options for policyholders to refrain from sharing certain data if they would like to keep it private.</li><li>Emphasising the benefits of participating so that they know their data is being used in their best interests.</li></ul>|
 | L4. Regulatory Compliance Risk | Using policyholder health data and constant health monitoring to determine e.g., premium reductions may be violating Lumarian regulations. | 20 (High) | <ul><li>Utilise regulatory and legal advisors whilst developing the program to ensure there is compliance to all relevant laws.</li><li>Conduct frequent audits to ensure ongoing compliance especially when there are changes to regulations.</li></ul>|
-| L5. Employee Resistance | Implementing a health program like this would require more work from employees since there would be more inquiries from policyholders and more information would need to be provided to customers. This concept is new so it would take quite a bit of work on the employees’ part to help customers understand and feel secure. | 12 (High) | <ul><li>Since more employees will need to be hired, make sure to hire individuals who are supportive of the program and its objectives.</li><li>Provide comprehensive training, guidance and resources so that they understand the program and its benefits.</li><li>Incentivise frontline workers to promote the new products.</li></ul>|
-| L6. Policyholders not adopting healthy behaviours | The policyholders may not adopt healthy behaviours in which case the program wouldn’t be that effective and the high initial costs to implement the program may not be compensated by decreased mortality in the future. | 12 (High) | <ul><li>Ensure participation incentives are sufficient to motivate participation. This could be done by conducting surveys and exploring existing data from other health care plans.</li><li>Providing tailored programs taking into account barriers to change and mitigating those accordingly.</li><li>Ensure that the policyholder understands the short and long term benefits of adherence.</li></ul>|
+| L5. Dependence on Technology | It is likely that there will be a lot of technology used for monitoring purposes throughout the program. Some policyholders (e.g., the elderly population) may not have sufficient digital literacy leading to accessibility issues amongst different age groups. | 20 (Very High) | <ul><li>Provide good customer service and technology support.</li><li>Ensure a user friendly interface and clear instructions.</li></ul>|
+| L6. Employee Resistance | Implementing a health program like this would require more work from employees since there would be more inquiries from policyholders and more information would need to be provided to customers. This concept is new so it would take quite a bit of work on the employees’ part to help customers understand and feel secure. | 12 (High) | <ul><li>Since more employees will need to be hired, make sure to hire individuals who are supportive of the program and its objectives.</li><li>Provide comprehensive training, guidance and resources so that they understand the program and its benefits.</li><li>Incentivise frontline workers to promote the new products.</li></ul>|
 | L7. Competitive Rivalry | Other insurance companies may implement similar health programs creating competition for SuperLife. | 12 (High) | <ul><li>Ensure that the program being provided by SuperLife has some differentiating aspect that isn’t easy to replicate, e.g., SuperLife could have an exclusive supply partnership with some other companies to provide unique incentives to policyholders.</li><li>Monitor the competition landscape continuously and ensure the program continues to have a differentiating factor and is reasonably priced.</li></ul>|
 | L8. Privacy Concerns | There is risk of privacy being breached. | 16 (Very High) | <ul><li>Ensure compliance with the relevant regulators. </li><li>Conduct frequent audits.</li><li>Create appropriate access controls and encryption.</li><li>Only collect the minimum data necessary to complete the required work.</li></ul>|
+| L9. Pandemic Risk | Pandemics can have a significant and unforeseen impact on mortality rates, economic conditions, healthcare costs, etc. This can result in a reality that is far from the projected mortality and cash flows. | 25 (Very High) | <ul><li>Incorporate pandemic scenarios into stress testing to assess the potential impact on mortality and cash flow projections.</li><li>Make reinsurance arrangements to transfer some of the risk associated with pandemics.</li><li>Work with epidemiologists and other health authorities to stay informed about emerging pandemic risks and taking measures to mitigate their impacts.</li><li>Diversify the premium investment portfolio to mitigate any sudden losses.</li></ul>|
 
 **Quantitative Risks (T)**
 | Risk | Explanation | Risk Matrix Score | Mitigation |
 |------|-------------|-------------------|------------|
 | T1. Underestimation of Program Costs | The total initial and ongoing costs of the program may be underestimated leading to unforeseen expenses and challenges to maintain the program. | 12 (High) | <ul><li>Conduct thorough analysis of all potential costs including admin, incentive payouts, marketing, new employee salaries, training, etc.</li><li>Regularly update cost projections depending on inflation.</li><li>Ensure there are reserves to buffer unexpected costs.</li><li>Conduct sensitivity analysis to determine what would be an appropriate amount of reserves.</li></ul>| 
-| T2. Inaccurate Health Assessments (Counterparty Risk) | There is a possibility that third-party vendors and healthcare providers conduct inaccurate health assessments leading to mispricing of premiums or not providing the most effective incentives. | 8 (High) | <ul><li>Conduct due diligence on selected counterparty’s experience and expertise.</li><li>Define clear performance metrics.</li><li>Monitor and audit the performance of the counterparty.</li></ul>| 
-| T3. Adverse Selection | Individuals with higher health risks may be more likely to sign up to the program leading to higher claims and increased losses to SuperLife. | 16 (Very High) | <ul><li>Ensure high risk individuals are filtered out during the health assessment process using well defined underwriting guidelines.</li><li>Monitor the risk profile of individuals and make sure to adjust their premiums and incentives accordingly.</li></ul>| 
-| T4. Model Selection Risk | Potentially selecting an inadequate modelling for projecting the program outcomes leading to inaccurate predictions or biases. | 9 (High) | <ul><li>Understand the data and use suitable assumptions.</li><li>Compare models.</li><li>Evaluate model performance using metrics such as AIC/BIC and R-squared.</li><li>Update assumptions and model as the program evolves.</li></ul>| 
-| T5. Economic Assumptions Risk | Economic factors such as inflation and interest rates can be highly volatile. Because of this, any assumptions about these rates are likely to be incorrect leading to false projections and revenue forecasts. | 25 (Very High) | <ul><li>Assume constant inflation and interest rate since the high volatility of these factors means there is no added benefit or projecting these.</li><li>Conduct sensitivity analysis to assess economic scenario impact.</li><li>Regularly update economic assumptions.</li></ul>|
-| T6. Liquidity Risk | There may be inadequate liquidity to fund payouts and meet other financial obligations especially during the first few years of implementing the program. | 15 (Very High) | <ul><li>Conduct stress testing and cash-flow analysis.</li><li>Organise contingency funding arrangements e.g., reinsurance.</li><li>Monitor liquidity metrics regularly.</li></ul>|
+| T2. Model Selection Risk | Potentially selecting an inadequate modelling for projecting the program outcomes leading to inaccurate predictions or biases. | 9 (High) | <ul><li>Understand the data and use suitable assumptions.</li><li>Compare models.</li><li>Evaluate model performance using metrics such as AIC/BIC and R-squared.</li><li>Update assumptions and model as the program evolves.</li></ul>| 
+| T3. Liquidity Risk | There may be inadequate liquidity to fund payouts and meet other financial obligations especially during the first few years of implementing the program. | 15 (Very High) | <ul><li>Conduct stress testing and cash-flow analysis.</li><li>Organise contingency funding arrangements e.g., reinsurance.</li><li>Monitor liquidity metrics regularly.</li></ul>|
+| T4. Inappropriate correlation assumptions between intervention programs | Inaccurate correlation assumptions between intervention programs can lead to combinations of intervention programs being either under or overestimated in their effectiveness at reducing mortality.| 15 (Very High) | <ul><li>Conduct research to identify commonalities in the outcomes of intervention programs.</li><li>Utilise existing studies and other data driven approaches to determine correlations between programs.</li><li>Seek advice from experts in the field and providers of the intervention programs.</li><li>Upon implementation, make sure to adjust correlation coefficients such that they are reflective of the mortality outcomes seen from running the program.</li></ul>|
+| T5. Inaccurate Health Assessments (Counterparty Risk) | There is a possibility that third-party vendors and healthcare providers conduct inaccurate health assessments leading to mispricing of premiums or not providing the most effective incentives. | 8 (High) | <ul><li>Conduct due diligence on selected counterparty’s experience and expertise.</li><li>Define clear performance metrics.</li><li>Monitor and audit the performance of the counterparty.</li></ul>| 
+| T6. Adverse Selection | Individuals with higher health risks may be more likely to sign up to the program leading to higher claims and increased losses to SuperLife. | 16 (Very High) | <ul><li>Ensure high risk individuals are filtered out during the health assessment process using well defined underwriting guidelines.</li><li>Monitor the risk profile of individuals and make sure to adjust their premiums and incentives accordingly.</li></ul>| 
+| T7. Economic Assumptions Risk | Economic factors such as inflation and interest rates can be highly volatile. Because of this, any assumptions about these rates are likely to be incorrect leading to false projections and revenue forecasts. | 25 (Very High) | <ul><li>Assume constant inflation and interest rate since the high volatility of these factors means there is no added benefit or projecting these.</li><li>Conduct sensitivity analysis to assess economic scenario impact.</li><li>Regularly update economic assumptions.</li></ul>|
+| T8. Inaccurate mortality and lapse rate assumptions | Inaccurate mortality and lapse rate assumptions could significantly impact long term cash flow projections and overly optimistic assumptions can lead to financial instability and misallocation of resources. | 20 (Very High) | <ul><li>Utilise historical data and actuarial analysis to determine reasonable assumptions.</li><li>Conduct sensitivity analysis to evaluate the sensitivity of projections to changes in mortality and lapse rates. (make sure the model is robust and small changes in assumptions don’t lead to major changes in projection).</li><li>Regularly review and update assumptions based on incoming data and changing demographics.</li></ul>|
 
 
 ## Data and Data Limitations
@@ -272,8 +279,46 @@ _Table A: Intervention Programs ranked in order of highest mortality effect and 
 _Column Graph A: Count of deaths associated with listed causes_
 _Plot A: Proportion of ages at death of each cause_
 
-### Appendix B: Inflation Assumption
-Plot below shows that the economic inflation rate from 2023 onwards approaches 2% in the short-term, hence set to this constant 2% for all analyses. 
+### Appendix B: Pricing Method
+_Simulated Variables_
+To generate the model parameters, the uniform distribution was used to generate a vector of TRUE/FALSE entries that represent whether each policyholder meets their annual health goals or not, with policyholders generating TRUE, being referred to as “Goal Meet-ers”. The uniform distribution was then used to generate the cost of each policyholder’s personalised program, with the full value of the individual programs added to SuperLife’s expenses. Then, using the multivariate normal distribution, mortality benefits were generated for each policyholder, based on their individual set of intervention programs. For policyholders not classified as “Goal Meet-ers”, effects derived from their intervention programs were excluded.
+
+_Calculations for Decrements_
+A lapse table and mortality table were created by considering policyholders’ lapse rate and mortality rate, respectively, as the duration of the policy increased. For mortality tables, graduation was then applied using standard life tables by fitting a linear regression. This approximation was sufficient for the male population (pop.), although further approximation was required for more realistic female mortality (mort.) values, using the formula:
+
+Standard Mortality x Total Population = Male Mortality x Male Population + Female Mortality x Female Population
+
+_Expenses and Expected Death Cost Calculations_
+Expenses and expected death costs were calculated for each policyholder, for each policy year:
+1. Calculate mortality reductions for policy year, according to:
+   New Mortality Rate = Old Mortality Rate  (1 - Mortality Reduction)
+2. Calculate cumulative survival probability to that point from age at date of issue:
+   Survival Probability = 1 - Lapse Probability - Death Probability
+3. Multiply the expenses associated with policyholders’ individualised health programs by the cumulative survival up to that point
+4. Multiply policyholders’ cumulative survival by death probability and face amount to find expected death costs
+
+
+_Basis for Premium Pricing_
+Pricing methodology is centred on first determining total expenses and expected death costs, then determining the required premiums to cover those costs and generate a specified profit margin. To determine the amount of the total required premium each policyholder should undertake, the concept of “risk units” is applied, whereby the annual premium for a single risk unit is determined, then depending on each policyholder’s individual characteristics, the quantity of risk units they must purchase for each Č1000 of sum insured is determined. This is used to find equitable proportions of total premiums paid by each policyholder, and price estimations. See Appendix 7.4.1 for the risk unit determination methodology. 
+
+After obtaining these risk units, standard valuation calculations were made, replacing premium values with Total Risk Units P, where P represents the price of a single risk unit. Finally, P was solved based on specified profit margins (see Results section).
+
+_Valuation and Zeroisation_
+The amount of required reserves each year to make the wellness program self-financing was determined by the equation below:
+Reserves(t) = Premiums(t) - Expenses(t) - Expected Death Costs(t)
+
+Final cash flows were then discounted by 5% (see Assumptions) to determine the NPV.
+
+_Determination of Risk Units_
+1. Calculate premiums for a unit of insurance using the Principle of Equivalence for all ages and both males and females
+2. Find the ratio of each age and gender’s premium relative to a baseline 30 year old male
+   - i.e., a ratio of 1.34 for a 41 year old Female for term insurance indicates that this policyholder incurs approximately 1.34 times of the cost of a 30 year old male
+3. Ratios (see Appendix 7.2 for tabulated values) are then grouped into 5 year age brackets in alignment with the definition of a short-term timeframe, and to increase interpretability and usability.
+4. To consider the underwriting class risk, death probability ratios between the four risk classes were examined, using “Very Low risk” as a baseline
+   - yielded factors: L = 1.15, M = 1.4, and H = 1.6
+5. Smoker factor was deduced by similar methodologies to Step 4, but was scaled down for reasonableness, as it would be “double counting” risk from their underwriting class.
+   - Resulted in a final factor of 1.74
+6. Determined the number risk units each of the 2023 policyholders are worth
 
 ### Appendix C: Comparison of In Force data vs Population data
 To justify the assumed homogeneity between the SuperLife Inforce sample and the general Lumaria population, a comparison of the age distribution was performed, as per the table below. The discrepancy in the age distributions can be attributed to the SuperLife data only covering persons aged 25+. 
