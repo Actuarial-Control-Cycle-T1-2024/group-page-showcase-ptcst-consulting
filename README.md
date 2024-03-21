@@ -13,7 +13,7 @@ Group Members: Chloe Kostopoulos, Sarah Lou, Tetian Madfouni, Tanvi Vakkalagadda
 - [Further Recommendations](#FurtherRecommendations)
 - [Conclusion](#Conclusion)
 - [References](#References)
-- [Appendix](#Appendix)
+
 ## Executive Summary
 ## Objectives
 The main objectives of the proposed program are to: 
@@ -106,10 +106,13 @@ _Qualitative_:
     customer loyalty and long-term customer relations
     
 _Quantitative_:
-Intervention Program Selection Methodology conducted to determine the most optimal intervention programs to include (refer to _Appendix A_ for further details):
+Intervention Program Selection Methodology conducted to determine the most optimal intervention programs to include (refer to _Figure A_ for visualisations):
 1. Sorted program descriptions (in given data) to maximise impact on mortality rates whilst simultaneously minimising per capita cost of the scheme
 2. Plotted and identified leading causes of death (using given data) and mapped these to the associated intervention schemes
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigate the leading causes of death
+
+![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/a192e7ac-7fb6-4cff-9e38-5f8d70bfaa8e)![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5e4b95c5-971d-4199-85a7-47558d2e7ac4)
+_Figure A_
 
 **Justification of Short-and-Long-term Timeframes**
 - Short-term timeframe is the 5-year period from 2023 (2023–2028)
@@ -123,7 +126,7 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 
 ## Pricing/Costs
 **Method**
-Summarised below is an overview of PTCST Consulting’s pricing methodology, with further detail provided in _Appendix B_.
+Summarised below is an overview of PTCST Consulting’s pricing methodology.
 
 _Costs_
 
@@ -132,25 +135,26 @@ Costs were priced according to four main categories:
 2. Intervention Program Costs,
 3. Incentive Costs
 4. Operating Expenses
-Program costs were determined by sampling participation booleans for each policyholder and intervention program according to the signup rates for each intervention program (see Appendix 7.2.1). The actual costs per year of providing each program to each policyholder were then determined by sampling from a uniform distribution bounded by the lower and upper limits of costs given in the provided data.
+Program costs were determined by sampling participation booleans for each policyholder and intervention program according to the signup rates for each intervention program. The actual costs per year of providing each program to each policyholder were then determined by sampling from a uniform distribution bounded by the lower and upper limits of costs given in the provided data.
 
-Annual expected payout costs were determined by multiplying survival probability to that year by death probability in that year and the policy face amount. The key difference was in the death probability reductions from the intervention programs which were determined by sampling from a multivariate normal distribution with parameters provided in Appendix 7.3.3. These values were incrementally applied according to the program time horizons listed in the assumptions.
+Annual expected payout costs were determined by multiplying survival probability to that year by death probability in that year and the policy face amount. The key difference was in the death probability reductions from the intervention programs which were determined by sampling from a multivariate normal distribution. These values were incrementally applied according to the program time horizons listed in the assumptions.
 
-To determine the incentive scheme costs, we first had to simulate which levels policyholders were likely to be at throughout their policies. This was modelled by sampling booleans for whether someone was likely to regularly meet their health goals that were set in their annual checkup or not. If they were, they received the level 5 benefits, and if they weren’t, they received the Level 1 benefits. In addition to this, as people who are unlikely to meet their health goals are unlikely to be actively taking part in their intervention programs, some of their mortality reductions were removed, such as mortality reductions received from discounted gym memberships (see Appendix 7.2.2).
+To determine the incentive scheme costs, we first had to simulate which levels policyholders were likely to be at throughout their policies. This was modelled by sampling booleans for whether someone was likely to regularly meet their health goals that were set in their annual checkup or not. If they were, they received the level 5 benefits, and if they weren’t, they received the Level 1 benefits. In addition to this, as people who are unlikely to meet their health goals are unlikely to be actively taking part in their intervention programs, some of their mortality reductions were removed, such as mortality reductions received from discounted gym memberships.
 
 The operating expenses were derived by considering data provided by APRA on life insurers and their breakdown of costs in Australian insurers. While this data is not completely reliable in estimating costs for Lumaria, using the proportion of operating expenses to policy revenue still provides a workable estimate for understanding our operational costs. 
 
 _Premiums_
 
 Rather than determining premiums and then evaluating policy revenue based on a given premium, each policy was priced by “risk units”. The base number of risk units for a given policyholder was determined using their gender, age, policy type, underwriting class and smoking status. The total number of risk units was found by multiplying their base risk units by the sum insured divided by 1000. This allowed for the price per Č1000 of sum insured for each policyholder to be determined.
-By using this method, the total number of risk units in the cohort of policyholders can be determined, with the premium per risk unit later decided to generate a specific profit margin. The tables to determine the total number of risk units per policyholder are in Appendix 7.2.3 with some examples of possible policyholders and their pricing for a given premium per risk unit. 
+By using this method, the total number of risk units in the cohort of policyholders can be determined, with the premium per risk unit later decided to generate a specific profit margin.
 
 **Results**
 
 _Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
 ADD GRAPHS
+FIGURE A
 
-From the above figures, it can be seen that the total economic costs incurred per year with the wellness program are higher in the first 10 years than the total economic costs incurred without the program. This is expected since there will be initial costs associated with the implementation of the program and the benefits to mortality rates will not be fully realised in the short term. After 10 years, the total economic costs incurred with the program are lower than without the program, which is reflective of the realised decrease in mortality rates.
+From _Figure A_, it can be seen that the total economic costs incurred per year with the wellness program are higher in the first 10 years than the total economic costs incurred without the program. This is expected since there will be initial costs associated with the implementation of the program and the benefits to mortality rates will not be fully realised in the short term. After 10 years, the total economic costs incurred with the program are lower than without the program, which is reflective of the realised decrease in mortality rates.
 
 | With Program Cost Formula  | Without Program Cost Formula |
 |----------------------------|------------------------------|
@@ -160,24 +164,28 @@ From the above figures, it can be seen that the total economic costs incurred pe
      + Expected Death Costs | Total Economic Costs (Without Program)
                              =  Policy and Other Expenses
                                    + Expected Death Costs |
+_Table B: Cost Formulas__
 
 _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
+FIGURE B
 ADD GRAPHS
 
-The above figures illustrate that the expected annual death costs with the program are consistently lower than that without the program. This difference becomes larger for the first 20 years before we see that the with program costs slowly approach the without program costs. This can be explained by the reduction in mortality, hence postponement of the death of policyholders. This allows premiums to be invested for longer resulting in higher returns.
+_Figure B_ illustrates that the expected annual death costs with the program are consistently lower than that without the program. This difference becomes larger for the first 20 years before we see that the with program costs slowly approach the without program costs. This can be explained by the reduction in mortality, hence postponement of the death of policyholders. This allows premiums to be invested for longer resulting in higher returns.
 
-With regards to possible savings if the program had been implemented 20 years ago, by accumulating all savings to the start of 2024, approximately Č6.46 billion in savings could have been accumulated (see Appendix 7.4.1 for visualisation). It should also be noted that a large proportion of these savings would have been offset by program expenses, but regardless, it demonstrates a high level of possible savings in benefit payouts.
+With regards to possible savings if the program had been implemented 20 years ago, by accumulating all savings to the start of 2024, approximately Č6.46 billion in savings could have been accumulated. It should also be noted that a large proportion of these savings would have been offset by program expenses, but regardless, it demonstrates a high level of possible savings in benefit payouts.
 
 _Revenue for Short Term (5 Years) & Long Term (30 Years)_
 ADD GRAPHS
+FIGURE C
 
-The above figures illustrate that the revenue is very high in the first year due to a proportion of policyholders being modelled to hold Single Premium Whole Life insurance (SPWL). The revenue generated per year for the next 19 years is much lower since they are from T20 policies and due to mortality these values have a decreasing trend before they drop to 0 after the 20 year period. Comparing revenues, it can be seen that more revenue is generated with the program than without. This is due to charging a higher premium reflective of the benefits the program provides to the policyholder.
+_Figure C_ illustrates that the revenue is very high in the first year due to a proportion of policyholders being modelled to hold Single Premium Whole Life insurance (SPWL). The revenue generated per year for the next 19 years is much lower since they are from T20 policies and due to mortality these values have a decreasing trend before they drop to 0 after the 20 year period. Comparing revenues, it can be seen that more revenue is generated with the program than without. This is due to charging a higher premium reflective of the benefits the program provides to the policyholder.
 
-Finally, a comparison of the profit margins obtained with and without the program is detailed in the table below,demonstrating that a higher profit margin is obtained with the program. 
+Finally, a comparison of the profit margins obtained with and without the program is detailed in _Table C_, demonstrating that a higher profit margin is obtained with the program. 
 
 | Profit Margin With Program | Profit Margin Without Program | Relative Diff in Profit Margin |
 |----------------------------|-------------------------------|--------------------------------|
 | 17.47% | 15.40% | 13.41% |
+_Table C: Profit Margin Calculations_
 
 _Sales Optimization_
 Premiums were set very generously (for policyholders) without the program and hiked by only 10% with the program. When monitoring the program over the next few years, if sales are below expectations, SuperLife can consider reducing premiums to optimise sales. However, it is vital to note that premiums should only be reduced to a minimum of 1.07037 × (Premiums without the program) to ensure the profit margin remains at par or greater than that without the program. 
@@ -186,7 +194,7 @@ Premiums were set very generously (for policyholders) without the program and hi
 ## Assumptions
 | Variable                   | Assumption                                                                                          |
 |----------------------------|-----------------------------------------------------------------------------------------------------|
-| Inflation                  | Economic inflation rate from 2023 onwards is a constant 2% p.a. (see _Appendix B_ for justification)    |
+| Inflation                  | Economic inflation rate from 2023 onwards is a constant 2% p.a. |
 | Population                 | Closed population (based on 2023) |
 | Interpolation              | Assume linear trend of mortality improvement across years |
 | Interest/Discount Rates    | Assumed a constant 5% for analyses, as the average of Lumaria’s 1-yr and 10-yr Risk-Free Annual Spot Rates were 5.68% and 6.74%, respectively, with significant declines of each rate in recent 10 years; trending at ~ 0-2%. |
@@ -198,19 +206,17 @@ Premiums were set very generously (for policyholders) without the program and hi
 | Expense and Expected Death Cost Calculations |<ul><li>Expenses assumed to be paid in advance</li></ul>Expected death costs assumed to be paid in arrears</li></ul>|
 
 ## Sensitivity Analysis
-A sensitivity analysis was performed on the key variables (see _Appendix D_ for tested values) to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure B_ below. See _Appendix D_ for the NPV comparison and an in-depth analysis of the sensitivity results.
+A sensitivity analysis was performed on the key variables to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure B_ below.
 
+ADD PLOTS
 _Figure B: Sensitivity Analysis - Profit Margin_
 
 Evidently, the effect of the intervention programs on mortality rates will have the largest impact on SuperLife’s profit margin. The outer bounds of each intervention program’s approximate impact on mortality rates was used, where the upper bound generates the best case scenario and the lower bound generates the worst case scenario. Given the results, it is important for SuperLife to closely monitor and update the mortality rate improvement assumptions regularly, as the worst case scenario results in a 14% decrease in the profit margin.
 
-Additionally, to showcase the interplay of these changing assumptions, the evaluation of a specific scenario was conducted (see Appendix 7.5.3 for tested values):
-- **Natural Disaster** (scenario): A decrease in supply of agricultural products due to major droughts which reduces crop yields and production, causing a significant decline in exports and income for individuals in Lumaria working in the agriculture sector.
-     - _Lower Mortality Improvements_: export volume decreases could lead to a decrease in revenue, hence limiting resources to invest in healthcare. This could result in lower quality of healthcare services, leading to higher mortality rates.
-     - _Lower Goal-Meeting Rate_: Lower mortality improvements and correlation may correspond to less policyholders meeting goals.
-     - _Increased Program Costs:_ economic decline causes higher prices for programs, especially non-essential ones. 
-     - _Lower Interest-Rate_: due to lower economic activity.
-     - _Lower Sign-Up Rate_: lower income and possible layoffs in the agricultural sector may result in lower spending, hence less likely to take out insurance.
+PASTE IMAGE
+_Figure C: Profit Margin Confidence Distribution_
+
+_Figure C_ illustrates a comparison of the distribution of profit margins, where 97.48% of the observations for ‘With Program’ have a higher profit margin than those for ‘Without Program’. This implies that there is a 97.48% degree of certainty that the value of the benefits derived from the program will exceed the value of the benefits derived without the program. Additionally, extending upon the results in Section 3.3 regarding the possible past mortality savings from the program, it can be deduced that there is a high degree of certainty for mortality improvements if the program had been implemented for the past 20 years.
 
 
 ## Risk and Risk Mitigation Strategies
@@ -255,7 +261,7 @@ No external data was used for the analysis.
 **Data Limitations**
 | Limitation                   | Explanation                                                                                         |
 |------------------------------|-----------------------------------------------------------------------------------------------------|
-| Lack of homogeneity between insured population vs. general population | The SuperLife Inforce data set (2023 cohort) has been used as a representative sample of payout reduction for prospective policies. However, the selection effects of the differences between the insured population versus the general population (_Appendix C_) may compromise the accuracy of our analysis. |
+| Lack of homogeneity between insured population vs. general population | The SuperLife Inforce data set (2023 cohort) has been used as a representative sample of payout reduction for prospective policies. However, the selection effects of the differences between the insured population versus the general population may compromise the accuracy of our analysis. |
 | Lack of gender differentiation in mortality table data | The discrepancies between female and male life expectancies in reality should be reflected in differences in their mortality rates. However, the mortality table does not distinguish between the two genders and thus, generalises our analysis by combining both genders.|
 | Limited past policy data | The truncation of the SuperLife Inforce dataset to 2001 blocks insight into possible longitudinal and cross-sectional trends, thus reducing the precision of future projections by introducing unaccounted variance. |
 | Limited data on Lumaria’s population trend | The lack of data on Lumaria’s population trend has made it difficult to extrapolate calculations. This had led to the assumptions of a closed population and a linear trend in mortality improvement. |
@@ -271,95 +277,3 @@ Furthermore, to ensure compliance with consumer protection laws, SuperLife shoul
 
 ## Conclusion
 To conclude, the proposed wellness intervention program can help SuperLife improve its policyholders’ expected mortality whilst also achieving increased profitability (RESULTS…..). After thorough qualitative and quantitative analyses on the impact of the wellness program over short and long-term timeframes and under assumptions scenarios, the improved financial and social benefits associated with the scheme provide substantial evidence that the project should be undertaken given our assumptions. Although the analyses conducted in this report justify the implementation of the wellness program, it is crucial to consider the ongoing monitoring of risks, costs and progress on initial objectives, within the program design.
-
-## References
-## Appendix 
-### Appendix A: Intervention Program Selection Methdology 
-_Table A: Intervention Programs ranked in order of highest mortality effect and lowest per capita cost_
-_Column Graph A: Count of deaths associated with listed causes_
-_Plot A: Proportion of ages at death of each cause_
-
-### Appendix B: Pricing Method
-_Simulated Variables_
-To generate the model parameters, the uniform distribution was used to generate a vector of TRUE/FALSE entries that represent whether each policyholder meets their annual health goals or not, with policyholders generating TRUE, being referred to as “Goal Meet-ers”. The uniform distribution was then used to generate the cost of each policyholder’s personalised program, with the full value of the individual programs added to SuperLife’s expenses. Then, using the multivariate normal distribution, mortality benefits were generated for each policyholder, based on their individual set of intervention programs. For policyholders not classified as “Goal Meet-ers”, effects derived from their intervention programs were excluded.
-
-_Calculations for Decrements_
-A lapse table and mortality table were created by considering policyholders’ lapse rate and mortality rate, respectively, as the duration of the policy increased. For mortality tables, graduation was then applied using standard life tables by fitting a linear regression. This approximation was sufficient for the male population (pop.), although further approximation was required for more realistic female mortality (mort.) values, using the formula:
-
-Standard Mortality x Total Population = Male Mortality x Male Population + Female Mortality x Female Population
-
-_Expenses and Expected Death Cost Calculations_
-Expenses and expected death costs were calculated for each policyholder, for each policy year:
-1. Calculate mortality reductions for policy year, according to:
-   New Mortality Rate = Old Mortality Rate  (1 - Mortality Reduction)
-2. Calculate cumulative survival probability to that point from age at date of issue:
-   Survival Probability = 1 - Lapse Probability - Death Probability
-3. Multiply the expenses associated with policyholders’ individualised health programs by the cumulative survival up to that point
-4. Multiply policyholders’ cumulative survival by death probability and face amount to find expected death costs
-
-
-_Basis for Premium Pricing_
-Pricing methodology is centred on first determining total expenses and expected death costs, then determining the required premiums to cover those costs and generate a specified profit margin. To determine the amount of the total required premium each policyholder should undertake, the concept of “risk units” is applied, whereby the annual premium for a single risk unit is determined, then depending on each policyholder’s individual characteristics, the quantity of risk units they must purchase for each Č1000 of sum insured is determined. This is used to find equitable proportions of total premiums paid by each policyholder, and price estimations. See Appendix 7.4.1 for the risk unit determination methodology. 
-
-After obtaining these risk units, standard valuation calculations were made, replacing premium values with Total Risk Units P, where P represents the price of a single risk unit. Finally, P was solved based on specified profit margins (see Results section).
-
-_Valuation and Zeroisation_
-The amount of required reserves each year to make the wellness program self-financing was determined by the equation below:
-Reserves(t) = Premiums(t) - Expenses(t) - Expected Death Costs(t)
-
-Final cash flows were then discounted by 5% (see Assumptions) to determine the NPV.
-
-_Determination of Risk Units_
-1. Calculate premiums for a unit of insurance using the Principle of Equivalence for all ages and both males and females
-2. Find the ratio of each age and gender’s premium relative to a baseline 30 year old male
-   - i.e., a ratio of 1.34 for a 41 year old Female for term insurance indicates that this policyholder incurs approximately 1.34 times of the cost of a 30 year old male
-3. Ratios (see Appendix 7.2 for tabulated values) are then grouped into 5 year age brackets in alignment with the definition of a short-term timeframe, and to increase interpretability and usability.
-4. To consider the underwriting class risk, death probability ratios between the four risk classes were examined, using “Very Low risk” as a baseline
-   - yielded factors: L = 1.15, M = 1.4, and H = 1.6
-5. Smoker factor was deduced by similar methodologies to Step 4, but was scaled down for reasonableness, as it would be “double counting” risk from their underwriting class.
-   - Resulted in a final factor of 1.74
-6. Determined the number risk units each of the 2023 policyholders are worth
-
-### Appendix C: Comparison of In Force data vs Population data
-To justify the assumed homogeneity between the SuperLife Inforce sample and the general Lumaria population, a comparison of the age distribution was performed, as per the table below. The discrepancy in the age distributions can be attributed to the SuperLife data only covering persons aged 25+. 
-
-| Age | Insured Data | Population Data | 
-|-----|--------------|-----------------|
-|0-14 |0%            |20%              |
-|15-24|0%            |18%              |
-|25-54|84.5%         |46%              |
-|55-64|14.3%         |12%              |
-|65+  |1.2%          |4%               |
-
-### Appendix D: Sensitivity Analysis
-Range of values used for each variable that was tested in the sensitivity analysis. 
-| Variable | Range | 
-|----------|-------|
-| Interest rate | 3% - 6.5% |
-| Intervention program mortality rate improvements | Used outer bounds:<ul><li>Safety campaign: 3-5%</li><li>Annual checkup: 5-10%</li><li>Discount gym: 3-6%</li><li>Weight Management: 5-10%</li><li>Cancer prevention: 5-10%</li><li>Heart screening: 5-10%</li></ul>|
-|Intervention program costs | Used outer bounds:<ul><li>Safety campaign: 10-35</li><li>Annual checkup: 175-870</li><li>Discount gym: 175-870</li><li>Weight Management: 175-870</li><li>Cancer prevention: 20-85</li><li>Heart screening: 90-345</li></ul>|
-|Goal meeting rate | 30% - 80%|
-| Sign up rate | Plus/minus 20%:<ul><li>Safety campaign: 50-90%</li><li>Annual checkup: Mandatory</li><li>Discount gym: 10-50%</li><li>Weight Management: 40-80%</li><li>Cancer prevention: 40-80%</li><li>Heart screening: 40-80%</li></ul>|
-| Time horizon for mortality reductions in each intervention program | 30% increase/decrease:<ul><li>Safety campaign: 0.7-1.3 years</li><li>Annual checkup: 3.5-6.5 years</li><li>Discount gym: 0.7-1.3 years</li><li>Weight Management: 0.7-1.3 years</li><li>Cancer prevention: 6.3-11.7 years</li><li>Heart screening: 3.5-6.5 years</li></ul>|
-
-The results illustrate a comparison of the varied effects of changes in assumptions on SuperLife’s net present value and profit margin. By comparing the magnitudes of impact, we can rank the variables based on their relative impact on SuperLife’s financials. From greatest to least impact:
-1. Intervention program mortality improvements
-2. Intervention program costs
-3. Sign-up rate
-4. Goal meeting rate
-5. Interest rate
-6. Time horizon for intervention program 
-
-It is important to note that a 1.5% increase in the interest rate assumption forms the ‘best case scenario’ and leads to a 1.18% increase in SuperLife’s profit margin whilst leading to a ~14m decrease in the NPV. The discrepancy in movement is explained by the greater level of discounting and hence, the smaller NPV. However, the EPV of premiums also decreased which led to an overall increase in the profit margin. 
-
-Another discrepancy in the results is the movement in the NPV and profit margin when the ‘goal meeting’ rate was adjusted. The ‘best case scenario’ was defined to be an 80% ‘goal meeting’ rate whilst the ‘worst case scenario’ was defined to be 30%. The results indicate that the ‘best case scenario’ actually led to downward movements in SuperLife’s financials and vice versa. This can be explained through the understanding that if a greater proportion of policyholders meet their goal, SuperLife will have to payout a greater amount as a result of the profit allocation structure of the program. 
-
-### Appendix E: Scenario Testing
-| Variable | Range | 
-|----------|-------|
-| Interest rate | 4% (lower)|
-|Intervention mortality rate improvements | Reduce bounds to:<ul><li>Safety campaign: 3-4%</li><li>Annual checkup: 5-7%</li><li>Discount gym: 3-5%</li><li>Weight Management: 5-6.5%</li><li>Cancer prevention: 5-8%</li><li>Heart screening: 5-8%</li></ul>|
-| Goal meeting rate | 60% (lower) |
-| Sign-Up Rate | Reduce values to:<ul><li>Safety campaign: 60%</li><li>Annual checkup: Mandatory</li><li>Discount gym: 20%</li><li>Weight Management: 40%</li><li>Cancer prevention: 50%</li><li>Heart screening: 50%</li></ul>|
-| Intervention Program Costs | Increase bounds to:<ul><li>Safety campaign: 30-35</li><li>Annual checkup: 300-870</li><li>Discount gym: 600-870</li><li>Weight Management: 500-870</li><li>Cancer prevention: 50-85</li><li>Heart screening: 150-345</li></ul>|
-
