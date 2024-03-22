@@ -21,6 +21,8 @@ The main objectives of the proposed program are to:
 2. Incentivise healthier behaviours of policyholders
 
 These two objectives work together to increase the profitability of SuperLife and will be measured by the following key metrics:
+<div align="center">
+
 | Key Metric | Frequency |
 |------------|-----------|
 | Mortality Rates of Policyholders | Annually for first 5 years, then once every 5 years |
@@ -28,6 +30,8 @@ These two objectives work together to increase the profitability of SuperLife an
 | Number of New Business Signups | Annually |
 | Expected Policy Profits & Costs | Annually |
 | Satisfaction Rate (Net Promoter Score) | Annually for the first 5 years, then once every 5 years |
+
+</div>
 
 Given these metrics, the wellness program will be reviewed as a whole every 5 years to assess whether it is still achieving its main objectives, and modify the program's features and pricing if necessary.
 
@@ -73,10 +77,13 @@ SuperLife’s incentive scheme is underpinned by a multi-level reward system, wh
 
 Each year, in the annual check-up and heart screening, the policyholder will receive certain health goals from the medical practitioner, such as BMI requirements, target heart-rate or ideal cholesterol levels. At the policyholder’s next annual check-up and heart screening:
 - If the policyholder has met (not met) the previous policy year’s goals, they move up (down) a level in the incentive scheme structure for the next year. Moving to higher (lower) levels leads to increased (decreased) proportions of profit share.
+<div align="center">
 
 |        | **Level 1** | **Level 2** | **Level 3** | **Level 4** | **Level 5** |
 |--------|---------|---------|---------|---------|---------|
 | **Profit Share Allocation** | 10% | 25% | 35% | 45% | 60%|
+
+</div>
 <p align="center">
 Table A: Profit Share Allocation Structure
 </p>
@@ -155,9 +162,10 @@ By using this method, the total number of risk units in the cohort of policyhold
 **Results**
 
 _Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
-
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d)
+<p align="center">
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65" width="500" alt="image"/>
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d" width="500" alt="image"/>
+</p>
 <p align="center">
      Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)
 </p>
@@ -172,9 +180,10 @@ Table B: Cost Formulas
 </p>
 
 _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
-
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3)
+<p align="center">
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f" width="500" alt="image"/>
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3" width="500" alt="image"/>
+</p>
 <p align="center">
      Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)
 </p>
@@ -184,9 +193,10 @@ _Figure C_ illustrates that the expected annual death costs with the program are
 With regards to possible savings if the program had been implemented 20 years ago, by accumulating all savings to the start of 2024, approximately Č6.46 billion in savings could have been accumulated. It should also be noted that a large proportion of these savings would have been offset by program expenses, but regardless, it demonstrates a high level of possible savings in benefit payouts.
 
 _Revenue for Short Term (5 Years) & Long Term (30 Years)_
-
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42)
+<p align="center">
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce" width="500" alt="image"/>
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42" width="500" alt="image"/>
+</p>
 <p align="center">
      Figure D: Revenue for Short Term (5 Years) & Long Term (30 Years). 
      Note: The 2023 revenue values have been hidden out of bounds to improve presentation of the data
@@ -195,10 +205,13 @@ _Revenue for Short Term (5 Years) & Long Term (30 Years)_
 _Figure D_ illustrates that the revenue is very high in the first year due to a proportion of policyholders being modelled to hold Single Premium Whole Life insurance (SPWL). The revenue generated per year for the next 19 years is much lower since they are from T20 policies and due to mortality these values have a decreasing trend before they drop to 0 after the 20 year period. Comparing revenues, it can be seen that more revenue is generated with the program than without. This is due to charging a higher premium reflective of the benefits the program provides to the policyholder.
 
 Finally, a comparison of the profit margins obtained with and without the program is detailed in _Table C_, demonstrating that a higher profit margin is obtained with the program. 
+<div align="center">
 
 | Profit Margin With Program | Profit Margin Without Program | Relative Diff in Profit Margin |
 |----------------------------|-------------------------------|--------------------------------|
 | 17.47% | 15.40% | 13.41% |
+
+</div>
 <p align="center">
 Table C: Profit Margin Calculations
 </p>
@@ -224,8 +237,9 @@ Premiums were set very generously (for policyholders) without the program and hi
 
 ## Sensitivity Analysis
 A sensitivity analysis was performed on the key variables to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure E_ below.
-
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/296a8dcd-7e6a-45cf-b919-830adbc5d250)
+<p align="center">
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/296a8dcd-7e6a-45cf-b919-830adbc5d250" alt="image"/>
+</p>
 <p align="center">
      Figure E: Sensitivity Analysis - Profit Margin
 </p>
