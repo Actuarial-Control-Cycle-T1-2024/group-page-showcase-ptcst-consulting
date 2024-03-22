@@ -112,7 +112,7 @@ Intervention Program Selection Methodology conducted to determine the most optim
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigate the leading causes of death
 
 ![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/a192e7ac-7fb6-4cff-9e38-5f8d70bfaa8e)![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5e4b95c5-971d-4199-85a7-47558d2e7ac4)
-_Figure A_
+_Figure A: Death count alongside proportion of ages at death associated with each cause_
 
 **Justification of Short-and-Long-term Timeframes**
 - Short-term timeframe is the 5-year period from 2023 (2023–2028)
@@ -135,6 +135,7 @@ Costs were priced according to four main categories:
 2. Intervention Program Costs,
 3. Incentive Costs
 4. Operating Expenses
+   
 Program costs were determined by sampling participation booleans for each policyholder and intervention program according to the signup rates for each intervention program. The actual costs per year of providing each program to each policyholder were then determined by sampling from a uniform distribution bounded by the lower and upper limits of costs given in the provided data.
 
 Annual expected payout costs were determined by multiplying survival probability to that year by death probability in that year and the policy face amount. The key difference was in the death probability reductions from the intervention programs which were determined by sampling from a multivariate normal distribution. These values were incrementally applied according to the program time horizons listed in the assumptions.
@@ -151,6 +152,7 @@ By using this method, the total number of risk units in the cohort of policyhold
 **Results**
 
 _Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
+
 ADD GRAPHS
 FIGURE A
 
@@ -159,6 +161,7 @@ From _Figure A_, it can be seen that the total economic costs incurred per year 
 | With Program Cost Formula  | Without Program Cost Formula |
 |----------------------------|------------------------------|
 | Total Economic Costs (With Program) =  Policy and Other Expenses + Program Expenses + Expected Death Costs | Total Economic Costs (Without Program) =  Policy and Other Expenses + Expected Death Costs |
+
 _Table B: Cost Formulas_
 
 _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
@@ -180,6 +183,7 @@ Finally, a comparison of the profit margins obtained with and without the progra
 | Profit Margin With Program | Profit Margin Without Program | Relative Diff in Profit Margin |
 |----------------------------|-------------------------------|--------------------------------|
 | 17.47% | 15.40% | 13.41% |
+
 _Table C: Profit Margin Calculations_
 
 _Sales Optimization_
@@ -263,4 +267,4 @@ The use of policyholder data to evaluate the impact of the wellness program is e
 Furthermore, to ensure compliance with consumer protection laws, SuperLife should consider providing clear information about the program, including costs, benefits and potential risks to policyholders, and not engage in unfair or deceptive practices. Ongoing reporting, monitoring of reserves and regular cost updates to regulators should be provided to ensure compliance.
 
 ## Conclusion
-To conclude, the proposed wellness intervention program can help SuperLife improve its policyholders’ expected mortality whilst also achieving increased profitability (RESULTS…..). After thorough qualitative and quantitative analyses on the impact of the wellness program over short and long-term timeframes and under assumptions scenarios, the improved financial and social benefits associated with the scheme provide substantial evidence that the project should be undertaken given our assumptions. Although the analyses conducted in this report justify the implementation of the wellness program, it is crucial to consider the ongoing monitoring of risks, costs and progress on initial objectives, within the program design.
+The proposed wellness intervention program can help SuperLife improve its policyholders’ expected mortality whilst also achieving increased profitability (with a 97.48% degree of certainty). The expected increase in the profit margin is 13.41% relative to the profit margin without the program. After thorough qualitative and quantitative analyses on its impact over short and long-term timeframes, the associated financial and social benefits provide substantial evidence that the project should be undertaken. However, it is crucial to perform ongoing monitoring of risks, costs and progress on initial objectives. 
