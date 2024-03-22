@@ -65,7 +65,7 @@ PTCST Consulting’s wellness plan uses a tailored approach whereby each new Sup
 6.	Safety Campaigns:
      - Provide both general and personalised safety workshops, based on policyholders' profiles, that aim to promote healthy living and injury prevention
      - General workshops and webinars on fire safety, home safety and safe driving
-     - Create personalised (i.e., by industry) workplace safety campaigns that offers tips on work stress management, ergonomic practices and key safety techniques, e.g., proper lifting techniques for policyholders with manual labour jobs
+     - Create personalised (i.e., by industry) workplace safety campaigns that offer tips on work stress management, ergonomic practices and key safety techniques, e.g., proper lifting techniques for policyholders with manual labour jobs
 
 **Incentives for Intervention Program**
 
@@ -77,7 +77,6 @@ Each year, in the annual check-up and heart screening, the policyholder will rec
 |        | **Level 1** | **Level 2** | **Level 3** | **Level 4** | **Level 5** |
 |--------|---------|---------|---------|---------|---------|
 | **Profit Share Allocation** | 10% | 25% | 35% | 45% | 60%|
-
 <p align="center">
 Table A: Profit Share Allocation Structure
 </p>
@@ -95,9 +94,8 @@ _Qualitative_:
   - Decreasing Expected Mortality: through the overall development of healthy behaviours, the program aims to reduce the likelihood of
     policyholders’ mortality.
 2. Incentivises Healthy Behaviour through…
-  - Participation in the Program: material rewards system uses gamification elements, such as progressing to higher reward tiers, to motivates
-    policyholders to make lasting health changes
-  - Social support aspect of program features, such as group healthy cooking or exercise classes, encourages engagement and make it easily
+  - Participation in the Program: material rewards system uses gamification elements, such as progressing to higher reward tiers, to motivate policyholders to make lasting health changes
+  - Social support aspect of program features, such as group healthy cooking or exercise classes, encourages engagement and makes it easily
     accessible
 3.	Increases SuperLife’s overall profitability by…
   - Increasing Life Insurance Sales: rewards and discounts offered through the program will incentivise participants to purchase SuperLife’s life
@@ -109,13 +107,13 @@ _Qualitative_:
     
 _Quantitative_:
 Intervention Program Selection Methodology conducted to determine the most optimal intervention programs to include (refer to _Figure A_ for visualisations):
-1. Sorted program descriptions to maximise impact on mortality rates whilst simultaneously minimising per capita cost of the scheme
+1. Sorted program descriptions to maximise impact on mortality rates whilst simultaneously minimising the per capita cost of the scheme
 2. Plotted and identified leading causes of death and mapped these to the associated intervention schemes
-3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigate the leading causes of death
+3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigating the leading causes of death
 
-<p align="center">
 ![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/a192e7ac-7fb6-4cff-9e38-5f8d70bfaa8e)![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5e4b95c5-971d-4199-85a7-47558d2e7ac4)
-     Figure A: Death count alongside proportion of ages at death for each cause
+<p align="center">
+Figure A: Death count alongside proportion of ages at death for each cause
 </p>
 
 **Justification of Short-and-Long-term Timeframes**
@@ -158,10 +156,10 @@ By using this method, the total number of risk units in the cohort of policyhold
 
 _Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
 
-<p align="center">
 ![image](https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65)
 ![image](https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d)
-     Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)
+<p align="center">
+Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)
 </p>
 
 From _Figure B_, it can be seen that the total economic costs incurred per year with the wellness program are higher in the first 10 years than the total economic costs incurred without the program. This is expected since there will be initial costs associated with the implementation of the program and the benefits to mortality rates will not be fully realised in the short term. After 10 years, the total economic costs incurred with the program are lower than without the program, which is reflective of the realised decrease in mortality rates.
@@ -169,17 +167,16 @@ From _Figure B_, it can be seen that the total economic costs incurred per year 
 | With Program Cost Formula  | Without Program Cost Formula |
 |----------------------------|------------------------------|
 | Total Economic Costs (With Program) =  Policy and Other Expenses + Program Expenses + Expected Death Costs | Total Economic Costs (Without Program) =  Policy and Other Expenses + Expected Death Costs |
-
 <p align="center">
 _Table B: Cost Formulas_
 </p>
 
 _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
 
-<p align="center">
 ![image](https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f)
 ![image](https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3)
-     Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)
+<p align="center">
+Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)
 </p>
 
 _Figure C_ illustrates that the expected annual death costs with the program are consistently lower than that without the program. This difference becomes larger for the first 20 years before we see that the with program costs slowly approach the without program costs. This can be explained by the reduction in mortality, hence postponement of the death of policyholders. This allows premiums to be invested for longer resulting in higher returns.
@@ -188,10 +185,10 @@ With regards to possible savings if the program had been implemented 20 years ag
 
 _Revenue for Short Term (5 Years) & Long Term (30 Years)_
 
-<p align="center">
 ![image](https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce)
 ![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42)
-     Figure D: Revenue for Short Term (5 Years) & Long Term (30 Years). 
+<p align="center">
+Figure D: Revenue for Short Term (5 Years) & Long Term (30 Years). 
 Note: The 2023 revenue values have been hidden out of bounds to improve presentation of the data
 </p>
 
@@ -202,7 +199,6 @@ Finally, a comparison of the profit margins obtained with and without the progra
 | Profit Margin With Program | Profit Margin Without Program | Relative Diff in Profit Margin |
 |----------------------------|-------------------------------|--------------------------------|
 | 17.47% | 15.40% | 13.41% |
-
 <p align="center">
 Table C: Profit Margin Calculations
 </p>
@@ -229,9 +225,9 @@ Premiums were set very generously (for policyholders) without the program and hi
 ## Sensitivity Analysis
 A sensitivity analysis was performed on the key variables to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure E_ below.
 
-<p align="center">
 ![image](https://github.com/tmadfouni/SOA2024/assets/85098929/296a8dcd-7e6a-45cf-b919-830adbc5d250)
-     Figure E: Sensitivity Analysis - Profit Margin
+<p align="center">
+Figure E: Sensitivity Analysis - Profit Margin
 </p>
 
 Evidently, the effect of the intervention programs on mortality rates will have the largest impact on SuperLife’s profit margin. The outer bounds of each intervention program’s approximate impact on mortality rates was used, where the upper bound generates the best case scenario and the lower bound generates the worst case scenario. Given the results, it is important for SuperLife to closely monitor and update the mortality rate improvement assumptions regularly, as the worst case scenario results in a 14% decrease in the profit margin.
@@ -240,14 +236,14 @@ Evidently, the effect of the intervention programs on mortality rates will have 
 Figure F:
 </p>
 
-_Figure C_ illustrates a comparison of the distribution of profit margins, where 97.48% of the observations for ‘With Program’ have a higher profit margin than those for ‘Without Program’. This implies that there is a 97.48% degree of certainty that the value of the benefits derived from the program will exceed the value of the benefits derived without the program. Additionally, extending upon the results in Section 3.3 regarding the possible past mortality savings from the program, it can be deduced that there is a high degree of certainty for mortality improvements if the program had been implemented for the past 20 years.
+_Figure F_ illustrates a comparison of the distribution of profit margins, where 97.48% of the observations for ‘With Program’ have a higher profit margin than those for ‘Without Program’. This implies that there is a 97.48% degree of certainty that the value of the benefits derived from the program will exceed the value of the benefits derived without the program. Additionally, extending upon the results in Section 3.3 regarding the possible past mortality savings from the program, it can be deduced that there is a high degree of certainty for mortality improvements if the program had been implemented for the past 20 years.
 
 
 ## Risk and Risk Mitigation Strategies
 
 **Risk Assessment Matrix**
-<p align="center">
 <img width="1000" alt="image" src="https://github.com/tmadfouni/SOA2024/assets/85324306/604ae043-c287-4d71-8b8a-24bd3f7825ae">
+<p align="center">
 UPDATE IMG
 </p>
 
