@@ -111,9 +111,9 @@ Intervention Program Selection Methodology conducted to determine the most optim
 2. Plotted and identified leading causes of death and mapped these to the associated intervention schemes
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigating the leading causes of death
 
-![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/a192e7ac-7fb6-4cff-9e38-5f8d70bfaa8e)![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5e4b95c5-971d-4199-85a7-47558d2e7ac4)
 <p align="center">
-Figure A: Death count alongside proportion of ages at death for each cause
+ <img src= "![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/a192e7ac-7fb6-4cff-9e38-5f8d70bfaa8e)![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5e4b95c5-971d-4199-85a7-47558d2e7ac4)">
+     Figure A: Death count alongside proportion of ages at death for each cause
 </p>
 
 **Justification of Short-and-Long-term Timeframes**
@@ -156,10 +156,10 @@ By using this method, the total number of risk units in the cohort of policyhold
 
 _Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
 
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d)
 <p align="center">
-Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)
+ <img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65)
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d)">
+     Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)
 </p>
 
 From _Figure B_, it can be seen that the total economic costs incurred per year with the wellness program are higher in the first 10 years than the total economic costs incurred without the program. This is expected since there will be initial costs associated with the implementation of the program and the benefits to mortality rates will not be fully realised in the short term. After 10 years, the total economic costs incurred with the program are lower than without the program, which is reflective of the realised decrease in mortality rates.
@@ -173,10 +173,10 @@ Table B: Cost Formulas
 
 _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
 
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3)
 <p align="center">
-Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)
+<img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f)
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3)">
+     Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)
 </p>
 
 _Figure C_ illustrates that the expected annual death costs with the program are consistently lower than that without the program. This difference becomes larger for the first 20 years before we see that the with program costs slowly approach the without program costs. This can be explained by the reduction in mortality, hence postponement of the death of policyholders. This allows premiums to be invested for longer resulting in higher returns.
@@ -185,11 +185,11 @@ With regards to possible savings if the program had been implemented 20 years ag
 
 _Revenue for Short Term (5 Years) & Long Term (30 Years)_
 
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42)
 <p align="center">
-Figure D: Revenue for Short Term (5 Years) & Long Term (30 Years). 
-Note: The 2023 revenue values have been hidden out of bounds to improve presentation of the data
+<img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce)
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42)">
+     Figure D: Revenue for Short Term (5 Years) & Long Term (30 Years). 
+     Note: The 2023 revenue values have been hidden out of bounds to improve presentation of the data
 </p>
 
 _Figure D_ illustrates that the revenue is very high in the first year due to a proportion of policyholders being modelled to hold Single Premium Whole Life insurance (SPWL). The revenue generated per year for the next 19 years is much lower since they are from T20 policies and due to mortality these values have a decreasing trend before they drop to 0 after the 20 year period. Comparing revenues, it can be seen that more revenue is generated with the program than without. This is due to charging a higher premium reflective of the benefits the program provides to the policyholder.
@@ -216,7 +216,7 @@ Premiums were set very generously (for policyholders) without the program and hi
 | Interpolation              | Assume linear trend of mortality improvement across years |
 | Interest/Discount Rates    | Assumed a constant 5% for analyses, as the average of Lumaria’s 1-yr and 10-yr Risk-Free Annual Spot Rates were 5.68% and 6.74%, respectively, with significant declines of each rate in recent 10 years; trending at ~ 0-2%. |
 | Interval Dates             | Annual date of health check-up and heart screening is based on yearly anniversary of policy inception date |
-| Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:<ul><li>Safety Campaigns: 6 months (Newnam & Muir 2015)</li><li>Annual Health-Checkups: 5 years (Maindal, Støvring & Sandbaek 2014)</li><li>Discounted Gym-Memberships: 10 months (Homonoff, Willage & Willén 2020)</li><li>Weight Management Programs: 3 months (Ahern et al. 2017)</li><li>Cancer Prevention Initiatives: 9 years (Valle, Tramalloni & Bragazzi 2015)</li><li>Heart-Health Screenings: 5 years (Alageel & Gulliford 2019)</li></ul> |
+| Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:<ul><li>Safety Campaigns: 6 months</li><li>Annual Health-Checkups: 5 years </li><li>Discounted Gym-Memberships: 10 months</li><li>Weight Management Programs: 3 months</li><li>Cancer Prevention Initiatives: 9 years</li><li>Heart-Health Screenings: 5 years</li></ul> |
 | Subsidies                  |Costs of initial and annual health check-ups and heart screenings are fully incorporated into all SuperLife policyholder premiums |
 | Correlation                |<ul><li>Annual Health Check-Ups & Safety Campaigns: 0.45</li><li>Annual Health Check-Ups & Discounted Gym Memberships: 0.35</li><li>Annual Health Check-Ups & Weight Management Programs: 0.40</li><li>Annual Health Check-Ups & Cancer Prevention Initiatives: 0.50</li><li>Heart Health Screenings & Discounted Gym Membership: 0.25</li><li>Heart Health Screenings & Weight Management Programs: 0.30</li><li>Heart Health Screenings & Cancer Prevention Initiatives: 0.30</li><li>Safety Campaigns & Cancer Prevention Initiatives: 0.30</li><li>Discounted Gym Memberships & Weight Management Programs: 0.40</li><li>Discounted Gym Memberships & Cancer Prevention Initiatives: 0.25</li><li>Weight Management Programs & Cancer Prevention Initiatives: 0.30</li></ul>|
 | Mortality & Lapse Rates    | Mortality rates and lapse rates are calculated as dependent as they were drawn from a dataset where people could both lapse and die |
@@ -225,15 +225,15 @@ Premiums were set very generously (for policyholders) without the program and hi
 ## Sensitivity Analysis
 A sensitivity analysis was performed on the key variables to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure E_ below.
 
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/296a8dcd-7e6a-45cf-b919-830adbc5d250)
 <p align="center">
-Figure E: Sensitivity Analysis - Profit Margin
+<img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/296a8dcd-7e6a-45cf-b919-830adbc5d250)">
+     Figure E: Sensitivity Analysis - Profit Margin
 </p>
 
 Evidently, the effect of the intervention programs on mortality rates will have the largest impact on SuperLife’s profit margin. The outer bounds of each intervention program’s approximate impact on mortality rates was used, where the upper bound generates the best case scenario and the lower bound generates the worst case scenario. Given the results, it is important for SuperLife to closely monitor and update the mortality rate improvement assumptions regularly, as the worst case scenario results in a 14% decrease in the profit margin.
 
 <p align="center">
-Figure F:
+     Figure F:
 </p>
 
 _Figure F_ illustrates a comparison of the distribution of profit margins, where 97.48% of the observations for ‘With Program’ have a higher profit margin than those for ‘Without Program’. This implies that there is a 97.48% degree of certainty that the value of the benefits derived from the program will exceed the value of the benefits derived without the program. Additionally, extending upon the results in Section 3.3 regarding the possible past mortality savings from the program, it can be deduced that there is a high degree of certainty for mortality improvements if the program had been implemented for the past 20 years.
@@ -242,9 +242,9 @@ _Figure F_ illustrates a comparison of the distribution of profit margins, where
 ## Risk and Risk Mitigation Strategies
 
 **Risk Assessment Matrix**
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/4c69cbb9-0d83-4b21-8c45-243e9a4d8af7)
 <p align="center">
-Risk Assessment Matrix for most significant risks
+<img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/4c69cbb9-0d83-4b21-8c45-243e9a4d8af7)">
+     Risk Assessment Matrix for most significant risks
 </p>
 
 A summary of the potential risks and possible risk mitigation techniques is provided below. 
@@ -329,6 +329,6 @@ Shankar, A., Roy, S., Rath, G.K., Chakraborty, A., Kamal, V.K. and Biswas, A.S. 
 ‌Riseth, L., Nøst, T.H., Nilsen, T.I.L. and Steinsbekk, A. (2019). Long-term members’ use of fitness centers: a qualitative study. BMC Sports Science, Medicine and Rehabilitation, [online] 11(2). Viewed 16th March 2024, https://doi.org/10.1186/s13102-019-0114-z
 ‌
 Rikke Søgaard, Axel and Jes Lindholt (2023). The impact of population screening for cardiovascular disease on quality of life. [online], viewed 15th March 2024, https://doi.org/10.1093/ehjopen/oead055
-‌
+
 AustralianSuper (2023). Money when it matters most - Insurance in your super [online], viewed 15th March 2024, https://www.australiansuper.com/-/media/australian-super/files/tools-and-advice/forms-and-fact-sheets/insurance/guides/insuranceguide-industry.pdf
 
