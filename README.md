@@ -112,7 +112,7 @@ Intervention Program Selection Methodology conducted to determine the most optim
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigating the leading causes of death
 
 <p align="center">
- <img src= "![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/16a6cbb9-dcf5-4d12-a62e-8705dcb47bc5)">
+     ![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/9921d0c6-3325-4674-87a8-7cc4acca5864)
      Figure A: Death count alongside proportion of ages at death for each cause
 </p>
 
