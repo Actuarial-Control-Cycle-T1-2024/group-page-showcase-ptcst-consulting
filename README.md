@@ -29,7 +29,7 @@ These two objectives work together to increase the profitability of SuperLife an
 | Expected Policy Profits & Costs | Annually |
 | Satisfaction Rate (Net Promoter Score) | Annually for the first 5 years, then once every 5 years |
 
-Given these metrics, the wellness program will be reviewed as a whole every 5 years to assess whether it is still achieving its main objectives, and modify the program's features and/or pricing if necessary.
+Given these metrics, the wellness program will be reviewed as a whole every 5 years to assess whether it is still achieving its main objectives, and modify the program's features and pricing if necessary.
 
 ## Program Design
 PTCST Consulting developed a comprehensive health incentive program for SuperLife that incentivises participation by offering profit-sharing opportunities.
@@ -79,7 +79,7 @@ Each year, in the annual check-up and heart screening, the policyholder will rec
 | **Profit Share Allocation** | 10% | 25% | 35% | 45% | 60%|
 
 <p align="center">
-_Table A: Profit Share Allocation Structure_
+Table A: Profit Share Allocation Structure
 </p>
 
 **Other Key Program Requirements**
@@ -113,10 +113,9 @@ Intervention Program Selection Methodology conducted to determine the most optim
 2. Plotted and identified leading causes of death and mapped these to the associated intervention schemes
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigate the leading causes of death
 
-![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/a192e7ac-7fb6-4cff-9e38-5f8d70bfaa8e)![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5e4b95c5-971d-4199-85a7-47558d2e7ac4)
-
 <p align="center">
-_Figure A: Death count alongside proportion of ages at death associated with each cause_
+![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/a192e7ac-7fb6-4cff-9e38-5f8d70bfaa8e)![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5e4b95c5-971d-4199-85a7-47558d2e7ac4)
+     Figure A: Death count alongside proportion of ages at death for each cause
 </p>
 
 **Justification of Short-and-Long-term Timeframes**
@@ -146,7 +145,7 @@ Program costs were determined by sampling participation booleans for each policy
 
 Annual expected payout costs were determined by multiplying survival probability to that year by death probability in that year and the policy face amount. The key difference was in the death probability reductions from the intervention programs which were determined by sampling from a multivariate normal distribution. These values were incrementally applied according to the program time horizons listed in the assumptions.
 
-To determine the incentive scheme costs, we first had to simulate which levels policyholders were likely to be at throughout their policies. This was modelled by sampling booleans for whether someone was likely to regularly meet their health goals that were set in their annual checkup or not. If they were, they received the level 5 benefits, and if they weren’t, they received the Level 1 benefits. In addition to this, as people who are unlikely to meet their health goals are unlikely to be actively taking part in their intervention programs, some of their mortality reductions were removed, such as mortality reductions received from discounted gym memberships.
+To determine the incentive scheme costs, we first had to simulate which levels policyholders were likely to be at throughout their policies. This was modelled by sampling booleans for whether someone was likely to regularly meet their health goals that were set in their annual checkup or not. If they were, they received the Level 5 benefits, and if they weren’t, they received the Level 1 benefits. In addition to this, as people who are unlikely to meet their health goals are unlikely to be actively taking part in their intervention programs, some of their mortality reductions were removed, such as mortality reductions received from discounted gym memberships.
 
 The operating expenses were derived by considering data provided by APRA on life insurers and their breakdown of costs in Australian insurers. While this data is not completely reliable in estimating costs for Lumaria, using the proportion of operating expenses to policy revenue still provides a workable estimate for understanding our operational costs. 
 
@@ -158,11 +157,11 @@ By using this method, the total number of risk units in the cohort of policyhold
 **Results**
 
 _Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d)
 
 <p align="center">
-_Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65)
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d)
+     Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)
 </p>
 
 From _Figure B_, it can be seen that the total economic costs incurred per year with the wellness program are higher in the first 10 years than the total economic costs incurred without the program. This is expected since there will be initial costs associated with the implementation of the program and the benefits to mortality rates will not be fully realised in the short term. After 10 years, the total economic costs incurred with the program are lower than without the program, which is reflective of the realised decrease in mortality rates.
@@ -176,11 +175,11 @@ _Table B: Cost Formulas_
 </p>
 
 _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3)
 
 <p align="center">
-_Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f)
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3)
+     Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)
 </p>
 
 _Figure C_ illustrates that the expected annual death costs with the program are consistently lower than that without the program. This difference becomes larger for the first 20 years before we see that the with program costs slowly approach the without program costs. This can be explained by the reduction in mortality, hence postponement of the death of policyholders. This allows premiums to be invested for longer resulting in higher returns.
@@ -188,12 +187,12 @@ _Figure C_ illustrates that the expected annual death costs with the program are
 With regards to possible savings if the program had been implemented 20 years ago, by accumulating all savings to the start of 2024, approximately Č6.46 billion in savings could have been accumulated. It should also be noted that a large proportion of these savings would have been offset by program expenses, but regardless, it demonstrates a high level of possible savings in benefit payouts.
 
 _Revenue for Short Term (5 Years) & Long Term (30 Years)_
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42)
 
 <p align="center">
-_Figure D: Revenue for Short Term (5 Years) & Long Term (30 Years). 
-Note: The 2023 revenue values have been hidden out of bounds to better display the rest of the data_
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce)
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42)
+     Figure D: Revenue for Short Term (5 Years) & Long Term (30 Years). 
+Note: The 2023 revenue values have been hidden out of bounds to improve presentation of the data
 </p>
 
 _Figure D_ illustrates that the revenue is very high in the first year due to a proportion of policyholders being modelled to hold Single Premium Whole Life insurance (SPWL). The revenue generated per year for the next 19 years is much lower since they are from T20 policies and due to mortality these values have a decreasing trend before they drop to 0 after the 20 year period. Comparing revenues, it can be seen that more revenue is generated with the program than without. This is due to charging a higher premium reflective of the benefits the program provides to the policyholder.
@@ -204,7 +203,9 @@ Finally, a comparison of the profit margins obtained with and without the progra
 |----------------------------|-------------------------------|--------------------------------|
 | 17.47% | 15.40% | 13.41% |
 
-_Table C: Profit Margin Calculations_
+<p align="center">
+Table C: Profit Margin Calculations
+</p>
 
 _Sales Optimization_
 
@@ -228,14 +229,16 @@ Premiums were set very generously (for policyholders) without the program and hi
 ## Sensitivity Analysis
 A sensitivity analysis was performed on the key variables to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure E_ below.
 
+<p align="center">
 ![image](https://github.com/tmadfouni/SOA2024/assets/85098929/296a8dcd-7e6a-45cf-b919-830adbc5d250)
-
-_Figure E: Sensitivity Analysis - Profit Margin_
+     Figure E: Sensitivity Analysis - Profit Margin
+</p>
 
 Evidently, the effect of the intervention programs on mortality rates will have the largest impact on SuperLife’s profit margin. The outer bounds of each intervention program’s approximate impact on mortality rates was used, where the upper bound generates the best case scenario and the lower bound generates the worst case scenario. Given the results, it is important for SuperLife to closely monitor and update the mortality rate improvement assumptions regularly, as the worst case scenario results in a 14% decrease in the profit margin.
 
-PASTE IMAGE
-_Figure C: Profit Margin Confidence Distribution_
+<p align="center">
+Figure F:
+</p>
 
 _Figure C_ illustrates a comparison of the distribution of profit margins, where 97.48% of the observations for ‘With Program’ have a higher profit margin than those for ‘Without Program’. This implies that there is a 97.48% degree of certainty that the value of the benefits derived from the program will exceed the value of the benefits derived without the program. Additionally, extending upon the results in Section 3.3 regarding the possible past mortality savings from the program, it can be deduced that there is a high degree of certainty for mortality improvements if the program had been implemented for the past 20 years.
 
@@ -243,9 +246,10 @@ _Figure C_ illustrates a comparison of the distribution of profit margins, where
 ## Risk and Risk Mitigation Strategies
 
 **Risk Assessment Matrix**
-<br>
+<p align="center">
 <img width="1000" alt="image" src="https://github.com/tmadfouni/SOA2024/assets/85324306/604ae043-c287-4d71-8b8a-24bd3f7825ae">
 UPDATE IMG
+</p>
 
 A summary of the potential risks and possible risk mitigation techniques is provided below. 
 
@@ -314,11 +318,12 @@ Rand, M., Norman, P. and Goyder, E. (2020). A systematic review of interventions
 
 Kuwabara, Y, Fujii, M, Kinjo, A & Osaki, Y 2022, ‘Abstaining from annual health check-ups is a predictor of advanced cancer diagnosis: a retrospective cohort study’, Environmental Health and Preventive Medicine, vol. 27, no. 0, pp. 1–1, viewed 15th March 2024, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9093613/
 
-
 Zhao, Y., Yu, B.Y.-M., Liu, Y., Tong, T. and Liu, Y. (2018). Weight reduction and cardiovascular benefits. Medicine, 97(50), p.e13246, viewed 16th March 2024, https://doi.org/10.1097/md.0000000000013246
 
 Norton, K. and Norton, L. (2011). Guide to the Australian adult pre-exercise screening system PRE-EXERCISE SCREENING., viewed 16th March 2024, [online] Available at: https://bp-fitnessaustralia-production.s3.amazonaws.com/uploads/uploaded_file/file/195/Australian-Adult-Pre-Exercise-Screening-Textbook.pdf
-‌MCTIERNAN, A., FRIEDENREICH, C.M., KATZMARZYK, P.T., POWELL, K.E., MACKO, R., BUCHNER, D., PESCATELLO, L.S., BLOODGOOD, B., TENNANT, B., VAUX-BJERKE, A., GEORGE, S.M., TROIANO, R.P. and PIERCY, K.L. (2019). Physical Activity in Cancer Prevention and Survival. Medicine & Science in Sports & Exercise, viewed 16th March 2024, [online] 51(6), pp.1252–1261. doi:https://doi.org/10.1249/mss.0000000000001937
+
+‌MCTIERNAN, A., FRIEDENREICH, C.M., KATZMARZYK, P.T., POWELL, K.E., MACKO, R., BUCHNER, D., PESCATELLO, L.S., BLOODGOOD, B., TENNANT, B., VAUX-BJERKE, A., GEORGE, S.M., TROIANO, R.P. and PIERCY, K.L. (2019). Physical Activity in Cancer Prevention and Survival. Medicine & Science in Sports & Exercise, viewed 16th March 2024, [online] 51(6), pp.1252–1261., https://doi.org/10.1249/mss.0000000000001937
+
 Anderson, A.S., Renehan, A.G., Saxton, J.M., Bell, J., Cade, J., Cross, A.J., King, A., Riboli, E., Sniehotta, F., Treweek, S. and Martin, R.M. (2021). Cancer prevention through weight control—where are we in 2020? British Journal of Cancer, [online] 124(6), pp.1049–1056, viewed 16th March 2024, https://doi.org/10.1038/s41416-020-01154-3
 
 Burioni, R., Contucci, P., Fedele, M., Vernia, C. and Vezzani, A. (2015). Enhancing participation to health screening campaigns by group interactions. Scientific Reports, 5(1). Viewed 17th March 2024, https://doi.org/10.1038/srep09904
