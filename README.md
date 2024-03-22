@@ -188,7 +188,7 @@ _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
      Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)
 </p>
 
-_Figure C_ illustrates that the expected annual death costs with the program are consistently lower than that without the program. This difference becomes larger for the first 20 years before we see that the with program costs slowly approach the without program costs. This can be explained by the reduction in mortality, hence postponement of the death of policyholders. This allows premiums to be invested for longer resulting in higher returns.
+_Figure C_ illustrates that the expected annual death costs with the program are consistently lower than that without the program. This difference becomes larger for the first 20 years before we see that the with program costs slowly approach the without program costs. This can be explained by the reduction in mortality, hence postponement of the death of policyholders.
 
 With regards to possible savings if the program had been implemented 20 years ago, by accumulating all savings to the start of 2024, approximately Č6.46 billion in savings could have been accumulated. It should also be noted that a large proportion of these savings would have been offset by program expenses, but regardless, it demonstrates a high level of possible savings in benefit payouts.
 
