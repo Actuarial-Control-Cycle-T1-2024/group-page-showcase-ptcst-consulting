@@ -107,11 +107,12 @@ _Qualitative_:
     
 _Quantitative_:
 Intervention Program Selection Methodology conducted to determine the most optimal intervention programs to include (refer to _Figure A_ for visualisations):
-1. Sorted program descriptions (in given data) to maximise impact on mortality rates whilst simultaneously minimising per capita cost of the scheme
-2. Plotted and identified leading causes of death (using given data) and mapped these to the associated intervention schemes
+1. Sorted program descriptions to maximise impact on mortality rates whilst simultaneously minimising per capita cost of the scheme
+2. Plotted and identified leading causes of death and mapped these to the associated intervention schemes
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigate the leading causes of death
 
 ![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/a192e7ac-7fb6-4cff-9e38-5f8d70bfaa8e)![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5e4b95c5-971d-4199-85a7-47558d2e7ac4)
+
 _Figure A: Death count alongside proportion of ages at death associated with each cause_
 
 **Justification of Short-and-Long-term Timeframes**
@@ -126,6 +127,7 @@ SuperLife offers products such as whole life, 20- and 30-year term insurance, an
 
 ## Pricing/Costs
 **Method**
+
 Summarised below is an overview of PTCST Consulting’s pricing methodology.
 
 _Costs_
@@ -187,6 +189,7 @@ Finally, a comparison of the profit margins obtained with and without the progra
 _Table C: Profit Margin Calculations_
 
 _Sales Optimization_
+
 Premiums were set very generously (for policyholders) without the program and hiked by only 10% with the program. When monitoring the program over the next few years, if sales are below expectations, SuperLife can consider reducing premiums to optimise sales. However, it is vital to note that premiums should only be reduced to a minimum of 1.07037 × (Premiums without the program) to ensure the profit margin remains at par or greater than that without the program. 
 
 
@@ -200,7 +203,7 @@ Premiums were set very generously (for policyholders) without the program and hi
 | Interval Dates             | Annual date of health check-up and heart screening is based on yearly anniversary of policy inception date |
 | Time-Horizon               | Time-Horizons for mortality reductions to occur in each intervention program:<ul><li>Safety Campaigns: 6 months (Newnam & Muir 2015)</li><li>Annual Health-Checkups: 5 years (Maindal, Støvring & Sandbaek 2014)</li><li>Discounted Gym-Memberships: 10 months (Homonoff, Willage & Willén 2020)</li><li>Weight Management Programs: 3 months (Ahern et al. 2017)</li><li>Cancer Prevention Initiatives: 9 years (Valle, Tramalloni & Bragazzi 2015)</li><li>Heart-Health Screenings: 5 years (Alageel & Gulliford 2019)</li></ul> |
 | Subsidies                  |Costs of initial and annual health check-ups and heart screenings are fully incorporated into all SuperLife policyholder premiums |
-| Correlation                |<ul><li>Annual Health Check-Ups & Safety Campaigns: 0.45  Burioni, et al (2015)</li><li>Annual Health Check-Ups & Discounted Gym Memberships: 0.35  M Rand (2020)</li><li>Annual Health Check-Ups & Weight Management Programs: 0.40 Madigan et al. (2022)</li><li>Annual Health Check-Ups & Cancer Prevention Initiatives: 0.50  Kuwabara et al. (2022)</li><li>Heart Health Screenings & Discounted Gym Membership: 0.25 Norton and Norton (2011)</li><li>Heart Health Screenings & Weight Management Programs: 0.30 Zhao (2018)</li><li>Heart Health Screenings & Cancer Prevention Initiatives: 0.30 Rikke et al. (2023)</li><li>Safety Campaigns & Cancer Prevention Initiatives: 0.30 Shankar et al. (2017)</li><li>Discounted Gym Memberships & Weight Management Programs: 0.40  Riseth et al. (2019)</li><li>Discounted Gym Memberships & Cancer Prevention Initiatives: 0.25  McTiernan et al. (2018)</li><li>Weight Management Programs & Cancer Prevention Initiatives: 0.30  Anderson et al. (2020)</li></ul>|
+| Correlation                |<ul><li>Annual Health Check-Ups & Safety Campaigns: 0.45</li><li>Annual Health Check-Ups & Discounted Gym Memberships: 0.35</li><li>Annual Health Check-Ups & Weight Management Programs: 0.40</li><li>Annual Health Check-Ups & Cancer Prevention Initiatives: 0.50</li><li>Heart Health Screenings & Discounted Gym Membership: 0.25</li><li>Heart Health Screenings & Weight Management Programs: 0.30</li><li>Heart Health Screenings & Cancer Prevention Initiatives: 0.30</li><li>Safety Campaigns & Cancer Prevention Initiatives: 0.30</li><li>Discounted Gym Memberships & Weight Management Programs: 0.40</li><li>Discounted Gym Memberships & Cancer Prevention Initiatives: 0.25</li><li>Weight Management Programs & Cancer Prevention Initiatives: 0.30</li></ul>|
 | Mortality & Lapse Rates    | Mortality rates and lapse rates are calculated as dependent as they were drawn from a dataset where people could both lapse and die |
 | Expense and Expected Death Cost Calculations |<ul><li>Expenses assumed to be paid in advance</li></ul>Expected death costs assumed to be paid in arrears</li></ul>|
 
@@ -268,3 +271,44 @@ Furthermore, to ensure compliance with consumer protection laws, SuperLife shoul
 
 ## Conclusion
 The proposed wellness intervention program can help SuperLife improve its policyholders’ expected mortality whilst also achieving increased profitability (with a 97.48% degree of certainty). The expected increase in the profit margin is 13.41% relative to the profit margin without the program. After thorough qualitative and quantitative analyses on its impact over short and long-term timeframes, the associated financial and social benefits provide substantial evidence that the project should be undertaken. However, it is crucial to perform ongoing monitoring of risks, costs and progress on initial objectives. 
+
+**Appendix available in Final Report file**
+
+## References
+Newnam, S & Muir, C 2015, Effectiveness of prevention-focused, workplace health and safety campaigns, viewed 2nd March 2024, https://research.iscrr.com.au/__data/assets/pdf_file/0008/341999/effectiveness-of-prevention-focused-workplace-health-and-safety-campaigns.pdf
+
+Maindal, HT, Støvring, H & Sandbaek, A 2014, ‘Effectiveness of the population-based Check your health preventive programme conducted in primary care with 4 years follow-up [the CORE trial]: study protocol for a randomised controlled trial’, Trials, vol. 15, no. 1., viewed 2nd March 2024, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4158060/
+
+Homonoff, T, Willage, B & Willén, A 2020, ‘Rebates as incentives: The effects of a gym membership reimbursement program’, Journal of Health Economics, vol. 70, p. 102285., viewed 1st March 2024, https://www.sciencedirect.com/science/article/pii/S0167629619310367
+
+Ahern, AL, Wheeler, GM, Aveyard, P, Boyland, EJ, Halford, JCG, Mander, AP, Woolston, J, Thomson, AM, Tsiountsioura, M, Cole, D, Mead, BR, Irvine, L, Turner, D, Suhrcke, M, Pimpin, L, Retat, L, Jaccard, A, Webber, L, Cohn, SR & Jebb, SA 2017, ‘Extended and standard duration weight-loss programme referrals for adults in primary care (WRAP): a randomised controlled trial’, The Lancet, vol. 389, no. 10085, pp. 2214–2225., viewed 3rd March 2024, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5459752/
+
+‌VALLE, I, TRAMALLONI, D & BRAGAZZI, NL 2015, ‘Cancer prevention: state of the art and future prospects’, Journal of Preventive Medicine and Hygiene, vol. 56, no. 1, pp. E21–E27., viewed 2nd March 2024, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4718348/
+
+Alageel, S & Gulliford, MC 2019, ‘Health checks and cardiovascular risk factor values over six years’ follow-up: Matched cohort study using electronic health records in England’, in A Sheikh (ed.), PLOS Medicine, vol. 16, no. 7, p. E1002863., viewed 6th March 2024, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6667114/
+
+Garaialde, D, Cox, AL & Cowan, BR 2021, ‘Designing gamified rewards to encourage repeated app selection: Effect of reward placement’, International Journal of Human-Computer Studies, vol. 153, p. 102661., viewed 15th March 2024, S1071581921000793
+
+Rand, M., Norman, P. and Goyder, E. (2020). A systematic review of interventions to increase attendance at health and fitness venues: identifying key behaviour change techniques. BMC Public Health, 20(1), viewed 16th March 2024, https://doi.org/10.1186/s12889-020-09898-6
+
+‌Madigan, C.D., Graham, H.E., Sturgiss, E., Kettle, V.E., Gokal, K., Biddle, G., Taylor, G.M.J. and Daley, A.J. (2022). Effectiveness of weight management interventions for adults delivered in primary care: systematic review and meta-analysis of randomised controlled trials. BMJ, 377, p.e069719, viewed 16th March 2024, https://doi.org/10.1136/bmj-2021-069719
+
+Kuwabara, Y, Fujii, M, Kinjo, A & Osaki, Y 2022, ‘Abstaining from annual health check-ups is a predictor of advanced cancer diagnosis: a retrospective cohort study’, Environmental Health and Preventive Medicine, vol. 27, no. 0, pp. 1–1, viewed 15th March 2024, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9093613/
+
+
+Zhao, Y., Yu, B.Y.-M., Liu, Y., Tong, T. and Liu, Y. (2018). Weight reduction and cardiovascular benefits. Medicine, 97(50), p.e13246, viewed 16th March 2024, https://doi.org/10.1097/md.0000000000013246
+
+Norton, K. and Norton, L. (2011). Guide to the Australian adult pre-exercise screening system PRE-EXERCISE SCREENING., viewed 16th March 2024, [online] Available at: https://bp-fitnessaustralia-production.s3.amazonaws.com/uploads/uploaded_file/file/195/Australian-Adult-Pre-Exercise-Screening-Textbook.pdf
+‌MCTIERNAN, A., FRIEDENREICH, C.M., KATZMARZYK, P.T., POWELL, K.E., MACKO, R., BUCHNER, D., PESCATELLO, L.S., BLOODGOOD, B., TENNANT, B., VAUX-BJERKE, A., GEORGE, S.M., TROIANO, R.P. and PIERCY, K.L. (2019). Physical Activity in Cancer Prevention and Survival. Medicine & Science in Sports & Exercise, viewed 16th March 2024, [online] 51(6), pp.1252–1261. doi:https://doi.org/10.1249/mss.0000000000001937
+Anderson, A.S., Renehan, A.G., Saxton, J.M., Bell, J., Cade, J., Cross, A.J., King, A., Riboli, E., Sniehotta, F., Treweek, S. and Martin, R.M. (2021). Cancer prevention through weight control—where are we in 2020? British Journal of Cancer, [online] 124(6), pp.1049–1056, viewed 16th March 2024, https://doi.org/10.1038/s41416-020-01154-3
+
+Burioni, R., Contucci, P., Fedele, M., Vernia, C. and Vezzani, A. (2015). Enhancing participation to health screening campaigns by group interactions. Scientific Reports, 5(1). Viewed 17th March 2024, https://doi.org/10.1038/srep09904
+
+Shankar, A., Roy, S., Rath, G.K., Chakraborty, A., Kamal, V.K. and Biswas, A.S. (2017). Impact of Cancer Awareness Drive on Generating Understanding and Improving Screening Practices for Breast Cancer: a Study on College Teachers in India. Asian Pacific Journal of Cancer Prevention : APJCP, [online] 18(7), pp.1985–1990. Viewed 16th March 2024, :https://doi.org/10.22034/APJCP.2017.18.7.1985
+
+‌Riseth, L., Nøst, T.H., Nilsen, T.I.L. and Steinsbekk, A. (2019). Long-term members’ use of fitness centers: a qualitative study. BMC Sports Science, Medicine and Rehabilitation, [online] 11(2). Viewed 16th March 2024, https://doi.org/10.1186/s13102-019-0114-z
+‌
+Rikke Søgaard, Axel and Jes Lindholt (2023). The impact of population screening for cardiovascular disease on quality of life. [online], viewed 15th March 2024, https://doi.org/10.1093/ehjopen/oead055
+‌
+AustralianSuper (2023). Money when it matters most - Insurance in your super [online], viewed 15th March 2024, https://www.australiansuper.com/-/media/australian-super/files/tools-and-advice/forms-and-fact-sheets/insurance/guides/insuranceguide-industry.pdf
+
