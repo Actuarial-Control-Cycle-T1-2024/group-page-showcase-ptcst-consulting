@@ -245,9 +245,11 @@ A sensitivity analysis was performed on the key variables to assess the financia
 </p>
 
 Evidently, the effect of the intervention programs on mortality rates will have the largest impact on SuperLife’s profit margin. The outer bounds of each intervention program’s approximate impact on mortality rates was used, where the upper bound generates the best case scenario and the lower bound generates the worst case scenario. Given the results, it is important for SuperLife to closely monitor and update the mortality rate improvement assumptions regularly, as the worst case scenario results in a 14% decrease in the profit margin.
-
 <p align="center">
-     Figure F:
+     <img src="https://github.com/tmadfouni/SOA2024/blob/main/Plots/Profit%20Margin%20Confidence.png?raw=true" alt="image"/>
+</p>
+<p align="center">
+     Figure F: Profit Margin Confidence Distribution
 </p>
 
 _Figure F_ illustrates a comparison of the distribution of profit margins, where 97.48% of the observations for ‘With Program’ have a higher profit margin than those for ‘Without Program’. This implies that there is a 97.48% degree of certainty that the value of the benefits derived from the program will exceed the value of the benefits derived without the program. Additionally, extending upon the results in Section 3.3 regarding the possible past mortality savings from the program, it can be deduced that there is a high degree of certainty for mortality improvements if the program had been implemented for the past 20 years.
