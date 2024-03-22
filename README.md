@@ -163,8 +163,8 @@ By using this method, the total number of risk units in the cohort of policyhold
 
 _Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
 <p align="center">
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65" width="500" alt="image"/>
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d" width="500" alt="image"/>
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65" width="300" alt="image"/>
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d" width="300" alt="image"/>
 </p>
 <p align="center">
      Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)
@@ -181,8 +181,8 @@ Table B: Cost Formulas
 
 _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
 <p align="center">
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f" width="500" alt="image"/>
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3" width="500" alt="image"/>
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f" width="300" alt="image"/>
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3" width="300" alt="image"/>
 </p>
 <p align="center">
      Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)
@@ -194,8 +194,8 @@ With regards to possible savings if the program had been implemented 20 years ag
 
 _Revenue for Short Term (5 Years) & Long Term (30 Years)_
 <p align="center">
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce" width="500" alt="image"/>
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42" width="500" alt="image"/>
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce" width="300" alt="image"/>
+     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42" width="300" alt="image"/>
 </p>
 <p align="center">
      Figure D: Revenue for Short Term (5 Years) & Long Term (30 Years). 
