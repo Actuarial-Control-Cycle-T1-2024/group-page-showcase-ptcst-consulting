@@ -45,7 +45,7 @@ PTCST Consulting’s wellness plan uses a tailored approach whereby each new Sup
 2.	Heart Health Screenings:
      - Offer to policyholders to gauge risk of a heart attack or stroke in the next 5 years
      - Use to develop features of personalised health plan, e.g., following a heart-healthy eating pattern, increasing exercise, maintaining a healthy weight and reducing tobacco use
-     - For all policyholder ages to complete annually upon purchasing a policy
+     - For all policyholders to complete annually upon purchasing a policy
 
 3.	Cancer Prevention Initiatives:
      - Personalised based on policyholder’s lifestyle factors, including diet, tobacco use, physical activity.
@@ -168,7 +168,7 @@ From _Figure B_, it can be seen that the total economic costs incurred per year 
 |----------------------------|------------------------------|
 | Total Economic Costs (With Program) =  Policy and Other Expenses + Program Expenses + Expected Death Costs | Total Economic Costs (Without Program) =  Policy and Other Expenses + Expected Death Costs |
 <p align="center">
-_Table B: Cost Formulas_
+Table B: Cost Formulas
 </p>
 
 _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
@@ -242,9 +242,9 @@ _Figure F_ illustrates a comparison of the distribution of profit margins, where
 ## Risk and Risk Mitigation Strategies
 
 **Risk Assessment Matrix**
-<img width="1000" alt="image" src="https://github.com/tmadfouni/SOA2024/assets/85324306/604ae043-c287-4d71-8b8a-24bd3f7825ae">
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/4c69cbb9-0d83-4b21-8c45-243e9a4d8af7)
 <p align="center">
-UPDATE IMG
+Risk Assessment Matrix for most significant risks
 </p>
 
 A summary of the potential risks and possible risk mitigation techniques is provided below. 
@@ -266,7 +266,7 @@ A summary of the potential risks and possible risk mitigation techniques is prov
 |L4 | Inappropriate correlation assumptions between intervention programs    | Research and utilise studies, seek expert advice from intervention program providers and adjust correlation coefficients with incoming data once program is launched|
 
 ## Data and Data Limitations
-**Data**
+**Data Sources**
 
 No external data was used for the analysis. 
 
