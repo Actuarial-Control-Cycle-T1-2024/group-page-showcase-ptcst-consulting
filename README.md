@@ -78,7 +78,9 @@ Each year, in the annual check-up and heart screening, the policyholder will rec
 |--------|---------|---------|---------|---------|---------|
 | **Profit Share Allocation** | 10% | 25% | 35% | 45% | 60%|
 
+<p align="center">
 _Table A: Profit Share Allocation Structure_
+</p>
 
 **Other Key Program Requirements**
 - Policyholders must agree to participate in initial and annual health and heart check-ups to track personal progress and improvements.
@@ -113,7 +115,9 @@ Intervention Program Selection Methodology conducted to determine the most optim
 
 ![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/a192e7ac-7fb6-4cff-9e38-5f8d70bfaa8e)![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5e4b95c5-971d-4199-85a7-47558d2e7ac4)
 
+<p align="center">
 _Figure A: Death count alongside proportion of ages at death associated with each cause_
+</p>
 
 **Justification of Short-and-Long-term Timeframes**
 - Short-term timeframe is the 5-year period from 2023 (2023–2028)
@@ -134,7 +138,7 @@ _Costs_
 
 Costs were priced according to four main categories: 
 1. Expected Payout Costs
-2. Intervention Program Costs,
+2. Intervention Program Costs
 3. Incentive Costs
 4. Operating Expenses
    
@@ -154,31 +158,45 @@ By using this method, the total number of risk units in the cohort of policyhold
 **Results**
 
 _Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65)
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d)
 
-ADD GRAPHS
-FIGURE A
+<p align="center">
+_Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
+</p>
 
-From _Figure A_, it can be seen that the total economic costs incurred per year with the wellness program are higher in the first 10 years than the total economic costs incurred without the program. This is expected since there will be initial costs associated with the implementation of the program and the benefits to mortality rates will not be fully realised in the short term. After 10 years, the total economic costs incurred with the program are lower than without the program, which is reflective of the realised decrease in mortality rates.
+From _Figure B_, it can be seen that the total economic costs incurred per year with the wellness program are higher in the first 10 years than the total economic costs incurred without the program. This is expected since there will be initial costs associated with the implementation of the program and the benefits to mortality rates will not be fully realised in the short term. After 10 years, the total economic costs incurred with the program are lower than without the program, which is reflective of the realised decrease in mortality rates.
 
 | With Program Cost Formula  | Without Program Cost Formula |
 |----------------------------|------------------------------|
 | Total Economic Costs (With Program) =  Policy and Other Expenses + Program Expenses + Expected Death Costs | Total Economic Costs (Without Program) =  Policy and Other Expenses + Expected Death Costs |
 
+<p align="center">
 _Table B: Cost Formulas_
+</p>
 
 _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
-FIGURE B
-ADD GRAPHS
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f)
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3)
 
-_Figure B_ illustrates that the expected annual death costs with the program are consistently lower than that without the program. This difference becomes larger for the first 20 years before we see that the with program costs slowly approach the without program costs. This can be explained by the reduction in mortality, hence postponement of the death of policyholders. This allows premiums to be invested for longer resulting in higher returns.
+<p align="center">
+_Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
+</p>
+
+_Figure C_ illustrates that the expected annual death costs with the program are consistently lower than that without the program. This difference becomes larger for the first 20 years before we see that the with program costs slowly approach the without program costs. This can be explained by the reduction in mortality, hence postponement of the death of policyholders. This allows premiums to be invested for longer resulting in higher returns.
 
 With regards to possible savings if the program had been implemented 20 years ago, by accumulating all savings to the start of 2024, approximately Č6.46 billion in savings could have been accumulated. It should also be noted that a large proportion of these savings would have been offset by program expenses, but regardless, it demonstrates a high level of possible savings in benefit payouts.
 
 _Revenue for Short Term (5 Years) & Long Term (30 Years)_
-ADD GRAPHS
-FIGURE C
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce)
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42)
 
-_Figure C_ illustrates that the revenue is very high in the first year due to a proportion of policyholders being modelled to hold Single Premium Whole Life insurance (SPWL). The revenue generated per year for the next 19 years is much lower since they are from T20 policies and due to mortality these values have a decreasing trend before they drop to 0 after the 20 year period. Comparing revenues, it can be seen that more revenue is generated with the program than without. This is due to charging a higher premium reflective of the benefits the program provides to the policyholder.
+<p align="center">
+_Figure D: Revenue for Short Term (5 Years) & Long Term (30 Years). 
+Note: The 2023 revenue values have been hidden out of bounds to better display the rest of the data_
+</p>
+
+_Figure D_ illustrates that the revenue is very high in the first year due to a proportion of policyholders being modelled to hold Single Premium Whole Life insurance (SPWL). The revenue generated per year for the next 19 years is much lower since they are from T20 policies and due to mortality these values have a decreasing trend before they drop to 0 after the 20 year period. Comparing revenues, it can be seen that more revenue is generated with the program than without. This is due to charging a higher premium reflective of the benefits the program provides to the policyholder.
 
 Finally, a comparison of the profit margins obtained with and without the program is detailed in _Table C_, demonstrating that a higher profit margin is obtained with the program. 
 
@@ -208,10 +226,11 @@ Premiums were set very generously (for policyholders) without the program and hi
 | Expense and Expected Death Cost Calculations |<ul><li>Expenses assumed to be paid in advance</li></ul>Expected death costs assumed to be paid in arrears</li></ul>|
 
 ## Sensitivity Analysis
-A sensitivity analysis was performed on the key variables to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure B_ below.
+A sensitivity analysis was performed on the key variables to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure E_ below.
 
-ADD PLOTS
-_Figure B: Sensitivity Analysis - Profit Margin_
+![image](https://github.com/tmadfouni/SOA2024/assets/85098929/296a8dcd-7e6a-45cf-b919-830adbc5d250)
+
+_Figure E: Sensitivity Analysis - Profit Margin_
 
 Evidently, the effect of the intervention programs on mortality rates will have the largest impact on SuperLife’s profit margin. The outer bounds of each intervention program’s approximate impact on mortality rates was used, where the upper bound generates the best case scenario and the lower bound generates the worst case scenario. Given the results, it is important for SuperLife to closely monitor and update the mortality rate improvement assumptions regularly, as the worst case scenario results in a 14% decrease in the profit margin.
 
