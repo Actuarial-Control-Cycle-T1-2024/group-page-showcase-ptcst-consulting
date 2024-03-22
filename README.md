@@ -112,7 +112,7 @@ Intervention Program Selection Methodology conducted to determine the most optim
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigating the leading causes of death
 
 <p align="center">
- <img src= "![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/a192e7ac-7fb6-4cff-9e38-5f8d70bfaa8e)![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5e4b95c5-971d-4199-85a7-47558d2e7ac4)">
+ <img src= "![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/16a6cbb9-dcf5-4d12-a62e-8705dcb47bc5)">
      Figure A: Death count alongside proportion of ages at death for each cause
 </p>
 
@@ -157,8 +157,8 @@ By using this method, the total number of risk units in the cohort of policyhold
 _Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
 
 <p align="center">
- <img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d)">
+     <img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65)">
+     <img src = "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d)">
      Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)
 </p>
 
@@ -174,8 +174,8 @@ Table B: Cost Formulas
 _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
 
 <p align="center">
-<img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3)">
+     <img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f)">
+     <img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3)">
      Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)
 </p>
 
@@ -186,8 +186,8 @@ With regards to possible savings if the program had been implemented 20 years ag
 _Revenue for Short Term (5 Years) & Long Term (30 Years)_
 
 <p align="center">
-<img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce)
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42)">
+     <img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce)">
+     <img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42)">
      Figure D: Revenue for Short Term (5 Years) & Long Term (30 Years). 
      Note: The 2023 revenue values have been hidden out of bounds to improve presentation of the data
 </p>
@@ -226,7 +226,7 @@ Premiums were set very generously (for policyholders) without the program and hi
 A sensitivity analysis was performed on the key variables to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure E_ below.
 
 <p align="center">
-<img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/296a8dcd-7e6a-45cf-b919-830adbc5d250)">
+     <img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/296a8dcd-7e6a-45cf-b919-830adbc5d250)">
      Figure E: Sensitivity Analysis - Profit Margin
 </p>
 
@@ -243,7 +243,7 @@ _Figure F_ illustrates a comparison of the distribution of profit margins, where
 
 **Risk Assessment Matrix**
 <p align="center">
-<img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/4c69cbb9-0d83-4b21-8c45-243e9a4d8af7)">
+     <img src= "![image](https://github.com/tmadfouni/SOA2024/assets/85098929/4c69cbb9-0d83-4b21-8c45-243e9a4d8af7)">
      Risk Assessment Matrix for most significant risks
 </p>
 
