@@ -118,7 +118,7 @@ Intervention Program Selection Methodology conducted to determine the most optim
 2. Plotted and identified leading causes of death and mapped these to the associated intervention schemes
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigating the leading causes of death
 
-![Rplot01](https://github.com/tmadfouni/SOA2024/assets/85098929/9921d0c6-3325-4674-87a8-7cc4acca5864)
+![Rplot01](Plots/Program Selection.png)
 <p align="center">
      Figure A: Death count alongside proportion of ages at death for each cause
 </p>
@@ -258,7 +258,7 @@ _Figure F_ illustrates a comparison of the distribution of profit margins, where
 ## Risk and Risk Mitigation Strategies
 
 **Risk Assessment Matrix**
-![image](https://github.com/tmadfouni/SOA2024/assets/85098929/4c69cbb9-0d83-4b21-8c45-243e9a4d8af7)
+![image](Plots/Risk Assessment Matrix.png)
 <p align="center">
      Risk Assessment Matrix for most significant risks
 </p>
