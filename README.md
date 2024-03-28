@@ -118,7 +118,9 @@ Intervention Program Selection Methodology conducted to determine the most optim
 2. Plotted and identified leading causes of death and mapped these to the associated intervention schemes
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigating the leading causes of death
 
-![Rplot01](Plots/Program Selection.png)
+<p align="center">
+     <img src="Plots/Program Selection.png" width="800" alt="image"/>
+</p>
 <p align="center">
      Figure A: Death count alongside proportion of ages at death for each cause
 </p>
