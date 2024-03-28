@@ -119,7 +119,7 @@ Intervention Program Selection Methodology conducted to determine the most optim
 3. Determined top schemes with maximal impact on mortality rates and minimal per capita cost that can be directly linked to mitigating the leading causes of death
 
 <p align="center">
-     <img src="Plots/Program Selection.png" width="800" alt="image"/>
+     <img src="Plots/Program Selection.png" alt="image"/>
 </p>
 <p align="center">
      Figure A: Death count alongside proportion of ages at death for each cause
@@ -260,7 +260,9 @@ _Figure F_ illustrates a comparison of the distribution of profit margins, where
 ## Risk and Risk Mitigation Strategies
 
 **Risk Assessment Matrix**
-![image](Plots/Risk Assessment Matrix.png)
+<p align="center">
+     <img src="Plots/Risk Assessment Matrix.png" alt="image"/>
+</p>
 <p align="center">
      Risk Assessment Matrix for most significant risks
 </p>
