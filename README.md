@@ -163,8 +163,8 @@ By using this method, the total number of risk units in the cohort of policyhold
 
 _Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
 <p align="center">
-     <img src="Plots/Total Economic Costs (5 years).png" width="400" alt="image"/>
-     <img src="Plots/Total Economic Costs (30 years).png" width="400" alt="image"/>
+     <img src="Plots/Total Economic Cost (5 years).png" width="400" alt="image"/>
+     <img src="Plots/Total Economic Cost (30 years).png" width="400" alt="image"/>
 </p>
 <p align="center">
      Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)
