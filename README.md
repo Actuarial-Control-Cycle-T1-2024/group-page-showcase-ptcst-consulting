@@ -163,8 +163,8 @@ By using this method, the total number of risk units in the cohort of policyhold
 
 _Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)_
 <p align="center">
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/c97f4951-a88a-4947-86e5-4197953b9b65" width="400" alt="image"/>
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/d3068cf7-c0d5-4ac3-97ac-7d7f99a1a99d" width="400" alt="image"/>
+     <img src="Plots/Total Economic Costs (5 years).png" width="400" alt="image"/>
+     <img src="Plots/Total Economic Costs (30 years).png" width="400" alt="image"/>
 </p>
 <p align="center">
      Figure B: Total Economic Costs for Short Term (5 Years) & Long Term (30 Years)
@@ -181,8 +181,8 @@ Table B: Cost Formulas
 
 _Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)_
 <p align="center">
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/9466c5d8-b52d-4c97-ba47-18d713b4659f" width="400" alt="image"/>
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/056b7f9b-a3ee-4eec-9ba9-2c40b5d77ff3" width="400" alt="image"/>
+     <img src="Plots/Expected Death Costs (5 years).png" width="400" alt="image"/>
+     <img src="Plots/Expected Death Costs (30 years).png" width="400" alt="image"/>
 </p>
 <p align="center">
      Figure C: Expected Death Costs for Short Term (5 Years) & Long Term (30 Years)
@@ -194,8 +194,8 @@ With regards to possible savings if the program had been implemented 20 years ag
 
 _Revenue for Short Term (5 Years) & Long Term (30 Years)_
 <p align="center">
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/7a389346-327c-4103-87f4-9bf55e069dce" width="400" alt="image"/>
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/5d3c6440-9fbb-4ffb-b84d-168507501c42" width="400" alt="image"/>
+     <img src="Plots/Revenue (5 years).png" width="400" alt="image"/>
+     <img src="Plots/Revenue (30 years).png" width="400" alt="image"/>
 </p>
 <p align="center">
      Figure D: Revenue for Short Term (5 Years) & Long Term (30 Years). 
@@ -238,7 +238,7 @@ Premiums were set very generously (for policyholders) without the program and hi
 ## Sensitivity Analysis
 A sensitivity analysis was performed on the key variables to assess the financial impact of changes in key assumptions. Ranges of values were determined for each of the above variables, with the theoretical experience assumptions lying within this range. A comparison of the absolute impacts on SuperLife’s net present value and the relative impacts on profit margin for the best and worst case scenarios for each variable was conducted. The profit margin comparison is illustrated in _Figure E_ below.
 <p align="center">
-     <img src="https://github.com/tmadfouni/SOA2024/assets/85098929/296a8dcd-7e6a-45cf-b919-830adbc5d250" alt="image"/>
+     <img src="Plots/Sensitivity Analysis Comparison - Profit Margin.png" alt="image"/>
 </p>
 <p align="center">
      Figure E: Sensitivity Analysis - Profit Margin
@@ -246,7 +246,7 @@ A sensitivity analysis was performed on the key variables to assess the financia
 
 Evidently, the effect of the intervention programs on mortality rates will have the largest impact on SuperLife’s profit margin. The outer bounds of each intervention program’s approximate impact on mortality rates was used, where the upper bound generates the best case scenario and the lower bound generates the worst case scenario. Given the results, it is important for SuperLife to closely monitor and update the mortality rate improvement assumptions regularly, as the worst case scenario results in a 14% decrease in the profit margin.
 <p align="center">
-     <img src="https://github.com/tmadfouni/SOA2024/blob/main/Plots/Profit%20Margin%20Confidence.png?raw=true" alt="image"/>
+     <img src="Plots/Profit Margin Confidence.png" alt="image"/>
 </p>
 <p align="center">
      Figure F: Profit Margin Confidence Distribution
