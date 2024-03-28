@@ -5,7 +5,7 @@ Group Members: Chloe Kostopoulos, Sarah Lou, Tetian Madfouni, Tanvi Vakkalagadda
 - [Executive Summary](#executive-summary)
 - [Objectives](#objectives)
 - [Program Design](#program-design)
-- [Pricing/Costs](#pricing/costs)
+- [Pricing/Costs](#pricingcosts)
 - [Assumptions](#assumptions)
 - [Sensitivity Analysis](#sensitivity-analysis)
 - [Risk and Risk Mitigation Strategies](#risk-and-risk-mitigation-strategies)
