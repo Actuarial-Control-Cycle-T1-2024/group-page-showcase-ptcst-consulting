@@ -2,17 +2,17 @@
 ## Project Description
 Group Members: Chloe Kostopoulos, Sarah Lou, Tetian Madfouni, Tanvi Vakkalagadda, Prithika Yogarajah
 ## Table of Contents
-- [Executive Summary](#ExecutiveSummary)
-- [Objectives](#Objectives)
-- [Program Design](#ProgramDesign)
-- [Pricing/Costs](#Pricing/Costs)
-- [Assumptions](#Assumptions)
-- [Sensitivity Analysis](#SensitivityAnalysis)
-- [Risk and Risk Mitigation Strategies](#RiskandRiskMitigationStrategies)
-- [Data and Data Limitations](#DataandDataLimitations)
-- [Further Recommendations](#FurtherRecommendations)
-- [Conclusion](#Conclusion)
-- [References](#References)
+- [Executive Summary](#executive-summary)
+- [Objectives](#objectives)
+- [Program Design](#program-design)
+- [Pricing/Costs](#pricing/costs)
+- [Assumptions](#assumptions)
+- [Sensitivity Analysis](#sensitivity-analysis)
+- [Risk and Risk Mitigation Strategies](#risk-and-risk-mitigation-strategies)
+- [Data and Data Limitations](#data-and-data-limitations)
+- [Further Recommendations](#further-recommendations)
+- [Conclusion](#conclusion)
+- [References](#references)
 
 ## Executive Summary
 ## Objectives
