@@ -2,7 +2,6 @@
 ## Project Description
 Group Members: Chloe Kostopoulos, Sarah Lou, Tetian Madfouni, Tanvi Vakkalagadda, Prithika Yogarajah
 ## Table of Contents
-- [Executive Summary](#executive-summary)
 - [Objectives](#objectives)
 - [Program Design](#program-design)
 - [Pricing/Costs](#pricingcosts)
@@ -14,7 +13,6 @@ Group Members: Chloe Kostopoulos, Sarah Lou, Tetian Madfouni, Tanvi Vakkalagadda
 - [Conclusion](#conclusion)
 - [References](#references)
 
-## Executive Summary
 ## Objectives
 The main objectives of the proposed program are to: 
 1. Reduce the frequency and severity of life insurance claim payouts for the company
